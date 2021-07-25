@@ -4,10 +4,8 @@
 .nav-logo-left {
     display: none;
 }
+
 @media all and (min-width: $screen_md_2 + 1px) {
-    .nav-up {
-        transform: translateY(-100%);
-    }
 
     .nav-logo-left,
     .secondary-desktop-nav-bar {
@@ -15,6 +13,8 @@
         // transform: translateY(.3em);
         z-index: 999;
     }
+
+    $nav-logo-left-y: .3em;
 
     .nav-logo-left {
         display: block;

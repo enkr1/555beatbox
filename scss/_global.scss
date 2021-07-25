@@ -138,28 +138,28 @@ img {
     -ms-user-select: none;
 }
 
-/* width */
-::-webkit-scrollbar {
-    /* display: none; */
-    width: .2rem;
-}
+// /* width */
+// ::-webkit-scrollbar {
+//     /* display: none; */
+//     width: .2rem;
+// }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: $theme-light-color;
-}
+// /* Track */
+// ::-webkit-scrollbar-track {
+//     background: $theme-light-color;
+// }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: $theme-dark-color;
-    border-radius: 2rem;
-    box-shadow: $neumorphism-box-shadow;
-}
+// /* Handle */
+// ::-webkit-scrollbar-thumb {
+//     background: $theme-dark-color;
+//     border-radius: 2rem;
+//     box-shadow: $neumorphism-box-shadow;
+// }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: $theme-color;
-}
+// /* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: $theme-color;
+// }
 
 #_progress {
     transform: translateY(7.9rem);
@@ -331,15 +331,4 @@ span {
 // For js body
 .hide-all-in-body {
     opacity: 0;
-}
-
-$nav-logo-left-y: .3em;
-// FOR NEW NAVIGATION
-.fade-left {
-    transform: translate(-150%, $nav-logo-left-y) !important;
-}
-
-// NOT USED NOW
-.switch-color {
-    background: $desktop-secondary-nav-bar-color-dark !important;
 }
