@@ -1216,8 +1216,8 @@ li {
   }
 }
 .landing-section #svg-beatbox svg path {
-  -webkit-animation: line-anime 7s ease forwards .8s;
-          animation: line-anime 7s ease forwards .8s;
+  -webkit-animation: line-anime 6s ease forwards .8s;
+          animation: line-anime 6s ease forwards .8s;
 }
 .landing-section .logo {
   width: 100em;
