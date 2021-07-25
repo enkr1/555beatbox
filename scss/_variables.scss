@@ -13,27 +13,29 @@ $screen_xs: 480px;
 $screen_xxs: 320px;
 
 // sec-color
-$theme-color: #9796f0; // OLD A8CABA / 9796f0
+$theme-color: #000000; // OLD A8CABA / 9796f0
 // pri-color
-$theme-light-color: #dbcde4; // OLD rgb(255, 255, 255)
+$theme-light-color: #a0a0a0; // OLD rgb(255, 255, 255)
 // third-color
-$theme-dark-color: #242449; // OLD 44415d
+$theme-dark-color: #000000; // OLD 44415d
 
 // --- Text scheme ---
 // main-p-color
-$theme-font-color: #dedef5; // OLD ddfff8
+$theme-font-color: #851515; // OLD ddfff8
 //#BE93C5
 $theme-h1-color: rgba(255, 255, 255, 0.2);
 
-$theme-small-title-color: #8d8da8;
+$theme-small-title-color: #b1b1b4;
+$theme-dark-background-color: #292929;
+$theme-light-background-color: white;
 
 // LOGO TEXT ATTRIBUTES
 // Currently is the ENKR text, <a>
-$logo-color: $theme-light-color;
+$logo-color: $theme-dark-color;
 $logo-text-font-size: 2rem;
 $logo-text-letter-spacing: .2rem;
 
-$media-icon-color: #e0e0f7;
+$media-icon-color: #ffffff;
 
 // https://css-tricks.com/almanac/properties/b/box-shadow/
 $neumorphism-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),

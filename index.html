@@ -30,15 +30,15 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-  <link rel="stylesheet" href="css/style.css?v=2.0.0" />
+  <link rel="stylesheet" href="css/style.css?v=1.0.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet" />
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Philosopher&family=Roboto+Mono&family=Source+Serif+Pro&display=swap" rel="stylesheet"> -->
   <link
     href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Anonymous+Pro&family=K2D&family=Overpass+Mono&family=Radley&display=swap"
     rel="stylesheet" />
 
   <script type="text/javascript" defer src="js/main.js"></script>
+  <script type="text/javascript" defer src="js/components/svg-landing.js"></script>
   <script type="text/javascript" defer src="js/components/preloader.js"></script>
   <script type="text/javascript" defer src="js/components/leaves.js"></script>
   <script type="text/javascript" defer src="js/components/footer.js"></script>
@@ -71,16 +71,13 @@
         <div class="nav-link-container">
           <li><a href="#home" class="nav-link">Home</a></li>
           <!-- <li><a href="#about" class="nav-link">About</a></li> -->
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li>
-            <a href="#specialization" class="nav-link">Specialization</a>
-          </li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#specialization" class="nav-link">Specialization</a></li>
           <li><a href="#experience" class="nav-link">Experience</a></li>
           <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
-          <li><a href="interest" class="nav-link">Interest</a></li>
+
           <!-- <li><a href="#" class="nav-link" id="interest-nav-item">Interest</a></li> -->
-          <!-- <li><a href="pdf/PangJingHui_Resume.pdf" class="nav-link" target="_blank">My Resume</a></li> -->
           <p class="designedby">Designed and developed by ENKR</p>
         </div>
       </ul>
@@ -89,11 +86,14 @@
     </nav>
 
     <div id="landing-section" class="landing-section">
-      <div class="logo">
-        <img src="images/web-main-logo-enkr.svg" alt="@enkr1 | ENKR | Pang Jing Hui" data-aos="zoom-out" />
+      <div id="landing-svg-container">
+        <svg-landing-component></svg-landing-component>
       </div>
+
       <!-- <h6 class="main-h6"><span class="span1">&#60;</span>Web Developer<span class="span2">/&#62;</span></h6> -->
-      <h6 class="main-h6">555 Beatbox community</h6>
+
+      <!-- <h6 class="main-h6"></h6> -->
+      <h6 class="main-h6">555 Beatbox Initiative</h6>
 
       <nav class="landing-action">
         <a class="action-btn bg-slide-to-right" target="_blank" href="https://github.com/enkr1">

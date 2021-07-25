@@ -9,6 +9,42 @@
 
     $home-landing-logo-width: 100em;
 
+    #svg-beatbox {
+        svg {
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100em;
+
+            // small laptop
+            @media all and (max-width: $screen_md_1) {
+                width: 70em;
+            }
+
+            // tablet
+            @media all and (max-width: $screen_sm) {
+                width: 40em;
+            }
+
+            // mobile 
+            @media all and (max-width: $screen_xs) {
+                width: 30em;
+            }
+
+            @media all and (max-width: $screen_xxs) {
+                width: 26em;
+            }
+
+            path {
+                animation: line-anime 7s ease forwards .8s;
+            }
+        }
+
+    }
+
+
     .logo {
         width: $home-landing-logo-width;
         user-select: none;

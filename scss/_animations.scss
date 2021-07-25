@@ -1,3 +1,4 @@
+// https://stackoverflow.com/questions/33203568/keyframe-animations-with-scss-not-working
 /*Start animations*/
 @keyframes pulse {
     0% {
@@ -185,19 +186,49 @@
     }
 }
 
-/* mobile menu bar background mover */
-@keyframes mobile-bar-bg-mover {
-    0% {
-        background-position: 0% 30%;
-    }
+// /* mobile menu bar background mover */
+// @keyframes mobile-bar-bg-mover {
+//     0% {
+//         background-position: 0% 30%;
+//     }
 
-    50% {
-        background-position: 100% 30%;
-    }
+//     50% {
+//         background-position: 100% 30%;
+//     }
 
-    100% {
-        background-position: 0% 30%;
-    }
-}
+//     100% {
+//         background-position: 0% 30%;
+//     }
+// }
 
+// @mixin keyframes($animation-name) {
+//     @-webkit-keyframes #{$animation-name} {
+//       @content;
+//     }
+//     @-moz-keyframes #{$animation-name} {
+//       @content;
+//     }  
+//     @-ms-keyframes #{$animation-name} {
+//       @content;
+//     }
+//     @-o-keyframes #{$animation-name} {
+//       @content;
+//     }  
+//     @keyframes #{$animation-name} {
+//       @content;
+//     }
+//   }
+
+//   @mixin animation($str) {
+//     -webkit-animation: #{$str};
+//     -moz-animation: #{$str};
+//     -ms-animation: #{$str};
+//     -o-animation: #{$str};
+//     animation: #{$str};      
+//   }
+
+//   @include keyframes(slide-down) {
+//     0% { opacity: 1; }
+//     90% { opacity: 0; }
+//   }
 /*End animations*/
