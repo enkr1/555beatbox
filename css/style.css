@@ -6,6 +6,7 @@ GitHub: @enkr1, Instagram: @enkr1
 **/
 /* tablet */
 /*Start animations*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&display=swap");
 @-webkit-keyframes pulse {
   0% {
     -webkit-box-shadow: 0 0 0 0 #a0a0a0;
@@ -295,16 +296,8 @@ GitHub: @enkr1, Instagram: @enkr1
 
 html {
   font-size: 62.5%;
-  font-family: 'Alegreya Sans', sans-serif;
-  font-family: 'Anonymous Pro', monospace;
-  font-family: 'Overpass Mono', monospace;
-  font-family: 'Radley', serif;
-  font-family: 'K2D', sans-serif;
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Roboto Mono', monospace;
-  font-family: 'Heebo', sans-serif;
-  font-family: 'Source Serif Pro', serif;
-  font-family: 'Philosopher', sans-serif; */
+  font-family: 'DM Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #851515;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -386,7 +379,6 @@ p {
   word-spacing: 0.2rem;
   letter-spacing: 1px;
   color: #851515;
-  /* font-family: 'Lato', sans-serif; */
 }
 @media all and (max-width: 768px) {
   p {
