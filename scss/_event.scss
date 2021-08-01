@@ -1,0 +1,133 @@
+/*Start event*/
+// TODO: Simplify the scss for enkr1 too
+.event {
+    height: fit-content;
+    padding-bottom: 10em;
+
+    @media all and (max-width: $screen_sm) {
+        .section-heading {
+            padding-bottom: 0 !important;
+        }
+    }
+
+    .event-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10rem 0;
+
+        &.odd {
+            flex-direction: row;
+        }
+
+        &.even {
+            flex-direction: row-reverse;
+        }
+
+        @media all and (max-width: $screen_sm) {
+            align-items: unset !important;
+            flex-direction: column !important;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .event-img-div {
+            flex: 3;
+            transition: all 2s ease;
+
+            // Only apply to screen bigger than 769px
+            @media all and (min-width: $screen_sm + 1) {
+                &.odd {
+                    margin-right: 4rem;
+                }
+            }
+
+            img {
+                width: 100%;
+
+                /*  Neumorphism Theme */
+                // TODO: Set to variable
+                box-shadow: 0px 0px 29px -5px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .event-description {
+            flex: 2;
+
+            @media all and (min-width: $screen_sm + 1) {
+                &.even {
+                    text-align: right;
+                    margin-right: 4rem;
+                }
+            }
+
+            @media all and (max-width: $screen_md_2) {
+                // ...
+            }
+
+            // NOTE: media query for screen small and max to 798 $screen_sm.
+            @media all and (max-width: $screen_sm) {
+                // For debugging purpose only, remove it later.
+                // margin: 34rem;
+                // order: 2;
+            }
+
+            h6 {
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                font-weight: 300;
+                opacity: .3;
+            }
+
+            h1 {
+                font-size: 3rem;
+                font-weight: 300;
+                margin: 1rem 0;
+            }
+
+            p {
+                @media all and (max-width: $screen_sm) {
+                    text-align: justify;
+                    text-justify: inter-word;
+                }
+            }
+        }
+    }
+}
+
+.event-description .cta,
+.cta {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: $theme-light-color;
+
+    @media all and (max-width: $screen_sm) {
+        margin-bottom: 2rem;
+    }
+}
+
+.event-description .cta:hover,
+.cta:hover {
+    color: $theme-color;
+}
+
+.cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 650ms;
+
+    &.view-more-btn {
+        box-shadow: $neumorphism-box-shadow;
+        width: fit-content;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        margin: auto;
+    }
+}
+
+/*End event*/

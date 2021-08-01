@@ -18,8 +18,10 @@
 
     .container {
         padding-top: 4rem;
-        box-shadow: $neumorphism-box-shadow;
-        border-radius: 3rem;
+        // box-shadow: $neumorphism-box-shadow;
+        // border-radius: 3rem;
+
+        // border: 1px solid $theme-light-color;
 
         @media all and (max-width: $screen_sm) {
             max-width: 90vw;
@@ -71,7 +73,7 @@
                 color: $theme-color;
                 width: 100%;
                 position: relative;
-                height: 6rem;
+                min-height: 6rem;
                 overflow: hidden;
                 margin: 2rem auto;
 
@@ -98,7 +100,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     /* -webkit-text-fill-color: rgb(197, 197, 197); */
-    -webkit-text-fill-color: #eee;
+    -webkit-text-fill-color: $theme-font-color;
     -webkit-box-shadow: $theme-dark-color;
     transition: background-color 5000s ease-in-out 0s;
 }
@@ -114,6 +116,7 @@ select:-webkit-autofill:focus {
 }
 
 .message-section textarea {
+    resize: vertical;
     width: 100%;
     height: 100%;
     padding-top: 3.6rem;
@@ -155,6 +158,7 @@ select:-webkit-autofill:focus {
 .content-name,
 .content-email,
 .content-message {
+    top: 50%;
     position: absolute;
     bottom: 5px;
     left: 0;
@@ -170,11 +174,16 @@ select:-webkit-autofill:focus {
 .name-section input:valid+.label-name .content-name,
 .email-section input:focus+.label-email .content-email,
 .email-section input:valid+.label-email .content-email,
-.email-section input:placeholder-shown+.label-email .content-email,
+// FIXME: Temp fix https://stackoverflow.com/questions/8639282/notempty-css-selector-is-not-working
+.email-section input:not([value=""]):not(:focus)+.label-email .content-email,
+// make invalid stay on top too
+// .email-section input:placeholder-shown+.label-email .content-email,
 .message-section textarea:focus+.label-message .content-message,
 .message-section textarea:valid+.label-message .content-message {
-    transform: translateY(-100%);
+    // transform: translateY(-100%);
+    top: 0;
     color: $theme-light-color;
+    transition: all .4s ease-in-out;
 }
 
 .name-section input:focus+.label-name::after,
@@ -191,40 +200,42 @@ input.contact-submit-btn {
     margin-top: 6rem;
     font-size: 1.6rem;
     height: fit-content;
-    width: initial;
-    color: $theme-font-color;
+    text-transform: uppercase;
+    max-width: 26rem;
+    width: 30vw;
+    min-width: 18rem;
+    color: $theme-light-color;
     background-color: $theme-dark-color;
     padding: 0.8rem 3rem;
     border: none;
-    border-radius: .9rem;
     cursor: pointer;
-
-    /* Neumorphism pulse */
-    // box-shadow:
-    //     0px 0px 10px 0px $theme-light-color;
     box-shadow: $neumorphism-box-shadow;
     transition: all .3s ease-in-out;
-}
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 
-input.contact-submit-btn:hover {
-    color: $theme-dark-color;
-    /* background-color: var(--pri-color); */
+    &:hover {
+        color: $theme-dark-color;
+        background-color: $theme-color;
 
-    transform: scale(.99);
-    /* animation: press .3s; */
+        transform: scale(.98);
+        /* animation: press .3s; */
 
-    /* stop at last frame */
-    /* animation-fill-mode: forwards;  */
+        /* stop at last frame */
+        /* animation-fill-mode: forwards;  */
 
-    /* Neumorphism pulse */
-    // box-shadow:
-    //     0px 0px 18px 0px $theme-color;
-    box-shadow: inset $neumorphism-box-shadow;
-    // box-shadow: unset;
+        box-shadow: inset $neumorphism-box-shadow;
+    }
+
+    // TODO: Add to enkr1.github.io
+    &:active {
+        color: $theme-dark-color;
+        transform: translateY(.2rem);
+    }
+
 }
 
 // USE FOR CONTACT 
-
 .bg-slide-to-top {
     background: linear-gradient(to right, $theme-light-color 50%, rgba(255, 255, 255, 0) 50%);
     background-size: 200% 100%;

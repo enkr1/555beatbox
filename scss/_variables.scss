@@ -13,15 +13,18 @@ $screen_xs: 480px;
 $screen_xxs: 320px;
 
 // sec-color
-$theme-color: #000000; // OLD A8CABA / 9796f0
+// From 555 logo
+$theme-color: #ED1D24; // OLD A8CABA / 9796f0
 // pri-color
-$theme-light-color: #a0a0a0; // OLD rgb(255, 255, 255)
+$theme-light-color: #e7362c;
+// $theme-light-color: rgba(220, 40, 30, 0.7);
 // third-color
-$theme-dark-color: #000000; // OLD 44415d
+$theme-dark-color: #121212; // OLD 44415d
 
 // --- Text scheme ---
 // main-p-color
-$theme-font-color: #851515; // OLD ddfff8
+// $theme-font-color: #851515; // OLD ddfff8
+$theme-font-color: #000000; // OLD ddfff8
 //#BE93C5
 $theme-h1-color: rgba(255, 255, 255, 0.2);
 

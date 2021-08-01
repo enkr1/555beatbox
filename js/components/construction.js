@@ -16,7 +16,7 @@ class Construction extends HTMLElement {
         <div class="content">
             <div class="container construction-container inner">
                 <div class="section-heading">
-                    <h1>Under Construction</h1>
+                    <h1>- Under Construction -</h1>
                 </div>
 
                 <!-- <p>

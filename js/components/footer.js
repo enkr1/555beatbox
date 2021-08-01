@@ -70,39 +70,26 @@ class Footer extends HTMLElement {
 <footer class="main-footer">
     <div class="contact-social-media">
         <ul class="nav-list contact-social-media-ul">
-            <li data-aos="zoom-out-up" data-aos-delay="100">
-                <a target="_blank" href="https://github.com/enkr1" class="icon-link">
-                    <i class="fab fa-github-square"></i></a>
-            </li>
-
-            <li data-aos="zoom-out-down" data-aos-delay="300">
-                <a target="_blank" href="https://www.linkedin.com/in/jinghuipang/" class="icon-link">
-                    <i class="fab fa-linkedin"></i></a>
-            </li>
-
             <li data-aos="zoom-out-down" data-aos-delay="500">
-                <a target="_blank" href="https://www.facebook.com/enkrbeatbox" class="icon-link">
+                <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152" class="icon-link">
                     <i class="fab fa-facebook-square"></i></a>
             </li>
 
             <li data-aos="zoom-out-down" data-aos-delay="700">
-                <a target="_blank" href="https://www.instagram.com/enkr1/" class="icon-link">
+                <a target="_blank" href="https://www.instagram.com/555beatboxsg/" class="icon-link">
                     <i class="fab fa-instagram"></i></a>
             </li>
 
             <li data-aos="zoom-out-up" data-aos-delay="800">
-                <a target="_blank" href="https://www.youtube.com/channel/UCJJmK5bN3b4izpMb2vtRXpw?view_as=subscriber"
+                <a target="_blank" href="https://www.youtube.com/channel/UC6jcQdnBe8A6nhaubvY6xNw"
                     class="icon-link">
                     <i class="fab fa-youtube-square"></i></a>
             </li>
 
             <li data-aos="zoom-out-up" data-aos-delay="1000">
-                <a href="mailto:enkr99@gmail.com" class="icon-link">
+                <a href="mailto:555beatboxsg@gmail.com" class="icon-link">
                     <i class="far fa-envelope"></i></a>
             </li>
-            <!-- <li data-aos="zoom-out-up" data-aos-delay="2000">
-                <a target="_blank" href="https://soundcloud.com/enkr1" class="icon-link">
-                    <i class="fab fa-soundcloud"></i></a></li> -->
         </ul>
     </div>
 
@@ -110,7 +97,7 @@ class Footer extends HTMLElement {
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <p>&copy; 2020 - 2021 ENKR. All rights reserved.</p>
+    <p>&copy; 2021 - 555 Beatbox Initiative. All rights reserved.</p>
     <p>Developed and designed by ENKR</p>
 
 </footer>

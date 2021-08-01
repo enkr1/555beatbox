@@ -6,6 +6,10 @@
     padding: .5% 0 4rem 0;
     position: relative;
 
+    p {
+        color: white;
+    }
+
     @media all and (max-width: $screen_md_1) {
         padding-bottom: 5rem;
     }
@@ -13,7 +17,6 @@
     @media all and (max-width: $screen_md_2) {
         padding-bottom: 6.6rem;
     }
-
 
     .contact-social-media {
         margin: 5rem 0;
