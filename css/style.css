@@ -442,11 +442,6 @@ img {
   }
 }
 
-/* for javascript */
-.main-h6 {
-  opacity: 0;
-}
-
 .show {
   opacity: 1;
 }
@@ -456,11 +451,6 @@ span {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   color: #000000;
-}
-
-.main-h6-anim {
-  opacity: 1;
-  color: #851515;
 }
 
 .container {
@@ -1103,7 +1093,7 @@ li {
 
 .nav-logo {
   text-align: center;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   font-size: 2rem;
   height: 50%;
   padding-bottom: 1rem;
@@ -1242,35 +1232,6 @@ li {
 @media all and (max-width: 480px) {
   .landing-section .logo {
     width: 30em;
-  }
-}
-.landing-section h6.main-h6 {
-  font-family: monospace;
-  -webkit-transform: translateY(12rem);
-          transform: translateY(12rem);
-  font-size: 2.2rem;
-  font-weight: 300;
-  color: #851515;
-}
-@media all and (max-width: 1281px) {
-  .landing-section h6.main-h6 {
-    font-size: 1.8rem;
-    -webkit-transform: translateY(11rem);
-            transform: translateY(11rem);
-  }
-}
-@media all and (max-width: 992px) {
-  .landing-section h6.main-h6 {
-    font-size: 1.5rem;
-    -webkit-transform: translateY(8rem);
-            transform: translateY(8rem);
-  }
-}
-@media all and (max-width: 768px) {
-  .landing-section h6.main-h6 {
-    font-size: 1.2rem;
-    -webkit-transform: translateY(5rem);
-            transform: translateY(5rem);
   }
 }
 .landing-section .landing-action {

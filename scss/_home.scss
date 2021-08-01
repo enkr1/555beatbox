@@ -71,29 +71,6 @@
         }
     }
 
-    h6.main-h6 {
-        font-family: monospace;
-        transform: translateY(12rem);
-        font-size: 2.2rem;
-        font-weight: 300;
-        color: $theme-font-color;
-
-        @media all and (max-width: $screen_lg) {
-            font-size: 1.8rem;
-            transform: translateY(11rem);
-        }
-
-        @media all and (max-width: $screen_md_2) {
-            font-size: 1.5rem;
-            transform: translateY(8rem);
-        }
-
-        @media all and (max-width: $screen_sm) {
-            font-size: 1.2rem;
-            transform: translateY(5rem);
-        }
-    }
-
     /* action buttons */
     .landing-action {
         list-style: none;

@@ -84,11 +84,6 @@
         <svg-landing-component></svg-landing-component>
       </div>
 
-      <!-- <h6 class="main-h6"><span class="span1">&#60;</span>Web Developer<span class="span2">/&#62;</span></h6> -->
-
-      <!-- <h6 class="main-h6"></h6> -->
-      <h6 class="main-h6">We are rising 555</h6>
-
       <!-- <nav class="landing-action">
         <a class="action-btn bg-slide-to-right" target="_blank" href="https://github.com/enkr1">
           <p class="action-text-1">my github</p>
@@ -381,37 +376,6 @@
         letterdone = false;
       }
     })();
-
-    setTimeout(function () {
-      // https://www.youtube.com/watch?v=GUEB9FogoP8&t=173s vanilla
-      const text = document.querySelector(".main-h6");
-      const strText = text.textContent;
-      const splitText = strText.split("");
-      text.textContent = "";
-      text.classList.add("show");
-
-      for (let i = 0; i < splitText.length; i++) {
-        text.innerHTML += "<span>" + splitText[i] + "</span>";
-      }
-
-      let char = 0;
-      let timer = setInterval(onTick, 80);
-
-      function onTick() {
-        const span = text.querySelectorAll("span")[char];
-        span.classList.add("main-h6-anim");
-        char++;
-        if (char === splitText.length) {
-          complete();
-          return;
-        }
-      }
-
-      function complete() {
-        clearInterval(timer);
-        timer = null;
-      }
-    }, 800);
   </script>
 
 </body>

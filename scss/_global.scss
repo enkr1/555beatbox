@@ -181,11 +181,6 @@ img {
     }
 }
 
-/* for javascript */
-.main-h6 {
-    opacity: 0;
-}
-
 .show {
     opacity: 1;
 }
@@ -195,13 +190,6 @@ span {
     opacity: 0.6;
     transition: all .3s ease;
     color: $theme-dark-color;
-}
-
-// for js
-// After 
-.main-h6-anim {
-    opacity: 1;
-    color: $theme-font-color;
 }
 
 .container {
