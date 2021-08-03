@@ -450,9 +450,7 @@ span {
 
 .section-heading {
   text-align: center;
-  margin-bottom: 2rem;
-  /*  Neumorphism Theme */
-  padding: 10rem 0 4rem 0;
+  margin: 2rem 0;
   border-radius: 1rem;
 }
 
@@ -1485,12 +1483,16 @@ box-shadow:
   }
 }
 .about .container .about-desc-container {
+  padding: .4rem;
+  border: 1px solid #f1e8d199;
+}
+.about .container .about-desc-container > div {
   padding: 2rem 3rem;
   background-color: #f1e8d199;
 }
 .about .container .about-desc-container p {
   text-align: justify;
-  font-weight: 300;
+  font-weight: 600;
 }
 @media all and (max-width: 768px) {
   .about .container .about-desc-container p {

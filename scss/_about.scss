@@ -133,12 +133,18 @@
 
     .about-desc-container {
         // mix-blend-mode: overlay;
-        padding: 2rem 3rem;
-        background-color: #f1e8d199;
+        padding: .4rem;
+        $temp-desc-container-color: #f1e8d199;
+        border: 1px solid $temp-desc-container-color;
+
+        >div {
+            padding: 2rem 3rem;
+            background-color: $temp-desc-container-color;
+        }
 
         p {
             text-align: justify;
-            font-weight: 300;
+            font-weight: 600;
 
             @media all and (max-width: $screen_sm) {
                 padding: 0 2rem;
@@ -146,9 +152,19 @@
                 padding: 0 auto;
             }
         }
+
+        // &::before,
+        // &::after {
+        //     content: '';
+        //     display: block;
+        //     width: 10rem;
+        //     height: 1rem;
+        //     background-color: darkslateblue;
+        // }
     }
 
     .about-social-media {
+
         i,
         img {
             font-size: 3rem;
