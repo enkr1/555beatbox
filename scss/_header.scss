@@ -320,12 +320,16 @@ li {
     padding: 1.2rem 1.5rem;
     /* right: -100vw; */
     z-index: 900;
-    /* browser support */
-    -webkit-transition: all 800ms cubic-bezier(1, 0, 0, 1);
-    -moz-transition: all 800ms cubic-bezier(1, 0, 0, 1);
-    -o-transition: all 800ms cubic-bezier(1, 0, 0, 1);
-    transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    background-color: transparent;
 
+    transition: all .4s ease-in-out;
+
+    // Only apply cubic-bezier when mobile menu icon is shown.
+    @media all and (max-width: $screen_md_2) {
+        transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    }
+
+    // transition: background-color 1s ease-in-out;
     /* for debug */
     /* background-color: rgba(245, 254, 241, 0.1); */
 
@@ -352,12 +356,7 @@ li {
     transition: all 1s ease;
 }
 
-.scrollup {
-    /* height: 6vh; */
-    background-color: #10212888;
-    /* browser support */
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+.scroll-up {
+    background-color: #ffffff99;
+    filter: invert(1);
 }

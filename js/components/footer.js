@@ -70,23 +70,23 @@ class Footer extends HTMLElement {
 <footer class="main-footer">
     <div class="contact-social-media">
         <ul class="nav-list contact-social-media-ul">
-            <li data-aos="zoom-out-down" data-aos-delay="500">
+            <li>
                 <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152" class="icon-link">
                     <i class="fab fa-facebook-square"></i></a>
             </li>
 
-            <li data-aos="zoom-out-down" data-aos-delay="700">
+            <li>
                 <a target="_blank" href="https://www.instagram.com/555beatboxsg/" class="icon-link">
                     <i class="fab fa-instagram"></i></a>
             </li>
 
-            <li data-aos="zoom-out-up" data-aos-delay="800">
+            <li>
                 <a target="_blank" href="https://www.youtube.com/channel/UC6jcQdnBe8A6nhaubvY6xNw"
                     class="icon-link">
                     <i class="fab fa-youtube-square"></i></a>
             </li>
 
-            <li data-aos="zoom-out-up" data-aos-delay="1000">
+            <li>
                 <a href="mailto:555beatboxsg@gmail.com" class="icon-link">
                     <i class="far fa-envelope"></i></a>
             </li>

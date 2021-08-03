@@ -423,7 +423,7 @@ img {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ED1D24;
+  background: #EF3340;
 }
 
 .show {
@@ -455,7 +455,7 @@ span {
 
 .section-heading h1 {
   font-size: 3.5rem;
-  color: #e7362c;
+  color: #EF3340;
   opacity: 0.8;
   text-transform: uppercase;
   font-weight: 300;
@@ -952,7 +952,7 @@ li {
   display: inline;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  color: #ED1D24;
+  color: #EF3340;
 }
 
 .top-nav.open {
@@ -1007,7 +1007,7 @@ li {
 }
 
 .bar {
-  background: linear-gradient(45deg, #121212, #ED1D24, #e7362c);
+  background: linear-gradient(45deg, #121212, #EF3340, #e7362c);
   width: 100%;
   height: 3px;
   border-radius: .8rem;
@@ -1080,17 +1080,23 @@ li {
   padding: 1.2rem 1.5rem;
   /* right: -100vw; */
   z-index: 900;
-  /* browser support */
-  -webkit-transition: all 800ms cubic-bezier(1, 0, 0, 1);
-  transition: all 800ms cubic-bezier(1, 0, 0, 1);
+  background-color: transparent;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   /* for debug */
   /* background-color: rgba(245, 254, 241, 0.1); */
 }
 @media all and (max-width: 992px) {
   .top-nav {
+    -webkit-transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    transition: all 800ms cubic-bezier(1, 0, 0, 1);
+  }
+}
+@media all and (max-width: 992px) {
+  .top-nav {
     height: 100vh;
     right: -100vw;
-    background: linear-gradient(45deg, #121212, #ED1D24);
+    background: linear-gradient(45deg, #121212, #EF3340);
     /* border-bottom-left-radius: 100%; */
     /* transition: all 800ms cubic-bezier(1, 0, 0, 1); */
     opacity: 0;
@@ -1110,12 +1116,10 @@ li {
   transition: all 1s ease;
 }
 
-.scrollup {
-  /* height: 6vh; */
-  background-color: #10212888;
-  /* browser support */
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+.scroll-up {
+  background-color: #ffffff99;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .landing-section {
@@ -1137,7 +1141,7 @@ li {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100em;
-  fill: #ED1D24;
+  fill: #EF3340;
 }
 @media all and (max-width: 1024px) {
   .landing-section #svg-beatbox svg {
@@ -1390,8 +1394,9 @@ box-shadow:
   max-width: unset;
   height: 100vh;
   padding: 0 20vw;
-  -webkit-box-shadow: inset 0 0 100vw 100vh #1e162950;
-          box-shadow: inset 0 0 100vw 100vh #1e162950;
+  background: url("https://cdn.discordapp.com/attachments/872089222356545566/872090804208939089/555_fam_001_compressed.jpg") no-repeat center fixed;
+  -webkit-box-shadow: inset 0 0 100vw 100vh #ffffff70;
+          box-shadow: inset 0 0 100vw 100vh #ffffff70;
   background-size: cover !important;
 }
 @media all and (max-width: 768px) {
@@ -1449,7 +1454,7 @@ box-shadow:
   text-transform: uppercase;
   line-height: 0;
   margin-bottom: 6rem;
-  color: #ED1D24;
+  color: #EF3340;
 }
 .about-details .about-heading h1 {
   z-index: -1;
@@ -1679,7 +1684,7 @@ box-shadow:
 
 .event-description .cta:hover,
 .cta:hover {
-  color: #ED1D24;
+  color: #EF3340;
 }
 
 .cta {
@@ -1754,7 +1759,7 @@ box-shadow:
 .specialization .icon-container {
   width: 14rem;
   height: 14rem;
-  border: 2px solid #ED1D24;
+  border: 2px solid #EF3340;
   margin-bottom: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1785,7 +1790,7 @@ box-shadow:
   content: '';
   width: 13.1rem;
   height: 13.1rem;
-  border: 2px solid #ED1D24;
+  border: 2px solid #EF3340;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1884,7 +1889,7 @@ box-shadow:
 .contact .container form.contact-form .email-section,
 .contact .container form.contact-form .message-section {
   font-size: 1.8rem;
-  color: #ED1D24;
+  color: #EF3340;
   width: 100%;
   position: relative;
   min-height: 6rem;
@@ -1942,7 +1947,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid #ED1D24;
+  border-bottom: 1px solid #EF3340;
 }
 .name-section label span,
 .email-section label span,
@@ -2032,7 +2037,7 @@ input.contact-submit-btn {
 }
 input.contact-submit-btn:hover {
   color: #121212;
-  background-color: #ED1D24;
+  background-color: #EF3340;
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
   /* animation: press .3s; */
@@ -2073,7 +2078,7 @@ input.contact-submit-btn:active {
 
 .info-anim-inner {
   cursor: pointer;
-  background-color: #ED1D24;
+  background-color: #EF3340;
   padding: 1rem;
   border-radius: 1rem;
   width: 100%;
@@ -2086,7 +2091,7 @@ input.contact-submit-btn:active {
 .info-anim-inner:hover {
   -webkit-clip-path: circle(75%);
           clip-path: circle(75%);
-  background-color: linear-gradient(0deg, #ED1D24, #121212) no-repeat center fixed;
+  background-color: linear-gradient(0deg, #EF3340, #121212) no-repeat center fixed;
 }
 
 .info-anim-inner span {
@@ -2137,7 +2142,7 @@ input.contact-submit-btn:active {
   }
 }
 .main-footer .contact-social-media ul.contact-social-media-ul li a {
-  color: #ED1D24;
+  color: #EF3340;
 }
 @media all and (max-width: 992px) {
   .main-footer .contact-social-media ul.contact-social-media-ul li a {
@@ -2161,7 +2166,7 @@ input.contact-submit-btn:active {
   position: fixed;
   height: 5rem;
   width: 5rem;
-  background-color: #e7362c;
+  background-color: #EF3340;
   top: 89vh;
   right: 3%;
   border-radius: 100%;
