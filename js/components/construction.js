@@ -11,7 +11,26 @@ class Construction extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-<section class="construction" id="construction">
+        <div class="content">
+            <div class="container construction-container inner">
+                <div class="section-heading">
+                    <h1>- Under Construction -</h1>
+                </div>
+                 <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nisi
+                autem possimus neque consequatur? Omnis voluptates incidunt suscipit
+                exercitationem distinctio animi blanditiis velit quam aut. Fugiat ex
+                optio iste et?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                A corporis natus error numquam impedit adipisci facere, in ipsa? Cum,
+                error excepturi. Minima debitis, est quis iusto pariatur
+                </p>
+            </div>
+        </div>
+`;
+    }
+}
+
+{/* <section class="construction" id="construction">
     <div class="example-marquee">
         <div class="content">
             <div class="container construction-container inner">
@@ -31,9 +50,6 @@ class Construction extends HTMLElement {
             </div>
         </div>
     </div>
-</section>
-`;
-    }
-}
+</section> */}
 
 customElements.define('construction-component', Construction);
