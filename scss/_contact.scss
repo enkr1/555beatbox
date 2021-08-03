@@ -215,8 +215,8 @@ input.contact-submit-btn {
     border-bottom-right-radius: 1rem;
 
     &:hover {
-        color: $theme-dark-color;
-        background-color: $theme-color;
+        // color: $theme-dark-color;
+        // background-color: $theme-color;
 
         transform: scale(.98);
         /* animation: press .3s; */
@@ -229,7 +229,7 @@ input.contact-submit-btn {
 
     // TODO: Add to enkr1.github.io
     &:active {
-        color: $theme-dark-color;
+        // color: $theme-dark-color;
         transform: translateY(.2rem);
     }
 

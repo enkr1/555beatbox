@@ -291,9 +291,9 @@
                   </div>
               </div> -->
 
-        <div class="typing-area">
+        <!-- <div class="typing-area">
           <p class="typing"></p>
-        </div>
+        </div> -->
 
         <form class="contact-form" action="https://formspree.io/f/mdoylrqd" method="POST" name="form">
           <div class="name-section">
@@ -320,8 +320,7 @@
             </label>
           </div>
 
-          <input id="contact-form-submit-button" class="contact-submit-btn bg-slide-to-top" type="submit"
-            value="Submit" />
+          <input id="contact-form-submit-button" class="contact-submit-btn" type="submit" value="Submit" />
 
         </form>
       </div>
@@ -331,44 +330,44 @@
 
   <script>
 
-    // typing effects
-    const landingtexts = [
-      "Beatbox Mentoership Program Free Trial",
-      "Couple's Beatbox Workshop",
-      "555 Beatbox Discord Server",
-      "Sign up now!",
-      "Drop us an email",
-      "Based in Singapore.",
-    ];
-    let count = 0;
-    let index = 0;
-    let currentText = "";
-    let letter = "";
-    let letterdone = false;
+    // // typing effects
+    // const landingtexts = [
+    //   "Beatbox Mentoership Program Free Trial",
+    //   "Couple's Beatbox Workshop",
+    //   "555 Beatbox Discord Server",
+    //   "Sign up now!",
+    //   "Drop us an email",
+    //   "Based in Singapore.",
+    // ];
+    // let count = 0;
+    // let index = 0;
+    // let currentText = "";
+    // let letter = "";
+    // let letterdone = false;
 
-    (function type() {
-      if (count === landingtexts.length) {
-        count = 0;
-      }
+    // (function type() {
+    //   if (count === landingtexts.length) {
+    //     count = 0;
+    //   }
 
-      currentText = landingtexts[count];
-      letter = currentText.slice(0, ++index);
-      document.querySelector(".typing").textContent = letter;
+    //   currentText = landingtexts[count];
+    //   letter = currentText.slice(0, ++index);
+    //   document.querySelector(".typing").textContent = letter;
 
-      if (letter.length === currentText.length) {
-        count++;
-        index = 0; // reset
-        letterdone = true;
-      }
+    //   if (letter.length === currentText.length) {
+    //     count++;
+    //     index = 0; // reset
+    //     letterdone = true;
+    //   }
 
-      // one line check
-      if (letterdone == false) {
-        setTimeout(type, 100);
-      } else {
-        setTimeout(type, 800);
-        letterdone = false;
-      }
-    })();
+    //   // one line check
+    //   if (letterdone == false) {
+    //     setTimeout(type, 100);
+    //   } else {
+    //     setTimeout(type, 800);
+    //     letterdone = false;
+    //   }
+    // })();
   </script>
 
 </body>

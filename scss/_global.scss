@@ -199,6 +199,8 @@ span {
 .section-heading {
     text-align: center;
     margin: 2rem 0;
+    // This is a hack to get the heading to center.
+    padding-top: 10rem;
     border-radius: 1rem;
 }
 

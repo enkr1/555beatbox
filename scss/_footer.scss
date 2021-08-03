@@ -8,6 +8,11 @@
 
     p {
         color: white;
+
+        // Just for the ENKR
+        a:hover {
+            color: $theme-light-color !important;
+        }
     }
 
     @media all and (max-width: $screen_md_1) {
@@ -18,8 +23,27 @@
         padding-bottom: 6.6rem;
     }
 
+    .footer-nav-container {
+        display: flex;
+        flex-direction: row;
+        padding: 1rem .4rem;
+
+        @media all and (max-width: $screen_md_2) {
+            flex-direction: column;
+        }
+
+        div {
+            flex: 1;
+            padding: 1rem;
+        }
+    }
+
     .contact-social-media {
-        margin: 5rem 0;
+        // margin: 5rem 0;
+        p {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
 
         ul.contact-social-media-ul {
             margin: 0 auto 2% auto;
