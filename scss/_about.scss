@@ -77,7 +77,28 @@
         }
 
         svg {
-            mix-blend-mode: overlay;
+            mix-blend-mode: color-burn;
+            width: 60rem;
+
+            // small laptop
+            @media all and (max-width: $screen_md_1) {
+                width: 50em;
+            }
+
+            // tablet
+            @media all and (max-width: $screen_sm) {
+                width: 40em;
+            }
+
+            // mobile 
+            @media all and (max-width: $screen_xs) {
+                width: 30em;
+            }
+
+            @media all and (max-width: $screen_xxs) {
+                width: 26em;
+            }
+
         }
 
         h1 {
@@ -110,24 +131,29 @@
         }
     }
 
-    p {
-        text-align: justify;
-        font-weight: 300;
+    .about-desc-container {
+        // mix-blend-mode: overlay;
+        padding: 2rem 3rem;
+        background-color: #f1e8d199;
 
-        @media all and (max-width: $screen_sm) {
-            padding: 0 2rem;
-            line-height: 1.6;
-            padding: 0 auto;
+        p {
+            text-align: justify;
+            font-weight: 300;
+
+            @media all and (max-width: $screen_sm) {
+                padding: 0 2rem;
+                line-height: 1.6;
+                padding: 0 auto;
+            }
         }
     }
 
     .about-social-media {
-
-        i {
+        i,
+        img {
             font-size: 3rem;
             transition: color .2s;
             margin: 60% 1rem 0 1rem;
-            // opacity: .6;
             color: $media-icon-color;
 
             // /*  Neumorphism Theme */
@@ -138,6 +164,10 @@
                 margin: 100% 0 0 0;
                 /* width: 4rem; */
             }
+        }
+
+        img {
+            width: 3rem;
         }
 
         i:hover {

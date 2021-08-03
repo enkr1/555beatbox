@@ -469,3 +469,28 @@ span {
     // background-color: #ffffff99 !important;
     // filter: invert(.9);
 }
+
+.box-display {
+
+    .box {
+        position: absolute;
+        width: 20rem;
+        height: 20rem;
+
+
+        background: darkgrey;
+        mix-blend-mode: difference;
+
+        &:nth-child(odd) {
+            top: 10%;
+            left: 10%;
+        }
+
+        &:nth-child(even) {
+            top: 20%;
+            right: 20%;
+        }
+    }
+    
+
+}
