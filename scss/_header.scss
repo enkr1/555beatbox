@@ -6,13 +6,24 @@
 }
 
 header {
-    // mix-blend-mode: difference;
-    // mix-blend-mode: multiply;
-    // backdrop-filter: sepia(100%);
-    // backdrop-filter: invert(1);
 
-    // width: 100%;
-    // height: 100vh;
+    // // NOTE: media query for screen small and max to 798 $screen_sm.
+    // @media all and (max-width: $screen_sm) {
+
+    // Only apply to screen bigger than 992px
+    // Only apply to non-mobile devices
+    @media all and (min-width: $screen_md_2 + 1) {
+        z-index: 999;
+        position: fixed;
+        // mix-blend-mode: overlay;
+        mix-blend-mode: difference;
+        // mix-blend-mode: multiply;
+        // backdrop-filter: sepia(100%);
+        // backdrop-filter: invert(1);
+
+        // width: 100%;
+        // height: 100vh;
+    }
 }
 
 .nav-list,
@@ -61,11 +72,6 @@ header {
         }
 
         a {
-            // TODO: Find a way to revert colour
-
-            // mix-blend-mode: difference;
-
-            /* need to find a better font fam */
             /* font-family: monospace; */
             white-space: nowrap;
             font-weight: 100;
@@ -159,6 +165,54 @@ header {
         justify-content: center;
         flex-direction: column;
     }
+
+    // Menu items
+    .nav-link {
+        /* font-family: monospace; */
+        text-transform: uppercase;
+        letter-spacing: 0rem;
+        font-size: 1.4rem;
+        padding: .6rem 2rem;
+        // color: $theme-font-color;
+        color: grey;
+        font-weight: bold;
+        user-select: none;
+
+        // Top menu social media icons
+        &.icon-link {
+            padding: .6rem 1.4rem;
+        }
+
+        @media all and (max-width: $screen_lg) {
+            font-size: 1.8em;
+            padding: 1.2rem;
+        }
+
+        // @media all and (max-width: $screen_md_2) {
+        //     color: $theme-font-color;
+        // }
+
+        @media all and (max-width: $screen_md_2) {
+            font-size: 1.8rem;
+            letter-spacing: .1rem;
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media all and (max-width: $screen_sm) {
+            font-size: 1.2rem;
+            padding: 5% 1rem;
+        }
+
+        &:hover,
+        &:focus {
+            display: inline;
+            transition: all .2s ease-in-out;
+            color: $theme-color;
+        }
+    }
 }
 
 /* also for contact icon */
@@ -169,53 +223,6 @@ li {
         margin: 2rem 0;
     }
 }
-
-// Menu items
-.nav-link {
-    /* font-family: monospace; */
-    text-transform: uppercase;
-    letter-spacing: 0rem;
-    font-size: 1.4rem;
-    padding: .6rem 2rem;
-    color: $theme-font-color;
-    font-weight: bold;
-
-    // Top menu social media icons
-    &.icon-link {
-        padding: .6rem 1.4rem;
-    }
-
-    @media all and (max-width: $screen_lg) {
-        font-size: 1.8em;
-        padding: 1.2rem;
-    }
-
-    // @media all and (max-width: $screen_md_2) {
-    //     color: $theme-font-color;
-    // }
-
-    @media all and (max-width: $screen_md_2) {
-        font-size: 1.8rem;
-        letter-spacing: .1rem;
-
-        p {
-            font-size: 1.2rem;
-        }
-    }
-
-    @media all and (max-width: $screen_sm) {
-        font-size: 1.2rem;
-        padding: 5% 1rem;
-    }
-
-    &:hover,
-    &:focus {
-        display: inline;
-        transition: all .2s ease-in-out;
-        color: $theme-color;
-    }
-}
-
 
 .top-nav.open {
     right: 0;
@@ -267,8 +274,8 @@ li {
     //     0px 0px 12px 0px var(--third-color);
     // -moz-box-shadow:
     //     0px 0px 12px 0px var(--third-color);
-    box-shadow:
-        0px 0px 12px 0px $theme-dark-color;
+    // box-shadow:
+    //     0px 0px 12px 0px $theme-dark-color;
 
     @media all and (max-width: $screen_sm) {
         height: 2px;
@@ -280,7 +287,7 @@ li {
 }
 
 .bar.start {
-    width: 60%;
+    width: 100%;
     align-self: flex-end;
     transform-origin: right;
 
@@ -300,7 +307,7 @@ li {
 }
 
 .bar.end {
-    width: 60%;
+    width: 100%;
     align-self: flex-end;
     transform-origin: right;
 
@@ -343,20 +350,4 @@ li {
         background-size: 200% 200%;
         animation: mobile-bar-bg-mover 4s ease infinite;
     }
-}
-
-.startscrolling {
-    /* top: -3rem; */
-    transform: translateY(-50%);
-    background-color: #10212820;
-    /* browser support */
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}
-
-.scroll-up {
-    background-color: #ffffff99;
-    filter: invert(1);
 }

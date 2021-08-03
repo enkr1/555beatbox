@@ -15,9 +15,11 @@ $screen_xxs: 320px;
 // sec-color
 // From 555 logo
 $singapore-red: #EF3340;
-$theme-color: $singapore-red; // OLD A8CABA / 9796f0
+$metallic-gold: #fad25a;
+$theme-color: $singapore-red; // OLD ED1D24 / A8CABA / 9796f0
 // pri-color
-$theme-light-color: #e7362c;
+$theme-light-color: $metallic-gold; // e7362c
+$theme-light-color-opacity: #fad25a80; // e7362c
 // $theme-light-color: rgba(220, 40, 30, 0.7);
 // third-color
 $theme-dark-color: #121212; // OLD 44415d

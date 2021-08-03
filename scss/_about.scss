@@ -4,23 +4,53 @@
     // scroll-margin-top: -2rem;
 }
 
+// TODO: Move to global
+.viewing-about-text {
+    box-shadow: inset 0 0 100vw 100vh #ffffff90 !important;
+}
+
+.transition-section {
+    height: 0 !important;
+}
+
+.img-parallax {
+    // width: 100vmax;
+    // z-index: -1;
+    position: absolute;
+    // top: 0;
+    // left: 50%;
+    // transform: translate(-50%, 0);
+    // pointer-events: none
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // transform: translateY(0) scale(1.2);
+    // transform: translate3d(0, 0, 0) scale(1);
+    transform: translateY(0) scale(1);
+    z-index: 1;
+}
+
 .about .container {
     display: flex;
     align-items: center;
     justify-content: center;
-
     max-width: unset; // Previously was 80vw
     height: 100vh;
-
     padding: 0 20vw;
 
-    // background: url("../images/4.jpg") no-repeat center fixed;
+    .about-heading {
+        svg, p {
+            z-index: 2;
+
+        }
+    }
 
     background: url("https://cdn.discordapp.com/attachments/872089222356545566/872090804208939089/555_fam_001_compressed.jpg") no-repeat center fixed;
-    // background-color: $theme-dark-background-color;
-    box-shadow: inset 0 0 100vw 100vh #ffffff70;
+    background-color: $theme-dark-background-color;
+    box-shadow: inset 0 0 100vw 100vh #ffffff98;
     background-size: cover !important; // TODO: Uncomment this
     // border-radius: 10rem;
+    transition: all .6s ease-in-out;
 
     @media all and (max-width: $screen_sm) {
         flex-direction: column;
@@ -30,46 +60,30 @@
         }
     }
 
-    // THIS IMAGE IS ALREADY REMOVED 
-    .profile-img {
-        // TODO: REMOVE TESTING
-        display: none;
-
-        flex: 1;
-        margin-right: 5rem;
-        /* animation: pulse 2s infinite; */
-        z-index: 2;
-
-        @media all and (max-width: $screen_sm) {
-            margin: 0 0 7rem 0;
-        }
-
-        img {
-            transform: scale(.7);
-            /*  Neumorphism Theme */
-            box-shadow: 0px 0px 29px -5px rgba(0, 0, 0, 0.5);
-
-            @media all and (max-width: $screen_md_1) {
-                transform: scale(1.06);
-            }
-        }
-    }
-}
-
-/* .profile-img a img:hover {
-    transition: all 0.7s ease; 
-    transform: scale(1.02); 
-} */
-
-.about-details {
-    // flex: 1;
-
     .about-heading {
         text-align: center;
         text-transform: uppercase;
         line-height: 0;
         margin-bottom: 6rem;
         color: $theme-color;
+
+
+        // TODO: NEED TO DOUBLE CHECK
+        @media all and (max-width: $screen_md_2) {
+
+            // nav-list is used for the about's social media icons too
+            .nav-list {
+                flex-direction: row;
+            }
+
+            li {
+                margin: 0 2rem;
+            }
+        }
+
+        svg {
+            mix-blend-mode: overlay;
+        }
 
         h1 {
             z-index: -1;
@@ -101,19 +115,6 @@
         }
     }
 
-    // TODO: NEED TO DOUBLE CHECK
-    @media all and (max-width: $screen_md_2) {
-
-        // nav-list is used for the about's social media icons too
-        .nav-list {
-            flex-direction: row;
-        }
-
-        li {
-            margin: 0 2rem;
-        }
-    }
-
     p {
         text-align: justify;
         font-weight: 300;
@@ -125,19 +126,13 @@
         }
     }
 
-    /* Green Theme */
-    /* .about-social-media img { 
-    margin: 60% 1rem 0 1rem;
-    width: 5rem;
-    } */
-
     .about-social-media {
 
         i {
             font-size: 3rem;
             transition: color .2s;
             margin: 60% 1rem 0 1rem;
-            opacity: .6;
+            // opacity: .6;
             color: $media-icon-color;
 
             // /*  Neumorphism Theme */
@@ -155,52 +150,4 @@
             transition: all 0.7s ease-in-out;
         }
     }
-
 }
-
-/*
-.myskills-button {
-    cursor: pointer;
-    text-align: center;
-    bottom: 0;
-    margin: 0 auto;
-    height: 4rem;
-    border-radius: 40rem;
-    width: 30%;
-    transform: translate(0, 150%);
-    background: $theme-background;
-    opacity: .5;
-
-    @media all and (max-width: $screen_md_2) {
-        width: 40%;
-        opacity: .7;
-    }
-
-    @media all and (max-width: $screen_sm) {
-        opacity: .8;
-        transform: translate(0, 80%);
-    }
-}
-
-.myskills-button a p {
-    color: $theme-dark-color;
-    font-size: 1.5rem;
-    transform: translate(0, 35%);
-}
-
-.myskills-button:hover {
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-    // -webkit-box-shadow:
-    //     0px 0px 8px 0px var(--pri-color);
-    // -moz-box-shadow:
-    //     0px 0px 8px 0px var(--pri-color);
-    box-shadow:
-        0px 0px 8px 0px $theme-light-color;
-}
-
-.myskills-button:hover p {
-    transition: all 0.3s ease-in-out;
-    color: $theme-light-color;
-}
-*/
