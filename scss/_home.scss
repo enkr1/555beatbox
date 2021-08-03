@@ -225,7 +225,7 @@
 
 .bg-slide-to-right:hover .action-text-1 {
     z-index: 1;
-    color: $theme-dark-color !important;
+    color: $theme-dark-color-2 !important;
     transition: all .1s ease-in-out !important;
 }
 
@@ -243,6 +243,6 @@
 
 .bg-slide-to-left:hover .action-text-3 {
     z-index: 1;
-    color: $theme-dark-color !important;
+    color: $theme-dark-color-2 !important;
     transition: all .1s ease-in-out !important;
 }

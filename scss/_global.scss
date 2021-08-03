@@ -121,7 +121,7 @@ a {
     transition: all .2s ease-in-out;
 
     &:hover {
-        color: $theme-dark-color;
+        color: $theme-dark-color-2;
     }
 }
 
@@ -167,7 +167,7 @@ img {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $theme-dark-color;
+    background: $theme-dark-color-2;
     border-radius: 2rem;
     box-shadow: $neumorphism-box-shadow;
 }
@@ -185,7 +185,7 @@ img {
 span {
     opacity: 0.6;
     transition: all .3s ease;
-    color: $theme-dark-color;
+    color: $theme-dark-color-2;
 }
 
 .container {
@@ -206,7 +206,7 @@ span {
 
 .section-heading h1 {
     font-size: 3.5rem;
-    color: $theme-color;
+    color: $dark-gold;
     opacity: 0.8;
     text-transform: uppercase;
     font-weight: 300;

@@ -457,7 +457,7 @@ span {
 
 .section-heading h1 {
   font-size: 3.5rem;
-  color: #EF3340;
+  color: #9e8437;
   opacity: 0.8;
   text-transform: uppercase;
   font-weight: 300;
@@ -1794,7 +1794,6 @@ box-shadow:
 /* interactive anim, exp */
 .contact {
   margin: 0 !important;
-  /*  Neumorphism Theme */
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -1904,7 +1903,7 @@ select:-webkit-autofill:focus {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  border-bottom: 1px solid #EF3340;
+  border-bottom: 1px solid #9e8437;
 }
 .name-section label span,
 .email-section label span,
@@ -1921,7 +1920,7 @@ select:-webkit-autofill:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid #fad25a;
+  border-bottom: 2px solid #9e8437;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform .6s ease;
@@ -1954,7 +1953,7 @@ select:-webkit-autofill:focus {
 .message-section textarea:focus + .label-message .content-message,
 .message-section textarea:valid + .label-message .content-message {
   top: 0;
-  color: #fad25a;
+  color: #9e8437;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -2106,6 +2105,7 @@ input.contact-submit-btn:active {
   padding: 1rem;
 }
 .main-footer .contact-social-media p {
+  color: #9e8437;
   font-size: 1.8rem;
   text-transform: uppercase;
 }

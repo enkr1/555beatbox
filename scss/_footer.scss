@@ -2,7 +2,7 @@
 .main-footer {
     width: 100%;
     text-align: center;
-    background-color: $theme-dark-color;
+    background-color: $theme-dark-color-2;
     padding: .5% 0 4rem 0;
     position: relative;
 
@@ -41,6 +41,8 @@
     .contact-social-media {
         // margin: 5rem 0;
         p {
+            // TODO: Create dark-gold class is better?
+            color: $theme-dark-color-1;
             font-size: 1.8rem;
             text-transform: uppercase;
         }
@@ -111,7 +113,7 @@
     }
 
     i {
-        color: $theme-dark-color;
+        color: $theme-dark-color-2;
         font-size: 2rem;
         margin: 1.3rem auto;
 

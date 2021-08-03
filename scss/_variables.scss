@@ -12,17 +12,22 @@ $screen_sm: 768px;
 $screen_xs: 480px;
 $screen_xxs: 320px;
 
-// sec-color
+
 // From 555 logo
 $singapore-red: #EF3340;
 $metallic-gold: #fad25a;
+$gold-with-opacity: #fad25a80;
+$dark-gold: #9e8437;
+
+
 $theme-color: $singapore-red; // OLD ED1D24 / A8CABA / 9796f0
 // pri-color
 $theme-light-color: $metallic-gold; // e7362c
-$theme-light-color-opacity: #fad25a80; // e7362c
+$theme-light-color-opacity: $gold-with-opacity; // e7362c
 // $theme-light-color: rgba(220, 40, 30, 0.7);
 // third-color
-$theme-dark-color: #121212; // OLD 44415d
+$theme-dark-color-1: $dark-gold; // 9e8437
+$theme-dark-color-2: #121212; // OLD 44415d
 
 $nav-bar-font-color: grey;
 
@@ -39,7 +44,7 @@ $theme-light-background-color: white;
 
 // LOGO TEXT ATTRIBUTES
 // Currently is the ENKR text, <a>
-$logo-color: $theme-dark-color;
+$logo-color: $theme-dark-color-2;
 $logo-text-font-size: 2rem;
 $logo-text-letter-spacing: .1rem;
 
@@ -53,13 +58,13 @@ $neumorphism-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
 0 41.8px 33.4px rgba(0, 0, 0, 0.096),
 0 100px 80px rgba(0, 0, 0, 0.22);
 
-$theme-gradient: linear-gradient(0deg, $theme-color, $theme-dark-color);
+$theme-gradient: linear-gradient(0deg, $theme-color, $theme-dark-color-2);
 
 // --background
-$theme-background: linear-gradient(0deg, $theme-color, $theme-dark-color) no-repeat center fixed;
+$theme-background: linear-gradient(0deg, $theme-color, $theme-dark-color-2) no-repeat center fixed;
 // --mobile-bar-color
-$theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color, $theme-color, $theme-light-color);
+$theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color-2, $theme-color, $theme-light-color);
 // --mobile-bar-bg
-$theme-mobile-bar-bg: linear-gradient(45deg, $theme-dark-color, $theme-color);
+$theme-mobile-bar-bg: linear-gradient(45deg, $theme-dark-color-2, $theme-color);
 $desktop-secondary-nav-bar-color-light: linear-gradient(45deg, $theme-light-color, $theme-color);
-$desktop-secondary-nav-bar-color-dark: linear-gradient(90deg, $theme-dark-color, $theme-color);
+$desktop-secondary-nav-bar-color-dark: linear-gradient(90deg, $theme-dark-color-2, $theme-color);
