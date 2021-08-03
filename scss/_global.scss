@@ -84,7 +84,9 @@ body.portfolio-body {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
+    height: -moz-max-content;
+    height: fit-content !important;
     padding: 0 0 6rem 0;
 }
 

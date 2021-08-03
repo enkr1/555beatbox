@@ -338,7 +338,11 @@ body.portfolio-body {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
+  height: -moz-max-content;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
   padding: 0 0 6rem 0;
 }
 
