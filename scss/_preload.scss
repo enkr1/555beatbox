@@ -9,7 +9,7 @@
     .preload-top {
         top: 0;
         height: 50vh;
-        background-color: $theme-dark-color;
+        background-color: $theme-dark-color-2;
         width: 100vw;
         // transform-origin: top left;
         // transform-style: preserve-3D;
@@ -18,7 +18,7 @@
     .preload-bot {
         bottom: 0;
         height: 50vh;
-        background-color: $theme-dark-color;
+        background-color: $theme-dark-color-2;
         width: 100vw;
         // transform-origin: bottom right;
         // transform-style: preserve-3D;
@@ -30,7 +30,7 @@
         height: 100vh;
         width: 100vw;
         // backdrop-filter: blur(2rem);
-        background-color: $theme-dark-color;
+        background-color: $theme-dark-color-2;
         opacity: .8;
     }
 

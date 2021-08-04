@@ -8,19 +8,16 @@ GitHub: @enkr1, Instagram: @enkr1
 // Global and reusable 
 @import "animations";
 @import "global";
-@import "reusable";
 
 // Sections
 @import "preload";
 @import "header";
 @import "home";
 @import "about";
+// TODO: Add lesson
+@import "event";
 @import "specialization";
-@import "experience";
-@import "portfolio";
 @import "contact";
 @import "footer";
-@import "old";
-@import "interest";
 
 // ...

@@ -12,28 +12,43 @@ $screen_sm: 768px;
 $screen_xs: 480px;
 $screen_xxs: 320px;
 
-// sec-color
-$theme-color: #9796f0; // OLD A8CABA / 9796f0
+
+// From 555 logo
+$singapore-red: #EF3340;
+$metallic-gold: #fad25a;
+$gold-with-opacity: #fad25a80;
+$dark-gold: #9e8437;
+
+
+$theme-color: $singapore-red; // OLD ED1D24 / A8CABA / 9796f0
 // pri-color
-$theme-light-color: #dbcde4; // OLD rgb(255, 255, 255)
+$theme-light-color: $metallic-gold; // e7362c
+$theme-light-color-opacity: $gold-with-opacity; // e7362c
+// $theme-light-color: rgba(220, 40, 30, 0.7);
 // third-color
-$theme-dark-color: #242449; // OLD 44415d
+$theme-dark-color-1: $dark-gold; // 9e8437
+$theme-dark-color-2: #121212; // OLD 44415d
+
+$nav-bar-font-color: grey;
 
 // --- Text scheme ---
 // main-p-color
-$theme-font-color: #dedef5; // OLD ddfff8
+// $theme-font-color: #851515; // OLD ddfff8
+$theme-font-color: #292929; // OLD ddfff8
 //#BE93C5
 $theme-h1-color: rgba(255, 255, 255, 0.2);
 
-$theme-small-title-color: #8d8da8;
+$theme-small-title-color: #b1b1b4;
+$theme-dark-background-color: #292929;
+$theme-light-background-color: white;
 
 // LOGO TEXT ATTRIBUTES
 // Currently is the ENKR text, <a>
-$logo-color: $theme-light-color;
+$logo-color: $theme-dark-color-2;
 $logo-text-font-size: 2rem;
-$logo-text-letter-spacing: .6rem;
+$logo-text-letter-spacing: .1rem;
 
-$media-icon-color: #e0e0f7;
+$media-icon-color: #ffffff;
 
 // https://css-tricks.com/almanac/properties/b/box-shadow/
 $neumorphism-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
@@ -43,13 +58,13 @@ $neumorphism-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
 0 41.8px 33.4px rgba(0, 0, 0, 0.096),
 0 100px 80px rgba(0, 0, 0, 0.22);
 
-$theme-gradient: linear-gradient(0deg, $theme-color, $theme-dark-color);
+$theme-gradient: linear-gradient(0deg, $theme-color, $theme-dark-color-2);
 
 // --background
-$theme-background: linear-gradient(0deg, $theme-color, $theme-dark-color) no-repeat center fixed;
+$theme-background: linear-gradient(0deg, $theme-color, $theme-dark-color-2) no-repeat center fixed;
 // --mobile-bar-color
-$theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color, $theme-color, $theme-light-color);
+$theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color-2, $theme-color, $theme-light-color);
 // --mobile-bar-bg
-$theme-mobile-bar-bg: linear-gradient(45deg, $theme-dark-color, $theme-color);
+$theme-mobile-bar-bg: linear-gradient(45deg, $theme-dark-color-2, $theme-color);
 $desktop-secondary-nav-bar-color-light: linear-gradient(45deg, $theme-light-color, $theme-color);
-$desktop-secondary-nav-bar-color-dark: linear-gradient(90deg, $theme-dark-color, $theme-color);
+$desktop-secondary-nav-bar-color-dark: linear-gradient(90deg, $theme-dark-color-2, $theme-color);

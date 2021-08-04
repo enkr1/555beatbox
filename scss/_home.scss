@@ -9,6 +9,44 @@
 
     $home-landing-logo-width: 100em;
 
+    #svg-beatbox {
+        svg {
+            // backdrop-filter: invert(1);
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100em;
+            fill: $theme-color;
+
+            // small laptop
+            @media all and (max-width: $screen_md_1) {
+                width: 70em;
+            }
+
+            // tablet
+            @media all and (max-width: $screen_sm) {
+                width: 40em;
+            }
+
+            // mobile 
+            @media all and (max-width: $screen_xs) {
+                width: 30em;
+            }
+
+            @media all and (max-width: $screen_xxs) {
+                width: 26em;
+            }
+
+            path {
+                animation: line-anime 5s ease forwards .8s;
+            }
+        }
+
+    }
+
+
     .logo {
         width: $home-landing-logo-width;
         user-select: none;
@@ -32,29 +70,6 @@
 
         @media all and (max-width: $screen_xs) {
             width: $home-landing-logo-width - 70em;
-        }
-    }
-
-    h6.main-h6 {
-        font-family: monospace;
-        transform: translateY(12rem);
-        font-size: 2.2rem;
-        font-weight: 300;
-        color: $theme-font-color;
-
-        @media all and (max-width: $screen_lg) {
-            font-size: 1.8rem;
-            transform: translateY(11rem);
-        }
-
-        @media all and (max-width: $screen_md_2) {
-            font-size: 1.5rem;
-            transform: translateY(8rem);
-        }
-
-        @media all and (max-width: $screen_sm) {
-            font-size: 1.2rem;
-            transform: translateY(5rem);
         }
     }
 
@@ -210,7 +225,7 @@
 
 .bg-slide-to-right:hover .action-text-1 {
     z-index: 1;
-    color: $theme-dark-color !important;
+    color: $theme-dark-color-2 !important;
     transition: all .1s ease-in-out !important;
 }
 
@@ -228,6 +243,6 @@
 
 .bg-slide-to-left:hover .action-text-3 {
     z-index: 1;
-    color: $theme-dark-color !important;
+    color: $theme-dark-color-2 !important;
     transition: all .1s ease-in-out !important;
 }
