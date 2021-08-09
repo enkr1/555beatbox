@@ -1545,11 +1545,6 @@ box-shadow:
   transition: all 0.7s ease-in-out;
 }
 
-#lesson {
-  background-color: white;
-  z-index: 2;
-}
-
 /*Start event*/
 .event {
   height: -webkit-fit-content;
