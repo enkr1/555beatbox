@@ -416,7 +416,7 @@ img {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fad25a;
+  background: white;
   opacity: .1;
 }
 
@@ -1399,8 +1399,8 @@ box-shadow:
   padding: 0 20vw;
   background: url("https://cdn.discordapp.com/attachments/872089222356545566/872090804208939089/555_fam_001_compressed.jpg") no-repeat center fixed;
   background-color: #292929;
-  -webkit-box-shadow: inset 0 0 100vw 100vh #ffffff98;
-          box-shadow: inset 0 0 100vw 100vh #ffffff98;
+  -webkit-box-shadow: inset 0 0 100vw 100vh #f1efe360;
+          box-shadow: inset 0 0 100vw 100vh #f1efe360;
   background-size: cover !important;
   -webkit-transition: all .6s ease-in-out;
   transition: all .6s ease-in-out;
@@ -1485,11 +1485,11 @@ box-shadow:
 }
 .about .container .about-desc-container {
   padding: .4rem;
-  border: 1px solid #f1e8d199;
+  border: 1px solid #f7f5ec99;
 }
 .about .container .about-desc-container > div {
   padding: 2rem 3rem;
-  background-color: #f1e8d199;
+  background-color: #f7f5ec99;
 }
 .about .container .about-desc-container p {
   text-align: justify;
@@ -2088,7 +2088,7 @@ input.contact-submit-btn:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 1rem .4rem;
+  padding: 1rem .4rem 5rem .4rem;
 }
 @media all and (max-width: 992px) {
   .main-footer .footer-nav-container {
@@ -2145,10 +2145,12 @@ input.contact-submit-btn:active {
 }
 
 .up {
+  mix-blend-mode: luminosity;
   position: fixed;
   height: 5rem;
   width: 5rem;
-  background-color: #EF3340;
+  background-color: #9e8437;
+  opacity: .8;
   top: 89vh;
   right: 3%;
   border-radius: 100%;
@@ -2157,8 +2159,8 @@ input.contact-submit-btn:active {
   /* animation: pulse 2s infinite; */
   z-index: 500;
   /*  Neumorphism Theme */
-  -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 20px -1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 20px -1px rgba(110, 110, 110, 0.4);
+          box-shadow: 0px 0px 20px -1px rgba(110, 110, 110, 0.4);
 }
 @media all and (max-width: 768px) {
   .up {
@@ -2179,15 +2181,14 @@ input.contact-submit-btn:active {
     margin-top: 1rem;
   }
 }
-
 .up:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
   /* Neumorphism */
-  -webkit-box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.6);
-          box-shadow: 0px 0px 20px 0px rgba(255, 255, 255, 0.6);
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(110, 110, 110, 0.6);
+          box-shadow: 0px 0px 20px 0px rgba(110, 110, 110, 0.6);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 .main-footer p {

@@ -26,7 +26,7 @@
     .footer-nav-container {
         display: flex;
         flex-direction: row;
-        padding: 1rem .4rem;
+        padding: 1rem .4rem 5rem .4rem;
 
         @media all and (max-width: $screen_md_2) {
             flex-direction: column;
@@ -39,6 +39,7 @@
     }
 
     .contact-social-media {
+
         // margin: 5rem 0;
         p {
             // TODO: Create dark-gold class is better?
@@ -89,10 +90,12 @@
 }
 
 .up {
+    mix-blend-mode: luminosity;
     position: fixed;
     height: 5rem;
     width: 5rem;
-    background-color: $theme-color;
+    background-color: $theme-dark-color-1;
+    opacity: .8;
     top: 89vh;
     right: 3%;
     border-radius: 100%;
@@ -103,7 +106,7 @@
 
     /*  Neumorphism Theme */
     box-shadow:
-        0px 0px 20px -1px rgba(0, 0, 0, 0.4);
+        0px 0px 20px -1px rgba(110, 110, 110, 0.4);
 
     @media all and (max-width: $screen_sm) {
         height: 4rem;
@@ -123,15 +126,16 @@
         }
 
     }
+
+    &:hover {
+        transform: scale(.95);
+        /* Neumorphism */
+        box-shadow:
+            0px 0px 20px 0px rgba(110, 110, 110, 0.6);
+        transition: all .5s ease-in-out;
+    }
 }
 
-.up:hover {
-    transform: scale(.95);
-    /* Neumorphism */
-    box-shadow:
-        0px 0px 20px 0px rgba(255, 255, 255, 0.6);
-    transition: all .6s ease-in-out;
-}
 
 
 .main-footer p {
