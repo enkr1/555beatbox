@@ -34,6 +34,7 @@
 
 
 .about {
+    padding: 0 !important;
 
     .img-container {
         display: flex;
@@ -53,10 +54,10 @@
         z-index: -1;
 
         .about-svg-container {
+            mix-blend-mode: color-burn;
             transform: translateY(-170%);
 
             svg {
-                mix-blend-mode: color-burn;
                 width: 60rem;
 
                 // small laptop
@@ -81,145 +82,144 @@
             }
         }
     }
-}
 
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: unset; // Previously was 80vw
+        height: 100vh;
+        padding: 0 20vw;
 
-.about .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: unset; // Previously was 80vw
-    height: 100vh;
-    padding: 0 20vw;
+        // background: url("https://cdn.discordapp.com/attachments/872089222356545566/872090804208939089/555_fam_001_compressed.jpg") no-repeat center fixed;
+        // background-color: $theme-dark-background-color;
+        // background-color: transparent;
+        // box-shadow: inset 0 0 100vw 100vh #f1efe360;
+        // background-size: cover !important; // TODO: Uncomment this
+        // border-radius: 10rem;
+        // transition: opacity .1s ease-in-out;
+        // z-index: -1;
 
-    // background: url("https://cdn.discordapp.com/attachments/872089222356545566/872090804208939089/555_fam_001_compressed.jpg") no-repeat center fixed;
-    // background-color: $theme-dark-background-color;
-    // background-color: transparent;
-    // box-shadow: inset 0 0 100vw 100vh #f1efe360;
-    // background-size: cover !important; // TODO: Uncomment this
-    // border-radius: 10rem;
-    // transition: opacity .1s ease-in-out;
-    // z-index: -1;
+        @media all and (max-width: $screen_sm) {
+            flex-direction: column;
 
-    @media all and (max-width: $screen_sm) {
-        flex-direction: column;
-
-        &.about-section {
-            height: auto;
-        }
-    }
-
-    .about-heading {
-        text-align: center;
-        text-transform: uppercase;
-        line-height: 0;
-        margin-bottom: 6rem;
-        color: $theme-color;
-
-
-        // TODO: NEED TO DOUBLE CHECK
-        @media all and (max-width: $screen_md_2) {
-
-            // nav-list is used for the about's social media icons too
-            .nav-list {
-                flex-direction: row;
-            }
-
-            li {
-                margin: 0 2rem;
+            &.about-section {
+                height: auto;
             }
         }
 
-        h1 {
-            z-index: -1;
-            font-size: 28rem;
-            /* Neumorphism Theme */
-            // TODO:  make the color like the curse
-            color: $theme-h1-color;
+        .about-heading {
+            text-align: center;
+            text-transform: uppercase;
+            line-height: 0;
+            margin-bottom: 6rem;
+            color: $theme-color;
 
-            // https://stackoverflow.com/questions/58133329/how-to-use-css-backdrop-filter-on-text
-            // backdrop-filter: grayscale(1);
 
-            @media all and (max-width: $screen_md_1) {
-                font-size: 8rem;
-            }
-        }
-
-        h6 {
-            z-index: 1 !important;
-            font-family: monospace;
-            color: $theme-font-color;
-            font-size: 4rem;
-            font-weight: 300;
-            margin-top: .45rem;
-
+            // TODO: NEED TO DOUBLE CHECK
             @media all and (max-width: $screen_md_2) {
+
+                // nav-list is used for the about's social media icons too
+                .nav-list {
+                    flex-direction: row;
+                }
+
+                li {
+                    margin: 0 2rem;
+                }
+            }
+
+            h1 {
+                z-index: -1;
+                font-size: 28rem;
+                /* Neumorphism Theme */
+                // TODO:  make the color like the curse
+                color: $theme-h1-color;
+
+                // https://stackoverflow.com/questions/58133329/how-to-use-css-backdrop-filter-on-text
+                // backdrop-filter: grayscale(1);
+
+                @media all and (max-width: $screen_md_1) {
+                    font-size: 8rem;
+                }
+            }
+
+            h6 {
+                z-index: 1 !important;
+                font-family: monospace;
+                color: $theme-font-color;
+                font-size: 4rem;
+                font-weight: 300;
+                margin-top: .45rem;
+
+                @media all and (max-width: $screen_md_2) {
+                    font-size: 3rem;
+                    margin-top: .3rem;
+                }
+            }
+        }
+
+        .about-desc-container {
+            z-index: 2;
+            // mix-blend-mode: overlay;
+            padding: .4rem;
+            // $temp-desc-container-color: #f1e8d199;
+            $temp-desc-container-color: #f7f5ec99;
+            border: 1px solid $temp-desc-container-color;
+
+            >div {
+                padding: 2rem 3rem;
+                background-color: $temp-desc-container-color;
+            }
+
+            p {
+                text-align: justify;
+                font-weight: 600;
+
+                @media all and (max-width: $screen_sm) {
+                    padding: 0 2rem;
+                    line-height: 1.6;
+                    padding: 0 auto;
+                }
+            }
+
+            // &::before,
+            // &::after {
+            //     content: '';
+            //     display: block;
+            //     width: 10rem;
+            //     height: 1rem;
+            //     background-color: darkslateblue;
+            // }
+        }
+
+        .about-social-media {
+
+            i,
+            img {
                 font-size: 3rem;
-                margin-top: .3rem;
+                transition: color .2s;
+                margin: 60% 1rem 0 1rem;
+                color: $media-icon-color;
+
+                // /*  Neumorphism Theme */
+                // box-shadow: $neumorphism-box-shadow;
+
+                @media all and (max-width: $screen_sm) {
+                    /* margin-top: 100%; */
+                    margin: 100% 0 0 0;
+                    /* width: 4rem; */
+                }
             }
-        }
-    }
 
-    .about-desc-container {
-        z-index: 2;
-        // mix-blend-mode: overlay;
-        padding: .4rem;
-        // $temp-desc-container-color: #f1e8d199;
-        $temp-desc-container-color: #f7f5ec99;
-        border: 1px solid $temp-desc-container-color;
-
-        >div {
-            padding: 2rem 3rem;
-            background-color: $temp-desc-container-color;
-        }
-
-        p {
-            text-align: justify;
-            font-weight: 600;
-
-            @media all and (max-width: $screen_sm) {
-                padding: 0 2rem;
-                line-height: 1.6;
-                padding: 0 auto;
+            img {
+                width: 3rem;
             }
-        }
 
-        // &::before,
-        // &::after {
-        //     content: '';
-        //     display: block;
-        //     width: 10rem;
-        //     height: 1rem;
-        //     background-color: darkslateblue;
-        // }
-    }
-
-    .about-social-media {
-
-        i,
-        img {
-            font-size: 3rem;
-            transition: color .2s;
-            margin: 60% 1rem 0 1rem;
-            color: $media-icon-color;
-
-            // /*  Neumorphism Theme */
-            // box-shadow: $neumorphism-box-shadow;
-
-            @media all and (max-width: $screen_sm) {
-                /* margin-top: 100%; */
-                margin: 100% 0 0 0;
-                /* width: 4rem; */
+            i:hover {
+                opacity: 1;
+                transition: all 0.7s ease-in-out;
             }
-        }
-
-        img {
-            width: 3rem;
-        }
-
-        i:hover {
-            opacity: 1;
-            transition: all 0.7s ease-in-out;
         }
     }
 }
