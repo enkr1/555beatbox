@@ -40,7 +40,7 @@ $theme-h1-color: rgba(255, 255, 255, 0.2);
 
 $theme-small-title-color: #b1b1b4;
 $theme-dark-background-color: #292929;
-$theme-light-background-color:  rgba(255, 255, 255, 1);
+$theme-light-background-color: rgba(255, 255, 255, 1);
 
 // LOGO TEXT ATTRIBUTES
 // Currently is the ENKR text, <a>
@@ -49,6 +49,9 @@ $logo-text-font-size: 2rem;
 $logo-text-letter-spacing: .1rem;
 
 $media-icon-color: #ffffff;
+
+// WIP: TEMP VARIABLE
+$temp-desc-container-color: #f7f5ec99;
 
 // https://css-tricks.com/almanac/properties/b/box-shadow/
 $neumorphism-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),

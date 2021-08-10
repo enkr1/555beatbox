@@ -1607,8 +1607,7 @@ box-shadow:
 .event .event-item .event-img-div img {
   width: 100%;
   /*  Neumorphism Theme */
-  -webkit-box-shadow: 0px 0px 29px -5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 29px -5px rgba(0, 0, 0, 0.5);
+  border: 2px solid #f7f5ec99;
 }
 .event .event-item .event-description {
   -webkit-box-flex: 2;
