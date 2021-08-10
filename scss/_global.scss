@@ -83,17 +83,6 @@ body {
     transition: all .6s ease-in-out;
 }
 
-// #all-sections {
-//     background-color: $theme-light-background-color;
-// }
-
-section {
-    min-height: 100vh;
-    height: -moz-max-content;
-    height: fit-content !important;
-    padding: 0 0 6rem 0;
-}
-
 // TODO: CONSTRUCTION
 #construction {
     h1 {
@@ -192,6 +181,17 @@ span {
     color: $theme-dark-color-2;
 }
 
+// #all-sections {
+//     background-color: $theme-light-background-color;
+// }
+
+section {
+    min-height: 100vh;
+    height: -moz-max-content;
+    height: fit-content !important;
+    padding: 0 0 6rem 0;
+}
+
 .container {
     width: 100%;
     max-width: 80vw;
@@ -205,7 +205,6 @@ span {
     margin: 2rem 0;
     // This is a hack to get the heading to center.
     padding-top: 10rem;
-    border-radius: 1rem;
 }
 
 .section-heading h1 {
@@ -352,7 +351,7 @@ span {
 // For js body
 .hide-all-in-body {
     opacity: 0;
-    transition: all .6 ease-in-out; // TODO: Double check does it work 
+    // display: none;
 }
 
 // for js preload
