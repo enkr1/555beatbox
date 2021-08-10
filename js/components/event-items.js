@@ -1,10 +1,11 @@
 class Event {
-    constructor(name, date, desc, imgSrc, ridirectionPath) {
+    constructor(name, date, desc, imgSrc, ridirectionPath, buttonName) {
         this.name = name;
         this.date = date;
         this.desc = desc;
         this.imgSrc = imgSrc;
         this.ridirectionPath = ridirectionPath;
+        this.buttonName = buttonName ?? "view";
     }
 
     // images/coming-soon.jpg
@@ -20,7 +21,7 @@ class Event {
                 <h6>${this.date}</h6>
                 <h1>${this.name}</h1>
                 <p>${this.desc}</p>` +
-            `<a target="_blank" href="${this.ridirectionPath}" class="cta">view</a>
+            `<a target="_blank" href="${this.ridirectionPath}" class="cta">${this.buttonName}</a>
                 </div>
             </div>`;
 
@@ -36,7 +37,8 @@ listOfEvents.push(
         "09 Nov 2021",
         "We are rising 555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://cdn.discordapp.com/attachments/826877621061156904/826879203403759686/33.jpg",
-        "https://enkr1.github.io"),
+        "https://enkr1.github.io",
+        "sign up"),
     new Event("Radiance 2",
         "18 Jan 2020",
         "We are rising 555555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
