@@ -40,9 +40,7 @@
 
     .contact-social-media {
 
-        // margin: 5rem 0;
         p {
-            // TODO: Create dark-gold class is better?
             color: $theme-dark-color-1;
             font-size: 1.8rem;
             text-transform: uppercase;
@@ -57,31 +55,22 @@
             }
 
             li {
+                margin: 0 1rem;
+
                 @media all and (max-width: $screen_md_2) {
                     display: inline-block;
                 }
 
-                a {
-                    color: $theme-color;
+                .icon-link {
 
                     @media all and (max-width: $screen_md_2) {
                         margin: 0 2rem;
                     }
 
-                    i {
-                        font-size: 3rem;
-                        transition: color 650ms;
-                        margin: 0 1rem;
-
-                        // /*  Neumorphism Theme */
-                        // box-shadow:
-                        //     0px 0px 32px 10px rgba(0, 0, 0, 0.2);
-
-                        @media all and (max-width: $screen_sm) {
-                            font-size: 3rem;
-                            margin: 0 -0.6rem;
-                        }
+                    img {
+                        width: 3em !important;
                     }
+
                 }
             }
         }

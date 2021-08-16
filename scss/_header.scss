@@ -49,6 +49,7 @@ header {
             @media all and (max-width: $screen_md_2) {
                 font-size: 1.1rem;
                 display: block;
+                color: rgba(255, 255, 255, 0.5) !important;
             }
         }
     }
@@ -122,15 +123,15 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }
 
-            i {
                 font-size: 1.6rem;
                 color: $nav-bar-font-color;
                 transition: color .4s;
 
+                // Apply when reach $screen_md_2 (992).
                 @media all and (max-width: $screen_md_2) {
-                    // margin: 0 1rem;
+                    font-size: 1.8rem !important;
+                    color: rgba(255, 255, 255, 0.7) !important;
                 }
             }
 
@@ -178,6 +179,7 @@ header {
 
             // Top menu social media icons
             &.icon-link {
+                font-weight: normal !important;
                 padding: .6rem 1.4rem;
             }
 
@@ -190,9 +192,11 @@ header {
             //     color: $theme-font-color;
             // }
 
+            // Apply when reach $screen_md_2 (992).
             @media all and (max-width: $screen_md_2) {
                 font-size: 1.8rem;
                 letter-spacing: .1rem;
+                color: rgba(255, 255, 255, 0.7) !important;
 
                 p {
                     font-size: 1.2rem;
@@ -265,11 +269,12 @@ li {
     transform: rotate(-270deg);
 }
 
+// TODO: Mobile menu icon redesign.
 .bar {
     background: $theme-mobile-bar-color;
     width: 100%;
     height: 3px;
-    border-radius: .8rem;
+    border-radius: .2rem;
     // -webkit-box-shadow:
     //     0px 0px 12px 0px var(--third-color);
     // -moz-box-shadow:

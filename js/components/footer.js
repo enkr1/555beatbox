@@ -43,23 +43,27 @@ class Footer extends HTMLElement {
             <ul class="nav-list contact-social-media-ul">
                 <li>
                     <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152" class="icon-link">
-                        <i class="fab fa-facebook-square"></i></a>
+                        <img src="images/svg/facebook-logo-coloured.svg" alt="555 Beatbox Initiative | Facebook">
+                    </a>
                 </li>
 
                 <li>
                     <a target="_blank" href="https://www.instagram.com/555beatboxsg/" class="icon-link">
-                        <i class="fab fa-instagram"></i></a>
+                        <img src="images/svg/instagram-logo-coloured.svg" alt="555 Beatbox Initiative | Instagram">
+                    </a>
                 </li>
 
                 <li>
                     <a target="_blank" href="https://www.youtube.com/channel/UC6jcQdnBe8A6nhaubvY6xNw"
                         class="icon-link">
-                        <i class="fab fa-youtube-square"></i></a>
+                        <img src="images/svg/youtube-logo-coloured.svg" alt="555 Beatbox Initiative | YouTube">
+                    </a>
                 </li>
 
                 <li>
                     <a href="mailto:555beatboxsg@gmail.com" class="icon-link">
-                        <i class="far fa-envelope"></i></a>
+                        <img src="images/envelope-logo-coloured.png" alt="555 Beatbox Initiative | YouTube">
+                    </a>
                 </li>
             </ul>
         </div>

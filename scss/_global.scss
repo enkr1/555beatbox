@@ -1,10 +1,7 @@
 /*Start global*/
 /* https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css */
 
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&display=swap');
-
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
@@ -27,14 +24,7 @@
 
 html {
     font-size: 62.5%;
-
-    // 1
-    // font-family: 'Open Sans', sans-serif;
-
-    // 2
     font-family: 'DM Sans', sans-serif;
-    font-family: 'Open Sans', sans-serif;
-
 
     color: $theme-font-color;
     overflow-x: hidden;
