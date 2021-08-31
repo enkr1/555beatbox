@@ -1,8 +1,24 @@
 /*Start event*/
 // TODO: Simplify the scss for enkr1 too
 .event {
-    height: fit-content;
-    padding-bottom: 10em;
+    picture.event-bg-picture {
+        position: absolute;
+
+        img {
+            height: 100vh !important;
+            width: 100vw !important;
+            object-fit: fill;
+        }
+    }
+
+    // background: url("/images/backgrounds/black_brick_wall.png") no-repeat center fixed;
+    background-color: white;
+    height: 100vh !important;
+    width: 100%;
+
+    .container {
+        padding: 10vh 5vw;
+    }
 
     @media all and (max-width: $screen_sm) {
         .section-heading {
@@ -11,17 +27,15 @@
     }
 
     .event-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10rem 0;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        height: 80vh;
+        width: 90vw;
+        cursor: grab;
 
-        &.odd {
-            flex-direction: row;
-        }
-
-        &.even {
-            flex-direction: row-reverse;
+        &:active {
+            cursor: grabbing;
         }
 
         @media all and (max-width: $screen_sm) {
@@ -29,71 +43,123 @@
             flex-direction: column !important;
         }
 
-        &:last-child {
-            margin-bottom: 0;
+        &:hover {
+
+            // NOTE: There is a space between & and the class!
+            & .event-content {
+                & .event-title {
+                    transform: translateY(0);
+                }
+
+                & .event-description {
+                    transform: translateY(0);
+                }
+            }
         }
 
-        .event-img-div {
-            flex: 3;
+        picture.event-img-div {
             transition: all 2s ease;
 
             // Only apply to screen bigger than 769px
             @media all and (min-width: $screen_sm + 1) {
-                &.odd {
-                    margin-right: 4rem;
-                }
-            }
-
-            img {
-                width: 100%;
-
-                /*  Neumorphism Theme */
-                // TODO: Set to variable
-                box-shadow: 0px 0px 29px -5px rgba(0, 0, 0, 0.5);
-            }
-        }
-
-        .event-description {
-            flex: 2;
-
-            @media all and (min-width: $screen_sm + 1) {
-                &.even {
-                    text-align: right;
-                    margin-right: 4rem;
-                }
-            }
-
-            @media all and (max-width: $screen_md_2) {
                 // ...
             }
 
-            @media all and (max-width: $screen_sm) {
-                // For debugging purpose only, remove it later.
-                // margin: 34rem;
-                // order: 2;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+                /*  Neumorphism Theme */
+                // TODO: Set to variable
+                // box-shadow: 0px 0px 29px -5px rgba(255, 255, 255, 0.5);
+                // border: 2px solid $temp-desc-container-color;
+
+            }
+        }
+
+        .event-content {
+            bottom: 0;
+            position: absolute;
+            padding: 3rem 2rem;
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+
+            // nav bar shows
+            @media all and (max-width: $screen_md_2) {
+                flex-direction: column !important;
             }
 
-            h6 {
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                font-weight: 300;
-                opacity: .3;
-            }
 
-            h1 {
-                font-size: 3rem;
+            h1.event-title {
+                flex: 50%;
+                mix-blend-mode: difference;
+                font-size: 6rem;
                 font-weight: 300;
+                -webkit-text-stroke: 2px white;
                 margin: 1rem 0;
+                // -webkit-text-stroke-color: $theme-color;
+
+                transform: translateY(-100vh);
+                transition: all .6s ease-in-out; // SAME 
             }
 
-            p {
+
+            .event-description {
+                flex: 50%;
+                padding: 2rem;
+                text-align: right;
+                background-color: rgba(0, 0, 0, 0.6);
+                transform: translateY(50vh);
+                transition: all .6s ease-in-out; // SAME 
+
+                @media all and (min-width: $screen_sm + 1) {
+                    // ...
+                }
+
+                // nav bar shows
+                @media all and (max-width: $screen_md_2) {
+                    text-align: left;
+                }
+
+                // NOTE: Apply once screen meets 768 and below
                 @media all and (max-width: $screen_sm) {
+                    // For debugging purpose only, remove it later.
+                    // margin: 34rem;
+                    // order: 2;
+                }
+
+                .event-date {
+                    mix-blend-mode: exclusion;
+                    color: #dadada;
+                    // color: transparent;
+                    // -webkit-text-stroke: 1px $theme-color;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    opacity: .6;
+                }
+
+                p {
+                    color: rgb(255, 255, 255);
                     text-align: justify;
-                    text-justify: inter-word;
+                    direction: rtl;
+
+                    @media all and (max-width: $screen_md_2) {
+                        direction: ltr;
+                    }
+                }
+
+                a {
+                    // direction: rtl;
+                    // @media all and (max-width: $screen_md_2) {
+                    // }
                 }
             }
         }
     }
+
 }
 
 .event-description .cta,

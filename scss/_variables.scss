@@ -6,7 +6,7 @@
 $screen_xl: 1440px;
 $screen_lg: 1281px;
 $screen_md_1: 1024px;
-$screen_md_2: 992px;
+$screen_md_2: 992px; // this is when the navbar shows
 /* tablet */
 $screen_sm: 768px;
 $screen_xs: 480px;
@@ -40,7 +40,7 @@ $theme-h1-color: rgba(255, 255, 255, 0.2);
 
 $theme-small-title-color: #b1b1b4;
 $theme-dark-background-color: #292929;
-$theme-light-background-color: white;
+$theme-light-background-color: rgba(255, 255, 255, 1);
 
 // LOGO TEXT ATTRIBUTES
 // Currently is the ENKR text, <a>
@@ -49,6 +49,9 @@ $logo-text-font-size: 2rem;
 $logo-text-letter-spacing: .1rem;
 
 $media-icon-color: #ffffff;
+
+// WIP: TEMP VARIABLE
+$temp-desc-container-color: #f7f5ec99;
 
 // https://css-tricks.com/almanac/properties/b/box-shadow/
 $neumorphism-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
@@ -63,7 +66,9 @@ $theme-gradient: linear-gradient(0deg, $theme-color, $theme-dark-color-2);
 // --background
 $theme-background: linear-gradient(0deg, $theme-color, $theme-dark-color-2) no-repeat center fixed;
 // --mobile-bar-color
-$theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color-2, $theme-color, $theme-light-color);
+// $theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color-2, $theme-dark-color-1, $theme-light-color);
+$theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color-2, $theme-dark-color-2, $theme-dark-color-2);
+// $theme-mobile-bar-color: linear-gradient(45deg, $theme-dark-color-2, $theme-dark-color-1, $theme-light-color);
 // --mobile-bar-bg
 $theme-mobile-bar-bg: linear-gradient(45deg, $theme-dark-color-2, $theme-color);
 $desktop-secondary-nav-bar-color-light: linear-gradient(45deg, $theme-light-color, $theme-color);

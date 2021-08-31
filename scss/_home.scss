@@ -40,7 +40,11 @@
             }
 
             path {
-                animation: line-anime 5s ease forwards .8s;
+                animation: line-anime 5s ease forwards 0s;
+                // fill: $theme-color;
+                // // fill: black;
+                // fill: #301717 !important;
+                // fill-opacity: 1;
             }
         }
 

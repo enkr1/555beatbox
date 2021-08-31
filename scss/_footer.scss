@@ -26,7 +26,7 @@
     .footer-nav-container {
         display: flex;
         flex-direction: row;
-        padding: 1rem .4rem;
+        padding: 1rem .4rem 5rem .4rem;
 
         @media all and (max-width: $screen_md_2) {
             flex-direction: column;
@@ -39,9 +39,9 @@
     }
 
     .contact-social-media {
-        // margin: 5rem 0;
-        p {
-            // TODO: Create dark-gold class is better?
+
+        p,
+        h6 {
             color: $theme-dark-color-1;
             font-size: 1.8rem;
             text-transform: uppercase;
@@ -52,35 +52,29 @@
 
             @media all and (max-width: $screen_md_2) {
                 text-align: center;
-                display: table;
+                display: flex;
+                justify-content: space-evenly;
+                margin: 2rem auto;
             }
 
             li {
+                margin: 0 1rem;
+
                 @media all and (max-width: $screen_md_2) {
                     display: inline-block;
+                    margin: unset;
                 }
 
-                a {
-                    color: $theme-color;
+                .icon-link {
 
                     @media all and (max-width: $screen_md_2) {
                         margin: 0 2rem;
                     }
 
-                    i {
-                        font-size: 3rem;
-                        transition: color 650ms;
-                        margin: 0 1rem;
-
-                        // /*  Neumorphism Theme */
-                        // box-shadow:
-                        //     0px 0px 32px 10px rgba(0, 0, 0, 0.2);
-
-                        @media all and (max-width: $screen_sm) {
-                            font-size: 3rem;
-                            margin: 0 -0.6rem;
-                        }
+                    img {
+                        width: 3em !important;
                     }
+
                 }
             }
         }
@@ -89,10 +83,12 @@
 }
 
 .up {
+    mix-blend-mode: luminosity;
     position: fixed;
     height: 5rem;
     width: 5rem;
-    background-color: $theme-color;
+    background-color: $theme-dark-color-1;
+    opacity: .8;
     top: 89vh;
     right: 3%;
     border-radius: 100%;
@@ -103,7 +99,7 @@
 
     /*  Neumorphism Theme */
     box-shadow:
-        0px 0px 20px -1px rgba(0, 0, 0, 0.4);
+        0px 0px 20px -1px rgba(110, 110, 110, 0.4);
 
     @media all and (max-width: $screen_sm) {
         height: 4rem;
@@ -123,15 +119,16 @@
         }
 
     }
+
+    &:hover {
+        transform: scale(.95);
+        /* Neumorphism */
+        box-shadow:
+            0px 0px 20px 0px rgba(110, 110, 110, 0.6);
+        transition: all .5s ease-in-out;
+    }
 }
 
-.up:hover {
-    transform: scale(.95);
-    /* Neumorphism */
-    box-shadow:
-        0px 0px 20px 0px rgba(255, 255, 255, 0.6);
-    transition: all .6s ease-in-out;
-}
 
 
 .main-footer p {

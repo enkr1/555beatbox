@@ -1,28 +1,35 @@
 class Event {
-    constructor(name, date, desc, imgSrc, ridirectionPath) {
+    constructor(name, date, desc, imgSrc, ridirectionPath, buttonName) {
         this.name = name;
         this.date = date;
         this.desc = desc;
         this.imgSrc = imgSrc;
         this.ridirectionPath = ridirectionPath;
+        this.buttonName = buttonName ?? "view";
     }
 
     // images/coming-soon.jpg
     display(index) {
-        let order = (index % 2 === 0) ? 'even' : 'odd';
-        this.imgSrc = "images/coming-soon.jpg";
+        // this.imgSrc = "images/coming-soon.jpg";
         let item =
-            `<div class="event-item ${order}">` +
-            `<div class="event-img-div ${order}">
-                    <img src="${this.imgSrc}" alt="Event Image" />
-                </div>` +
-            `<div class="event-description ${order}">
-                <h6>${this.date}</h6>
-                <h1>${this.name}</h1>
-                <p>${this.desc}</p>` +
-            `<a target="_blank" href="${this.ridirectionPath}" class="cta">view</a>
-                </div>
-            </div>`;
+            `<div class="event-item">` +
+
+            `<picture class="event-img-div">` +
+            `<img src="${this.imgSrc}" alt="Event Image" />` +
+            `</picture>` +
+
+            `<div class="event-content">` +
+            `<h1 class="event-title">${this.name}</h1>` +
+
+            `<div class="event-description">` +
+            `<span class="event-date">${this.date}</span>` +
+            `<p>${this.desc}</p>` +
+            `<a target="_blank" href="${this.ridirectionPath}" class="cta">${this.buttonName}</a>` +
+            `</div>` +
+
+            `</div>` +
+
+            `</div>`;
 
         return item;
     }
@@ -36,7 +43,8 @@ listOfEvents.push(
         "09 Nov 2021",
         "We are rising 555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://cdn.discordapp.com/attachments/826877621061156904/826879203403759686/33.jpg",
-        "https://enkr1.github.io"),
+        "https://enkr1.github.io",
+        "sign up"),
     new Event("Radiance 2",
         "18 Jan 2020",
         "We are rising 555555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
@@ -59,11 +67,21 @@ class EventItems extends HTMLElement {
     }
 
     connectedCallback() {
+        // this.innerHTML = "<div class='event-list'>";
         for (let i = 0; i < listOfEvents.length; i++) {
             this.innerHTML += listOfEvents[i].display(i + 1);
         }
+        // this.innerHTML += "</div>";
+        this.innerHTML = `<div class='event-list'>${this.innerHTML}</div>`;
     }
-
 }
 
+
 customElements.define('event-items-component', EventItems);
+
+
+$('.event-list').slick({
+    infinite: true,
+    // slidesToShow: 3,
+    // slidesToScroll: 3
+});

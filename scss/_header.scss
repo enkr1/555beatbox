@@ -49,6 +49,7 @@ header {
             @media all and (max-width: $screen_md_2) {
                 font-size: 1.1rem;
                 display: block;
+                color: rgba(255, 255, 255, 0.5) !important;
             }
         }
     }
@@ -66,12 +67,10 @@ header {
         }
 
         a {
-            /* font-family: monospace; */
             white-space: nowrap;
             font-weight: 100;
             color: $logo-color;
 
-            // font-family: 'Playfair Display', serif;
             svg {
                 width: 4rem;
                 height: fit-content;
@@ -117,26 +116,31 @@ header {
         .icon-li {
             display: flex;
 
-            // NOTE: Add img if in the future wanna use img for icon on top nav.
-            i {
+            @media all and (max-width: $screen_md_2) {
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-            }
-
-            i {
-                font-size: 1.6rem;
-                color: $nav-bar-font-color;
+                margin: 1rem;
                 transition: color .4s;
 
+                // Apply when reach $screen_md_2 (992).
                 @media all and (max-width: $screen_md_2) {
-                    // margin: 0 1rem;
+                    // font-size: 1.8rem !important;
+                    // color: rgba(255, 255, 255, 0.7) !important;
                 }
+            }
+
+            img {
+                width: 2.4rem;
             }
 
         }
 
-        // // display: inline-block;
         .nav-logo {
 
             //     flex: 2;
@@ -166,14 +170,14 @@ header {
         }
 
         // Menu items
+        a.nav-link,
         .nav-link {
-            /* font-family: monospace; */
+            font-family: "hansonBold";
+            letter-spacing: .2rem;
             text-transform: uppercase;
-            letter-spacing: 0rem;
             font-size: 1.4rem;
             padding: .6rem 2rem;
             color: $nav-bar-font-color;
-            font-weight: bold;
             user-select: none;
 
             // Top menu social media icons
@@ -182,7 +186,7 @@ header {
             }
 
             @media all and (max-width: $screen_lg) {
-                font-size: 1.8em;
+                font-size: 1.2em;
                 padding: 1.2rem;
             }
 
@@ -190,9 +194,11 @@ header {
             //     color: $theme-font-color;
             // }
 
+            // Apply when reach $screen_md_2 (992).
             @media all and (max-width: $screen_md_2) {
                 font-size: 1.8rem;
                 letter-spacing: .1rem;
+                color: rgba(255, 255, 255, 0.7) !important;
 
                 p {
                     font-size: 1.2rem;
@@ -265,11 +271,12 @@ li {
     transform: rotate(-270deg);
 }
 
+// TODO: Mobile menu icon redesign.
 .bar {
     background: $theme-mobile-bar-color;
     width: 100%;
-    height: 3px;
-    border-radius: .8rem;
+    height: .6rem;
+    // border-radius: .2rem;
     // -webkit-box-shadow:
     //     0px 0px 12px 0px var(--third-color);
     // -moz-box-shadow:

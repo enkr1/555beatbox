@@ -5,6 +5,9 @@ GitHub: @enkr1, Instagram: @enkr1
 // Variables
 @import "variables";
 
+// Custom import fonts
+@import "imported_fonts";
+
 // Global and reusable 
 @import "animations";
 @import "global";
@@ -14,8 +17,9 @@ GitHub: @enkr1, Instagram: @enkr1
 @import "header";
 @import "home";
 @import "about";
-// TODO: Add lesson
 @import "event";
+@import "video";
+@import "lesson";
 @import "specialization";
 @import "contact";
 @import "footer";
