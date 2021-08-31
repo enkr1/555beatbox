@@ -1,9 +1,7 @@
 /*Start global*/
 /* https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans');
 
 * {
     margin: 0;
@@ -30,21 +28,6 @@ html {
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
-}
-
-input,
-textarea {
-    // font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    color: $theme-font-color;
-    font-size: 1.8rem;
-    font-family: 'Alegreya Sans', sans-serif;
-    font-family: 'Anonymous Pro', monospace;
-    font-family: 'Overpass Mono', monospace;
-    font-family: 'Radley', serif;
-    font-family: 'K2D', sans-serif;
 }
 
 body {
@@ -86,15 +69,33 @@ body {
     }
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    color: $theme-small-title-color;
+h1,
+h6 {
+    // color: $theme-small-title-color;
+    // color: transparent !important;
 }
 
 // Common 
 h1,
-h6 {
+h6,
+input.btn // label,
+
+// textarea 
+    {
+    font-family: 'hansonBold';
     user-select: none;
+    // -webkit-text-stroke-width: 1px;
+    // -webkit-text-stroke-color: $theme-color;
+    letter-spacing: .3rem;
+}
+
+input,
+textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    color: $theme-font-color;
+    font-size: 1.8rem;
 }
 
 /* all links */
@@ -139,7 +140,7 @@ img {
 /* width */
 ::-webkit-scrollbar {
     /* display: none; */
-    width: .5rem;
+    width: .2rem;
 }
 
 /* Track */
@@ -183,8 +184,8 @@ section {
 }
 
 .container {
-    width: 100%;
-    max-width: 80vw;
+    width: 90%;
+    max-width: 100vw;
     height: 100%;
     margin: 0 auto;
     position: relative;

@@ -90,23 +90,52 @@
     }
 }
 
+$test-black: rgb(48, 7, 7);
+
 @keyframes line-anime {
     0% {
+        fill: $theme-color;
+        // fill: #000000;
+        // fill: rgba(0, 0, 0, 0);
+        // fill: rgb(51, 40, 40);
+    }
+
+    25% {
+        // fill: rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        // fill: rgba(0, 0, 0, 0);
+    }
+
+    75% {
+        // transition: fill .4s ease-in-out;
         // fill: rgba(250, 250, 250, 0);
     }
 
-    // 75% {
-    //     transition: fill .4s ease-in-out;
-    //     fill: rgba(250, 250, 250, 0);
+    100% {
+        // fill: $theme-light-color;
+        // fill: rgba(0, 0, 0, 0);
+        fill: #0000;
+
+        // fill: #000000 !important;
+        // fill-opacity: 1;
+        stroke-dashoffset: 0;
+
+        // Amazing effect once u uncomment this
+        // stroke-dasharray: 0;
+    }
+
+    // from {
+    //     fill: #000000;
     // }
 
-    100% {
-        // TODO: Uncomment below to have a filled wording
-        // fill: $theme-light-color;
-        /* opacity: 1; */
-        stroke-dashoffset: 0;
-    }
+    // to {
+    //     fill: #00000000;
+    //     stroke-dashoffset: 0;
+    // }
 }
+
 
 @keyframes line-anime-skills {
     0% {

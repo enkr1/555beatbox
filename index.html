@@ -45,6 +45,15 @@
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+
+  <!-- External -->
+
+
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Add the slick-theme.css if you want default styling -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
 </head>
 
 <preloader-component></preloader-component>
@@ -173,18 +182,20 @@
             <ul class="nav-list">
               <li>
                 <a target="_blank" href="https://www.instagram.com/555beatboxsg/" class="icon-link">
-                  <img src="images/svg/instagram-logo-coloured.svg" alt="555 Beatbox Initiative | Instagram">
+                  <img src="images/social-media-icons/instagram-logo-coloured.svg"
+                    alt="555 Beatbox Initiative | Instagram">
                 </a>
               </li>
               <li>
                 <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152"
                   class="icon-link">
-                  <img src="images/svg/facebook-logo-coloured.svg" alt="555 Beatbox Initiative | Facebook">
+                  <img src="images/social-media-icons/facebook-logo-coloured.svg"
+                    alt="555 Beatbox Initiative | Facebook">
                 </a>
               </li>
               <li>
                 <a target="_blank" href="https://www.youtube.com/channel/UC6jcQdnBe8A6nhaubvY6xNw" class="icon-link">
-                  <img src="images/svg/youtube-logo-coloured.svg" alt="555 Beatbox Initiative | YouTube">
+                  <img src="images/social-media-icons/youtube-logo-coloured.svg" alt="555 Beatbox Initiative | YouTube">
                 </a>
               </li>
             </ul>
@@ -200,11 +211,10 @@
 
 
     <section class="event" id="event">
+      <picture class="event-bg-picture">
+        <img src="/images/backgrounds/black_brick_wall.png" alt="555 Black Brick Wall">
+      </picture>
       <div class="container">
-        <div class="section-heading">
-          <h1>Event</h1>
-          <!-- <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h6> -->
-        </div>
 
         <event-items-component></event-items-component>
 
@@ -213,7 +223,6 @@
         </a> -->
       </div>
     </section>
-
 
 
     <!-- 1 = take the whole page of the section above -->
@@ -261,16 +270,16 @@
         <!-- <div class="section-heading">
           <h1>Videos</h1>
         </div> -->
-
+        <p>WIP</p>
         <!-- <construction-component></construction-component> -->
         <!-- REF: https://www.classynemesis.com/projects/ytembed/ -->
-        <div class="video-slider">
+        <!-- <div class="video-slider">
           <iframe width="560" height="315"
             src="https://www.youtube.com/embed/01JJdkxYtk8?autoplay=0&mute=0&modestbranding=1&rel=0&controls=1&disablekb=0"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
-        </div>
+        </div> -->
 
 
       </div>
@@ -280,7 +289,7 @@
       <div class="container" id="contact">
         <div class="section-heading">
           <h1>Contact</h1>
-          <h6>Drop us a line</h6>
+          <p>Drop us a "beat"!</p>
         </div>
 
         <!-- <div class="info-anim">
@@ -319,14 +328,13 @@
             </label>
           </div>
 
-          <input id="contact-form-submit-button" class="contact-submit-btn" type="submit" value="Submit" />
+          <input id="contact-form-submit-button" class="btn contact-submit-btn" type="submit" value="Submit" />
 
         </form>
       </div>
     </section>
   </div>
   <footer-component></footer-component>
-
   <script>
 
     // // typing effects
@@ -369,6 +377,44 @@
     // })();
   </script>
 
+  <!-- External -->
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
+  <script>
+    $(".slider").slick({
+
+      // normal options...
+      infinite: false,
+
+      // the magic
+      responsive: [{
+
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          infinite: true
+        }
+
+      }, {
+
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          dots: true
+        }
+
+      }, {
+
+        breakpoint: 300,
+        settings: "unslick" // destroys slick
+
+      }]
+    });
+
+  </script>
 </body>
 
 </html>
