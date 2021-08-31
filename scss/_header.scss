@@ -116,26 +116,31 @@ header {
         .icon-li {
             display: flex;
 
-            // NOTE: Add img if in the future wanna use img for icon on top nav.
-            i {
+            @media all and (max-width: $screen_md_2) {
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
-                font-size: 1.6rem;
-                color: $nav-bar-font-color;
+                margin: 1rem;
                 transition: color .4s;
 
                 // Apply when reach $screen_md_2 (992).
                 @media all and (max-width: $screen_md_2) {
-                    font-size: 1.8rem !important;
-                    color: rgba(255, 255, 255, 0.7) !important;
+                    // font-size: 1.8rem !important;
+                    // color: rgba(255, 255, 255, 0.7) !important;
                 }
+            }
+
+            img {
+                width: 2.4rem;
             }
 
         }
 
-        // // display: inline-block;
         .nav-logo {
 
             //     flex: 2;
