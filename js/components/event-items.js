@@ -10,7 +10,8 @@ class Event {
 
     // images/coming-soon.jpg
     display(index) {
-        // this.imgSrc = "images/coming-soon.jpg";
+        this.imgSrc = "images/coming-soon.jpg";
+
         let item =
             `<div class="event-item">` +
 
