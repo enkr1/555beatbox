@@ -48,11 +48,8 @@
 
   <!-- External -->
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-  <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
 </head>
 
@@ -366,40 +363,9 @@
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
-  <script>
-    $(".slider").slick({
 
-      // normal options...
-      infinite: false,
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-      // the magic
-      responsive: [{
-
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          infinite: true
-        }
-
-      }, {
-
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          dots: true
-        }
-
-      }, {
-
-        breakpoint: 300,
-        settings: "unslick" // destroys slick
-
-      }]
-    });
-
-  </script>
 </body>
 
 </html>
