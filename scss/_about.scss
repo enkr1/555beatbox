@@ -51,28 +51,12 @@
             mix-blend-mode: multiply;
 
             svg {
-                width: 120rem;
+                width: 80vw;
                 height: fit-content;
 
-                // small laptop
-                @media all and (max-width: $screen_md_1) {
-                    width: 50em;
-                }
-
-                // tablet
-                @media all and (max-width: $screen_sm) {
-                    width: 40em;
-                }
-
-                // mobile 
                 @media all and (max-width: $screen_xs) {
-                    width: 35em;
+                    width: 90vw;
                 }
-
-                @media all and (max-width: $screen_xxs) {
-                    width: 26em;
-                }
-
             }
         }
     }
@@ -97,7 +81,7 @@
         // NOTE: Apply once screen meets 768 and below
         @media all and (max-width: $screen_sm) {
             flex-direction: column;
-            padding: 0 8vw;
+            padding: 0 6vw;
 
             &.about-section {
                 height: auto;
@@ -182,11 +166,16 @@
         }
 
         .discord-button-container {
-            margin: 6em 0;
+            margin: 10vh 0;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: row;
+
+            // NOTE: Apply once screen meets 768 and below
+            @media all and (max-width: $screen_sm) {
+                margin: 6vh 0;
+            }
 
             div {
                 border: 1px solid $theme-color;
@@ -209,15 +198,30 @@
                 &:hover {
                     opacity: 1;
                     transform: translate(-1rem, -1rem);
-
                 }
 
                 &:active {
                     transform: scale(.9);
                 }
 
+
+
+                // NOTE: Apply once screen meets 768 and below
+                @media all and (max-width: $screen_sm) {
+                    padding: .6rem 1.2rem;
+                }
+
                 img {
                     width: 6rem;
+
+                    // NOTE: Apply once screen meets 768 and below
+                    @media all and (max-width: $screen_sm) {
+                        width: 4rem;
+                    }
+
+                    @media all and (max-width: $screen_xs) {
+                        width: 3rem;
+                    }
                 }
 
                 p {
@@ -225,11 +229,19 @@
                     margin: 1rem 0 1rem 1.2rem;
                     color: $theme-color;
 
-                    // NOTE: Apply once screen meets 768 and below
                     @media all and (max-width: $screen_md_2) {
                         // ..
                         font-size: 1.6rem;
 
+                    }
+
+                    // NOTE: Apply once screen meets 768 and below
+                    @media all and (max-width: $screen_sm) {
+                        font-size: 1.2rem;
+                    }
+
+                    @media all and (max-width: $screen_xs) {
+                        font-size: 1rem;
                     }
                 }
             }
