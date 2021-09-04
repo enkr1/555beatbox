@@ -41,6 +41,13 @@ class Footer extends HTMLElement {
         <div class="contact-social-media">
         <h6>find us on</h6>
             <ul class="nav-list contact-social-media-ul">
+
+                <li>
+                    <a target="_blank" href="https://discord.gg/csZukuUcN2" class="icon-link">
+                        <img src="images/social-media-icons/discord-logo-coloured.svg" alt="555 Beatbox Initiative | Discord">
+                    </a>
+                </li>
+
                 <li>
                     <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152" class="icon-link">
                         <img src="images/social-media-icons/facebook-logo-coloured.svg" alt="555 Beatbox Initiative | Facebook">
