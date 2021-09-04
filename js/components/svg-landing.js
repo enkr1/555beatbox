@@ -71,7 +71,7 @@ class SvgLanding extends HTMLElement {
         let svg_logo = (screen.width < 769) ? svg_thic : svg_thin;
 
         this.innerHTML = `
-        <div id="svg-beatbox">
+        <div id="svg-beatbox" data-aos="zoom-out" data-aos-delay="500">
         
         ${svg_logo}
         

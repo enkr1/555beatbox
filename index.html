@@ -49,7 +49,7 @@
   <!-- External -->
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
@@ -180,7 +180,7 @@
             </div>
           </div>
 
-          <div class="discord-button-container">
+          <div class="discord-button-container" data-aos="flip-up" data-aos-delay="200">
             <div>
               <a target="_blank" href="https://discord.gg/csZukuUcN2" class="icon-link discord-button">
                 <img src="images/social-media-icons/discord-logo-coloured.svg" alt="555 Beatbox Initiative | Discord">
@@ -224,19 +224,19 @@
     </section> -->
 
     <section id="lesson" class="lesson">
-      <div class="container">
-        <div class="section-heading">
-          <h1>Lessons</h1>
-          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum repellendus odio vero similique veniam quo
+      <div class="container" data-aos="zoom-out" data-aos-delay="500">
+      <div class="section-heading">
+        <h1>Lessons</h1>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum repellendus odio vero similique veniam quo
             voluptates a cumque delectus sequi dolores illo minus sint, deleniti dolorum reiciendis quasi voluptatum
             assumenda.</p> -->
-          <construction-component></construction-component>
+        <construction-component></construction-component>
 
-        </div>
       </div>
-    </section>
+  </div>
+  </section>
 
-    <!-- <section class="transition-section">
+  <!-- <section class="transition-section">
       <picture>
         <img data-speed=".5"
           src="https://media.discordapp.net/attachments/872089222356545566/872090804208939089/555_fam_001_compressed.jpg"
@@ -246,16 +246,16 @@
 
 
 
-    <section id="video" class="video">
-      <div class="container">
-        <!-- <div class="section-heading">
+  <section id="video" class="video">
+    <div class="container">
+      <!-- <div class="section-heading">
           <h1>Videos</h1>
         </div> -->
-        <p>WIP</p>
+      <p>WIP</p>
 
-        <!-- <construction-component></construction-component> -->
-        <!-- REF: https://www.classynemesis.com/projects/ytembed/ -->
-        <!-- <div class="video-slider">
+      <!-- <construction-component></construction-component> -->
+      <!-- REF: https://www.classynemesis.com/projects/ytembed/ -->
+      <!-- <div class="video-slider">
           <iframe width="560" height="315"
             src="https://www.youtube.com/embed/01JJdkxYtk8?autoplay=0&mute=0&modestbranding=1&rel=0&controls=1&disablekb=0"
             title="YouTube video player" frameborder="0"
@@ -264,57 +264,58 @@
         </div> -->
 
 
+    </div>
+  </section>
+
+  <section class="contact contact-section">
+    <div class="container" id="contact">
+      <div class="section-heading">
+        <h1>Contact</h1>
+        <p>Drop us a "beat"!</p>
       </div>
-    </section>
 
-    <section class="contact contact-section">
-      <div class="container" id="contact">
-        <div class="section-heading">
-          <h1>Contact</h1>
-          <p>Drop us a "beat"!</p>
-        </div>
-
-        <!-- <div class="info-anim">
+      <!-- <div class="info-anim">
                   <div class="info-anim-inner">
                       <h1>Web Design Service</h1>
                       <p>I do provide web design services!</p>
                   </div>
               </div> -->
 
-        <!-- <div class="typing-area">
+      <!-- <div class="typing-area">
           <p class="typing"></p>
         </div> -->
 
-        <form class="contact-form" action="https://formspree.io/f/mdoylrqd" method="POST" name="form">
-          <div class="name-section">
-            <input type="text" id="contact-input-name" name="contact-input-name" pattern=".*\S.*"
-              onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
-            <label class="label-name" for="contact-input-name">
-              <span class="content-name">Name</span>
-            </label>
-          </div>
-          <!-- autocomplete="off"  -->
-          <div class="email-section">
-            <input type="email" id="contact-input-email" name="contact-input-email"
-              onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
-            <label class="label-email" for="contact-input-email">
-              <span class="content-email">Email</span>
-            </label>
-          </div>
+      <form class="contact-form" action="https://formspree.io/f/mdoylrqd" method="POST" name="form">
+        <div class="name-section">
+          <input type="text" id="contact-input-name" name="contact-input-name" pattern=".*\S.*"
+            onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
+          <label class="label-name" for="contact-input-name">
+            <span class="content-name">Name</span>
+          </label>
+        </div>
+        <!-- autocomplete="off"  -->
+        <div class="email-section">
+          <input type="email" id="contact-input-email" name="contact-input-email"
+            onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
+          <label class="label-email" for="contact-input-email">
+            <span class="content-email">Email</span>
+          </label>
+        </div>
 
-          <div class="message-section">
-            <textarea name="contact-input-message" id="contact-input-message" rows="1" pattern="^\s?(?=\S).*"
-              onkeyup="this.setAttribute('value', this.value);" required></textarea>
-            <label class="label-message" for="contact-input-message">
-              <span class="content-message">Message</span>
-            </label>
-          </div>
+        <div class="message-section">
+          <textarea name="contact-input-message" id="contact-input-message" rows="1" pattern="^\s?(?=\S).*"
+            onkeyup="this.setAttribute('value', this.value);" required></textarea>
+          <label class="label-message" for="contact-input-message">
+            <span class="content-message">Message</span>
+          </label>
+        </div>
 
-          <input id="contact-form-submit-button" class="btn contact-submit-btn" type="submit" value="Submit" />
+        <input id="contact-form-submit-button" class="btn contact-submit-btn" type="submit" value="Submit"
+          data-aos="flip-right" data-aos-delay="200" />
 
-        </form>
-      </div>
-    </section>
+      </form>
+    </div>
+  </section>
   </div>
   <footer-component></footer-component>
   <script>
@@ -365,6 +366,7 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
 

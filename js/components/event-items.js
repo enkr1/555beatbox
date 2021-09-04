@@ -75,7 +75,7 @@ class EventItems extends HTMLElement {
         }
         // this.innerHTML += "</div>";
         this.innerHTML = `
-        <div class="swiper event-swiper">
+        <div class="swiper event-swiper" data-aos="slide-up" data-aos-delay="200">
         <div class="swiper-wrapper">
         ${this.innerHTML}
         </div>
