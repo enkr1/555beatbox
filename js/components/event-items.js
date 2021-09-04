@@ -11,11 +11,12 @@ class Event {
     // images/coming-soon.jpg
     display(index) {
         // this.imgSrc = "images/coming-soon.jpg";
+
         let item =
-            `<div class="event-item">` +
+            `<div class="swiper-slide event-item">` +
 
             `<picture class="event-img-div">` +
-            `<img src="${this.imgSrc}" alt="Event Image" />` +
+            `<img src="${this.imgSrc}" alt="Event Image" class="swiper-lazy"/>` +
             `</picture>` +
 
             `<div class="event-content">` +
@@ -26,8 +27,9 @@ class Event {
             `<p>${this.desc}</p>` +
             `<a target="_blank" href="${this.ridirectionPath}" class="cta">${this.buttonName}</a>` +
             `</div>` +
-
             `</div>` +
+
+            `<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>` +
 
             `</div>`;
 
@@ -72,7 +74,20 @@ class EventItems extends HTMLElement {
             this.innerHTML += listOfEvents[i].display(i + 1);
         }
         // this.innerHTML += "</div>";
-        this.innerHTML = `<div class='event-list'>${this.innerHTML}</div>`;
+        this.innerHTML = `
+        <div class="swiper event-swiper">
+        <div class="swiper-wrapper">
+        ${this.innerHTML}
+        </div>
+
+        <!--<div class="swiper-pagination"></div>-->
+
+        <!--<div class="swiper-button-prev"></div>-->
+        <!--<div class="swiper-button-next"></div>-->
+      
+        <div class="swiper-scrollbar"></div>
+
+        </div>`;
     }
 }
 
@@ -80,8 +95,46 @@ class EventItems extends HTMLElement {
 customElements.define('event-items-component', EventItems);
 
 
-$('.event-list').slick({
-    infinite: true,
-    // slidesToShow: 3,
-    // slidesToScroll: 3
+// Official site: https://swiperjs.com/get-started
+// gh: https://github.com/nolimits4web/swiper/
+const swiper = new Swiper('.event-swiper', {
+    spaceBetween: 30,
+    centeredSlides: true,
+    direction: 'horizontal',
+    loop: true,
+    lazy: true,
+    mousewheel: false, // true is good for vertical 
+    freeMode: false, // scroll without section parting
+
+    keyboard: {
+        enabled: true,
+    },
+
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+        // renderBullet: function (index, className) {
+        //   return '<span class="' + className + '">' + (index + 1) + "</span>";
+        // },
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        hide: false,
+    },
+
 });

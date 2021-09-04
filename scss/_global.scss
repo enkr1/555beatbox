@@ -10,7 +10,7 @@
 }
 
 *::selection {
-    color: $theme-font-color;
+    color: $theme-font-light-color;
     // -webkit-filter: invert(100%);
     // filter: invert(100%);
     // mix-blend-mode: multiply;
@@ -24,7 +24,7 @@ html {
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
 
-    color: $theme-font-color;
+    color: $theme-font-light-color;
     overflow-x: hidden;
     overflow-y: hidden;
     scroll-behavior: smooth;
@@ -94,7 +94,7 @@ textarea {
     width: 100%;
     height: 100%;
     outline: none;
-    color: $theme-font-color;
+    color: $theme-font-light-color;
     font-size: 1.8rem;
 }
 
@@ -116,7 +116,7 @@ p {
     line-height: 1.6;
     word-spacing: 0.2rem;
     letter-spacing: 1px;
-    color: $theme-font-color;
+    color: $theme-font-light-color;
 
     @media all and (max-width: $screen_sm) {
         font-size: 1.6rem;
@@ -247,7 +247,7 @@ section {
     transform: translateY(-30%);
     font-size: 1.6rem;
     font-weight: 300;
-    color: $theme-font-color;
+    color: $theme-font-light-color;
     letter-spacing: 1px;
 
     @media all and (max-width: $screen_md_2) {

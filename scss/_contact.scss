@@ -96,7 +96,7 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
     /* -webkit-text-fill-color: rgb(197, 197, 197); */
-    -webkit-text-fill-color: $theme-font-color;
+    -webkit-text-fill-color: $theme-font-light-color;
     -webkit-box-shadow: $theme-dark-color-2;
     transition: background-color 5000s ease-in-out 0s;
 }
@@ -133,7 +133,7 @@ select:-webkit-autofill:focus {
     border-bottom: 1px solid $theme-dark-color-1;
 
     span {
-        color: $theme-font-color;
+        color: $theme-font-light-color;
     }
 }
 

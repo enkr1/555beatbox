@@ -1399,11 +1399,6 @@ box-shadow:
   transition: all .1s ease-in-out !important;
 }
 
-.viewing-about-text {
-  -webkit-box-shadow: inset 0 0 100vw 100vh #ffffff90 !important;
-          box-shadow: inset 0 0 100vw 100vh #ffffff90 !important;
-}
-
 .about {
   padding: 0 !important;
 }
@@ -1423,17 +1418,18 @@ box-shadow:
   background: url("https://cdn.discordapp.com/attachments/872089222356545566/872090804208939089/555_fam_001_compressed.jpg") no-repeat center fixed;
   background-color: white;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 100vw 100vh #f1efe360;
-          box-shadow: inset 0 0 100vw 100vh #f1efe360;
+  -webkit-box-shadow: inset 0 0 100vw 100vh #3d3d3d70;
+          box-shadow: inset 0 0 100vw 100vh #3d3d3d70;
   z-index: -1;
 }
 .about .img-container .svg-about-container {
-  mix-blend-mode: color-burn;
-  -webkit-transform: translateY(-170%);
-          transform: translateY(-170%);
+  mix-blend-mode: multiply;
 }
 .about .img-container .svg-about-container svg {
-  width: 76rem;
+  width: 120rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media all and (max-width: 1024px) {
   .about .img-container .svg-about-container svg {
@@ -1525,17 +1521,20 @@ box-shadow:
   }
 }
 .about .container .about-desc-container {
-  z-index: 2;
-  padding: .4rem;
-  border: 1px solid #f7f5ec99;
+  width: 100%;
+  border: 1px solid #EF3340;
 }
 .about .container .about-desc-container > div {
   padding: 2rem 3rem;
-  background-color: #f7f5ec99;
+  border: 1px solid #EF3340;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translate(1rem, 1rem);
+          transform: translate(1rem, 1rem);
 }
 .about .container .about-desc-container p {
   text-align: justify;
   font-weight: 600;
+  color: #a3a3a3;
 }
 @media all and (max-width: 768px) {
   .about .container .about-desc-container p {
@@ -1544,29 +1543,72 @@ box-shadow:
     padding: 0 auto;
   }
 }
-.about .container .about-social-media i,
-.about .container .about-social-media img {
-  font-size: 3rem;
-  -webkit-transition: color .2s;
-  transition: color .2s;
-  margin: 60% 1rem 0 1rem;
-  color: #ffffff;
+.about .container .discord-button-container {
+  margin: 6em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
-@media all and (max-width: 768px) {
-  .about .container .about-social-media i,
-  .about .container .about-social-media img {
-    /* margin-top: 100%; */
-    margin: 100% 0 0 0;
-    /* width: 4rem; */
-  }
+.about .container .discord-button-container div {
+  border: 1px solid #EF3340;
 }
-.about .container .about-social-media img {
-  width: 3rem;
+.about .container .discord-button-container a.discord-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #EF3340;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: .7;
+  -webkit-transform: translate(1rem, 1rem);
+          transform: translate(1rem, 1rem);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
-.about .container .about-social-media i:hover {
+.about .container .discord-button-container a.discord-button:hover {
   opacity: 1;
-  -webkit-transition: all 0.7s ease-in-out;
-  transition: all 0.7s ease-in-out;
+  -webkit-transform: translate(-1rem, -1rem);
+          transform: translate(-1rem, -1rem);
+}
+.about .container .discord-button-container a.discord-button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.about .container .discord-button-container a.discord-button img {
+  width: 6rem;
+}
+.about .container .discord-button-container a.discord-button p {
+  font-family: 'hansonBold';
+  margin: 1rem 0 1rem 1.2rem;
+  color: #EF3340;
+}
+@media all and (max-width: 992px) {
+  .about .container .discord-button-container a.discord-button p {
+    font-size: 1.6rem;
+  }
 }
 
 /*Start event*/

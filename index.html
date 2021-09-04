@@ -48,11 +48,8 @@
 
   <!-- External -->
 
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-  <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <!-- Add the slick-theme.css if you want default styling -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
 </head>
 
@@ -166,14 +163,13 @@
 
       <div class="container">
         <div class="about-details">
-          <div class="about-heading">
-          </div>
+          <!-- <div class="about-heading"></div> -->
 
           <div class="about-desc-container">
             <div>
               <p>
                 <!-- BIO -->
-                555 BEATBOX INITIATIVE represents the ever growing local beatbox scene here in Singapore. Everyone can
+                555 Beatbox Initiative represents the ever growing local beatbox scene here in Singapore. Everyone can
                 learn
                 beatboxing, and we aim to impart it to others, and prove just how easy it is to pick it up. Beatboxing
                 is
@@ -184,30 +180,13 @@
             </div>
           </div>
 
-          <!-- WIP: Continue to integrate the discord button. -->
-          <!-- <p>Join our Discord Channel</p> -->
-
-          <div class="about-social-media">
-            <ul class="nav-list">
-              <li>
-                <a target="_blank" href="https://www.instagram.com/555beatboxsg/" class="icon-link">
-                  <img src="images/social-media-icons/instagram-logo-coloured.svg"
-                    alt="555 Beatbox Initiative | Instagram">
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152"
-                  class="icon-link">
-                  <img src="images/social-media-icons/facebook-logo-coloured.svg"
-                    alt="555 Beatbox Initiative | Facebook">
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://www.youtube.com/channel/UC6jcQdnBe8A6nhaubvY6xNw" class="icon-link">
-                  <img src="images/social-media-icons/youtube-logo-coloured.svg" alt="555 Beatbox Initiative | YouTube">
-                </a>
-              </li>
-            </ul>
+          <div class="discord-button-container">
+            <div>
+              <a target="_blank" href="https://discord.gg/csZukuUcN2" class="icon-link discord-button">
+                <img src="images/social-media-icons/discord-logo-coloured.svg" alt="555 Beatbox Initiative | Discord">
+                <p>Join our Discord Channel</p>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -252,14 +231,7 @@
             voluptates a cumque delectus sequi dolores illo minus sint, deleniti dolorum reiciendis quasi voluptatum
             assumenda.</p> -->
           <construction-component></construction-component>
-          <!-- <div style="display: flex; flex-direction: column;">
-            <div style="background-color: beige; width: 10rem; height: 20rem;margin: 2rem;">test</div>
-            <div style="background-color: beige; width: 10rem; height: 20rem;margin: 2rem;">test</div>
-            <div style="background-color: beige; width: 10rem; height: 20rem;margin: 2rem;">test</div>
-            <div style="background-color: beige; width: 10rem; height: 20rem;margin: 2rem;">test</div>
-            <div style="background-color: beige; width: 10rem; height: 20rem;margin: 2rem;">test</div>
-            <div style="background-color: beige; width: 10rem; height: 20rem;margin: 2rem;">test</div>
-          </div> -->
+
         </div>
       </div>
     </section>
@@ -280,6 +252,7 @@
           <h1>Videos</h1>
         </div> -->
         <p>WIP</p>
+
         <!-- <construction-component></construction-component> -->
         <!-- REF: https://www.classynemesis.com/projects/ytembed/ -->
         <!-- <div class="video-slider">
@@ -390,40 +363,9 @@
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
-  <script>
-    $(".slider").slick({
 
-      // normal options...
-      infinite: false,
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
-      // the magic
-      responsive: [{
-
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          infinite: true
-        }
-
-      }, {
-
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          dots: true
-        }
-
-      }, {
-
-        breakpoint: 300,
-        settings: "unslick" // destroys slick
-
-      }]
-    });
-
-  </script>
 </body>
 
 </html>
