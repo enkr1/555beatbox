@@ -91,27 +91,43 @@
             }
 
 
-            h1.event-title {
+            .event-title,
+            .event-description {
                 flex: 50%;
+                transition: all .6s ease-in-out;
+
+                // NOTE: Apply once screen meets 992 and below
+                @media all and (max-width: $screen_md_2) {
+                    transform: translateY(0) !important;
+                }
+            }
+
+            .event-title {
                 mix-blend-mode: difference;
                 font-size: 6rem;
                 font-weight: 300;
                 -webkit-text-stroke: 2px white;
                 margin: 1rem 0;
                 // -webkit-text-stroke-color: $theme-color;
-
                 transform: translateY(-100vh);
-                transition: all .6s ease-in-out; // SAME 
+
+                // NOTE: Apply once screen meets 992 and below
+                @media all and (max-width: $screen_md_2) {
+                    font-size: 4rem;
+                }
+                // NOTE: Apply once screen meets 768 and below
+                @media all and (max-width: $screen_sm) {
+                    font-size: 2rem;
+                    -webkit-text-stroke: 1px white;
+                }
             }
 
 
             .event-description {
-                flex: 50%;
                 padding: 2rem;
                 text-align: right;
                 background-color: rgba(0, 0, 0, 0.6);
                 transform: translateY(50vh);
-                transition: all .6s ease-in-out; // SAME 
 
                 @media all and (min-width: $screen_sm + 1) {
                     // ...

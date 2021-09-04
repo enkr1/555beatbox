@@ -460,16 +460,14 @@ section {
   margin: 2rem 0;
   padding-top: 10rem;
 }
-
 .section-heading h1 {
   font-size: 3.5rem;
-  color: #9e8437;
+  color: #EF3340;
   opacity: 0.8;
   text-transform: uppercase;
   font-weight: 300;
   position: relative;
   margin-bottom: 0.8rem;
-  /* font-family: 'Lora', serif; */
   letter-spacing: 0.2rem;
 }
 @media all and (max-width: 992px) {
@@ -935,7 +933,7 @@ section {
   font-family: "hansonBold";
   letter-spacing: .2rem;
   text-transform: uppercase;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   padding: .6rem 2rem;
   color: grey;
   -webkit-user-select: none;
@@ -950,7 +948,6 @@ section {
 @media all and (max-width: 1281px) {
   .nav-list .nav-link-container a.nav-link,
   .nav-list .nav-link-container .nav-link {
-    font-size: 1.2em;
     padding: 1.2rem;
   }
 }
@@ -1034,7 +1031,7 @@ li {
     top: 2rem;
     right: 2rem;
     width: 3rem;
-    height: 2rem;
+    height: 2.4rem;
   }
 }
 
@@ -1050,7 +1047,7 @@ li {
 }
 @media all and (max-width: 768px) {
   .bar {
-    height: 2px;
+    height: .4rem;
   }
 }
 
@@ -1426,29 +1423,14 @@ box-shadow:
   mix-blend-mode: multiply;
 }
 .about .img-container .svg-about-container svg {
-  width: 120rem;
+  width: 80vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-@media all and (max-width: 1024px) {
-  .about .img-container .svg-about-container svg {
-    width: 50em;
-  }
-}
-@media all and (max-width: 768px) {
-  .about .img-container .svg-about-container svg {
-    width: 40em;
-  }
-}
 @media all and (max-width: 480px) {
   .about .img-container .svg-about-container svg {
-    width: 35em;
-  }
-}
-@media all and (max-width: 320px) {
-  .about .img-container .svg-about-container svg {
-    width: 26em;
+    width: 90vw;
   }
 }
 .about .container {
@@ -1471,7 +1453,7 @@ box-shadow:
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 8vw;
+    padding: 0 6vw;
   }
   .about .container.about-section {
     height: auto;
@@ -1544,7 +1526,7 @@ box-shadow:
   }
 }
 .about .container .discord-button-container {
-  margin: 6em 0;
+  margin: 10vh 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1558,6 +1540,11 @@ box-shadow:
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+@media all and (max-width: 768px) {
+  .about .container .discord-button-container {
+    margin: 6vh 0;
+  }
 }
 .about .container .discord-button-container div {
   border: 1px solid #EF3340;
@@ -1597,8 +1584,23 @@ box-shadow:
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
+@media all and (max-width: 768px) {
+  .about .container .discord-button-container a.discord-button {
+    padding: .6rem 1.2rem;
+  }
+}
 .about .container .discord-button-container a.discord-button img {
   width: 6rem;
+}
+@media all and (max-width: 768px) {
+  .about .container .discord-button-container a.discord-button img {
+    width: 4rem;
+  }
+}
+@media all and (max-width: 480px) {
+  .about .container .discord-button-container a.discord-button img {
+    width: 3rem;
+  }
 }
 .about .container .discord-button-container a.discord-button p {
   font-family: 'hansonBold';
@@ -1608,6 +1610,16 @@ box-shadow:
 @media all and (max-width: 992px) {
   .about .container .discord-button-container a.discord-button p {
     font-size: 1.6rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .about .container .discord-button-container a.discord-button p {
+    font-size: 1.2rem;
+  }
+}
+@media all and (max-width: 480px) {
+  .about .container .discord-button-container a.discord-button p {
+    font-size: 1rem;
   }
 }
 
@@ -1695,10 +1707,22 @@ box-shadow:
             flex-direction: column !important;
   }
 }
-.event .event-item .event-content h1.event-title {
+.event .event-item .event-content .event-title,
+.event .event-item .event-content .event-description {
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+@media all and (max-width: 992px) {
+  .event .event-item .event-content .event-title,
+  .event .event-item .event-content .event-description {
+    -webkit-transform: translateY(0) !important;
+            transform: translateY(0) !important;
+  }
+}
+.event .event-item .event-content .event-title {
   mix-blend-mode: difference;
   font-size: 6rem;
   font-weight: 300;
@@ -1706,20 +1730,24 @@ box-shadow:
   margin: 1rem 0;
   -webkit-transform: translateY(-100vh);
           transform: translateY(-100vh);
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
+}
+@media all and (max-width: 992px) {
+  .event .event-item .event-content .event-title {
+    font-size: 4rem;
+  }
+}
+@media all and (max-width: 768px) {
+  .event .event-item .event-content .event-title {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px white;
+  }
 }
 .event .event-item .event-content .event-description {
-  -webkit-box-flex: 50%;
-      -ms-flex: 50%;
-          flex: 50%;
   padding: 2rem;
   text-align: right;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-transform: translateY(50vh);
           transform: translateY(50vh);
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
 }
 @media all and (max-width: 992px) {
   .event .event-item .event-content .event-description {
@@ -1955,6 +1983,15 @@ box-shadow:
   -webkit-box-shadow: unset;
           box-shadow: unset;
 }
+.contact .container .section-heading p {
+  font-family: 'hansonBold';
+  font-size: 1.6rem;
+}
+@media all and (max-width: 992px) {
+  .contact .container .section-heading p {
+    font-size: 1.4rem;
+  }
+}
 .contact .container .typing-area {
   text-align: center;
   margin-top: -4rem;
@@ -2060,7 +2097,7 @@ select:-webkit-autofill:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  border-bottom: 2px solid #9e8437;
+  border-bottom: 2px solid #EF3340;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
   -webkit-transition: -webkit-transform .6s ease;
@@ -2093,7 +2130,7 @@ select:-webkit-autofill:focus {
 .message-section textarea:focus + .label-message .content-message,
 .message-section textarea:valid + .label-message .content-message {
   top: 0;
-  color: #9e8437;
+  color: #EF3340;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
@@ -2110,26 +2147,26 @@ select:-webkit-autofill:focus {
 }
 
 input.contact-submit-btn {
-  margin-top: 6rem;
+  cursor: pointer;
   font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-top: 6rem;
+  padding: 0.8rem 3rem;
+  width: 30vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  text-transform: uppercase;
-  max-width: 26rem;
-  width: 30vw;
   min-width: 18rem;
-  color: #fad25a;
+  max-width: 26rem;
+  color: #EF3340;
   background-color: #121212;
-  padding: 0.8rem 3rem;
   border: none;
-  cursor: pointer;
   -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
           box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
   border-top-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 input.contact-submit-btn:hover {
   -webkit-transform: scale(0.98);
@@ -2246,7 +2283,7 @@ input.contact-submit-btn:active {
 }
 .main-footer .contact-social-media p,
 .main-footer .contact-social-media h6 {
-  color: #9e8437;
+  color: #EF3340;
   font-size: 1.8rem;
   text-transform: uppercase;
 }
@@ -2288,7 +2325,7 @@ input.contact-submit-btn:active {
   position: fixed;
   height: 5rem;
   width: 5rem;
-  background-color: #9e8437;
+  background-color: #EF3340;
   opacity: .8;
   top: 89vh;
   right: 3%;

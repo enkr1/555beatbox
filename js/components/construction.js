@@ -14,9 +14,9 @@ class Construction extends HTMLElement {
         <div class="content">
             <div class="container construction-container inner">
                 <div class="section-heading">
-                    <h1>- Under Construction -</h1>
+                    <h1 style="font-size: 1.8rem;">Under Construction</h1>
                 </div>
-                 <p>
+                 <p style="color: grey;">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nisi
                 autem possimus neque consequatur? Omnis voluptates incidunt suscipit
                 exercitationem distinctio animi blanditiis velit quam aut. Fugiat ex

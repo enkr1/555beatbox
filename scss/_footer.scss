@@ -42,7 +42,7 @@
 
         p,
         h6 {
-            color: $theme-dark-color-1;
+            color: $theme-color;
             font-size: 1.8rem;
             text-transform: uppercase;
         }
@@ -87,7 +87,7 @@
     position: fixed;
     height: 5rem;
     width: 5rem;
-    background-color: $theme-dark-color-1;
+    background-color: $theme-color;
     opacity: .8;
     top: 89vh;
     right: 3%;
