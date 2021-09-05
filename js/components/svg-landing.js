@@ -69,9 +69,9 @@ class SvgLanding extends HTMLElement {
 
         // When screen size is lesser then 769px, use the svg_thic, otherwise use svg_thin.
         let svg_logo = (screen.width < 769) ? svg_thic : svg_thin;
-
+        // data-aos="zoom-out" data-aos-delay="500"
         this.innerHTML = `
-        <div id="svg-beatbox" data-aos="zoom-out" data-aos-delay="500">
+        <div id="svg-beatbox" data-aos="fade-up">
         
         ${svg_logo}
         
