@@ -1,5 +1,39 @@
 #lesson {
+
     // background-color: $theme-light-background-color;
     // z-index: 2;
     // ...
+    .container {
+        .section-heading {
+            h1 {}
+        }
+
+        a {
+            margin: 0 !important;
+        }
+
+        // ...
+        .lesson-swiper {
+            .swiper-slide {
+                background-position: center;
+                background-size: cover;
+                width: auto;
+                height: 100%;
+
+
+                // NOTE: Apply once screen meets 768 and below
+                // @media all and (max-width: $screen_sm) {
+                //     width: 80%;
+                // }
+
+                picture {
+                    img {
+                        border: 2px solid $theme-color;
+                        height: 70vh;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
 }

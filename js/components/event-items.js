@@ -16,7 +16,7 @@ class Event {
             `<div class="swiper-slide event-item">` +
 
             `<picture class="event-img-div">` +
-            `<img src="${this.imgSrc}" alt="Event Image" class="swiper-lazy"/>` +
+            `<img src="${this.imgSrc}" alt="555 Beatbox Initiative | Event Image" class="swiper-lazy"/>` +
             `</picture>` +
 
             `<div class="event-content">` +
@@ -41,27 +41,33 @@ var listOfEvents = [];
 
 
 listOfEvents.push(
-    new Event("Bijou 1",
+    new Event(
+        "Bijou 1",
         "09 Nov 2021",
         "We are rising 555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://cdn.discordapp.com/attachments/826877621061156904/826879203403759686/33.jpg",
         "https://enkr1.github.io",
-        "sign up"),
-    new Event("Radiance 2",
+        "sign up"
+    ),
+    new Event(
+        "Radiance 2",
         "18 Jan 2020",
         "We are rising 555555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://media.discordapp.net/attachments/826877621061156904/826879201029521468/20.jpg",
-        "https://enkr1.github.io"),
-    new Event("Radiance 1",
+        "https://enkr1.github.io"
+    ),
+    new Event(
+        "Radiance 1",
         "09 Nov 2019",
         "We are rising 555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://media.discordapp.net/attachments/826877621061156904/826879196735209492/24.jpg",
-        "https://enkr1.github.io"),
+        "https://enkr1.github.io"
+    ),
 );
 
 // NOTE: For debugging purposes only.
-const jsonData = JSON.stringify(listOfEvents, null, 2);
-// console.log(jsonData);
+let jsonData_event = JSON.stringify(listOfEvents, null, 2);
+// console.log(jsonData_event);
 
 class EventItems extends HTMLElement {
     constructor() {
@@ -97,7 +103,8 @@ customElements.define('event-items-component', EventItems);
 
 // Official site: https://swiperjs.com/get-started
 // gh: https://github.com/nolimits4web/swiper/
-const swiper = new Swiper('.event-swiper', {
+const eventSwiper = new Swiper('.event-swiper', {
+    grabCursor: true,
     spaceBetween: 30,
     centeredSlides: true,
     direction: 'horizontal',

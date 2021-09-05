@@ -195,7 +195,12 @@ section {
     text-align: center;
     margin: 2rem 0;
     // This is a hack to get the heading to center.
-    padding-top: 10rem;
+    padding-top: 6rem;
+
+    // NOTE: Apply once screen meets 992 and below
+    @media all and (max-width: $screen_md_2) {
+        padding-top: 3rem;
+    }
 
     h1 {
         font-size: 3.5rem;
@@ -204,11 +209,12 @@ section {
         text-transform: uppercase;
         font-weight: 300;
         position: relative;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1.4rem;
         letter-spacing: 0.2rem;
 
         @media all and (max-width: $screen_md_2) {
             font-size: 3rem;
+            margin-bottom: 2rem;
         }
     }
 }
