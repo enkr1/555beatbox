@@ -1852,15 +1852,19 @@ box-shadow:
 #lesson .container a {
   margin: 0 !important;
 }
+#lesson .container .lesson-swiper {
+  width: 100%;
+}
 #lesson .container .lesson-swiper .swiper-slide {
-  background-position: center;
-  background-size: cover;
   width: auto;
   height: 100%;
 }
 #lesson .container .lesson-swiper .swiper-slide picture img {
-  border: 2px solid #EF3340;
   height: 70vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: 2px solid #EF3340;
   -o-object-fit: contain;
      object-fit: contain;
 }

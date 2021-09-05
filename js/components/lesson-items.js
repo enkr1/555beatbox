@@ -93,7 +93,7 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
     centeredSlides: true,
     spaceBetween: 30,
     centeredSlides: true,
-    slidesPerView: "auto",
+    slidesPerView: (screen.width > 992) ? "auto" : 1,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -101,8 +101,8 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
         modifier: 1,
         slideShadows: true,
     },
-    // direction: 'horizontal',
-    // loop: true,
+    direction: 'horizontal',
+    loop: true,
     lazy: true,
     mousewheel: false, // true is good for vertical 
     freeMode: false, // scroll without section parting

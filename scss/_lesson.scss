@@ -14,9 +14,11 @@
 
         // ...
         .lesson-swiper {
+            width: 100%;
+
             .swiper-slide {
-                background-position: center;
-                background-size: cover;
+                // background-position: center;
+                // background-size: cover;
                 width: auto;
                 height: 100%;
 
@@ -28,9 +30,16 @@
 
                 picture {
                     img {
-                        border: 2px solid $theme-color;
                         height: 70vh;
+                        width: fit-content;
+                        border: 2px solid $theme-color;
                         object-fit: contain;
+
+                        // NOTE: Apply once screen meets 768 and below
+                        @media all and (max-width: $screen_sm) {
+                            // height: auto !important;
+                        }
+
                     }
                 }
             }
