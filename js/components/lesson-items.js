@@ -111,12 +111,7 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
         enabled: false,
     },
 
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
-
-    // If we need pagination
+    // Pagination
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -125,14 +120,10 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
         //   return '<span class="' + className + '">' + (index + 1) + "</span>";
         // },
     },
-
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
-    // And if we need scrollbar
     scrollbar: {
         el: '.swiper-scrollbar',
         hide: true,
