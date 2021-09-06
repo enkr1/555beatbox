@@ -1769,12 +1769,14 @@ box-shadow:
 .event .event-item .event-content .event-description .event-date {
   mix-blend-mode: exclusion;
   color: #dadada;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 300;
   opacity: .6;
 }
 .event .event-item .event-content .event-description p {
+  margin: 1rem 0 0 0;
+  font-size: 1.4rem;
   color: white;
   text-align: justify;
   direction: rtl;
@@ -1788,16 +1790,10 @@ box-shadow:
 .event-description .cta,
 .cta {
   display: inline-block;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #fad25a;
-}
-@media all and (max-width: 768px) {
-  .event-description .cta,
-  .cta {
-    margin-bottom: 2rem;
-  }
 }
 
 .event-description .cta:hover,

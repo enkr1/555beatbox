@@ -114,6 +114,7 @@
                 @media all and (max-width: $screen_md_2) {
                     font-size: 4rem;
                 }
+
                 // NOTE: Apply once screen meets 768 and below
                 @media all and (max-width: $screen_sm) {
                     font-size: 2rem;
@@ -145,17 +146,19 @@
                 }
 
                 .event-date {
-                    mix-blend-mode: exclusion;
-                    color: #dadada;
                     // color: transparent;
                     // -webkit-text-stroke: 1px $theme-color;
-                    font-size: 1.5rem;
+                    mix-blend-mode: exclusion;
+                    color: #dadada;
+                    font-size: 1.6rem;
                     text-transform: uppercase;
                     font-weight: 300;
                     opacity: .6;
                 }
 
                 p {
+                    margin: 1rem 0 0 0;
+                    font-size: 1.4rem;
                     color: rgb(255, 255, 255);
                     text-align: justify;
                     direction: rtl;
@@ -179,13 +182,13 @@
 .event-description .cta,
 .cta {
     display: inline-block;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: $theme-light-color;
 
     @media all and (max-width: $screen_sm) {
-        margin-bottom: 2rem;
+        // margin-bottom: 1rem;
     }
 }
 
