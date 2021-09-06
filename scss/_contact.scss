@@ -13,10 +13,16 @@
 
     .container {
         padding-top: 4rem;
-        // box-shadow: $neumorphism-box-shadow;
-        // border-radius: 3rem;
 
-        // border: 1px solid $theme-light-color;
+        .design-line-2 {
+            margin: 8vh 0;
+            border: 1px solid $theme-color;
+
+            .design-line-1 {
+                border: 1px solid $theme-color;
+                transform: translate(-1rem, -1rem);
+            }
+        }
 
         @media all and (max-width: $screen_sm) {
             max-width: 90vw;
@@ -60,7 +66,7 @@
             position: relative;
             width: 78%;
             margin: 0 auto;
-            padding: 0 0 4rem 0;
+            padding: 0 0 10vh 0;
             text-align: center;
 
             @media all and (max-width: $screen_sm) {
@@ -230,7 +236,8 @@ input.contact-submit-btn {
 
     // TODO: Add to enkr1.github.io
     &:active {
-        // color: $theme-dark-color;
+        background-color: $theme-color;
+        color: $theme-dark-color-2;
         transform: translateY(.2rem);
     }
 
