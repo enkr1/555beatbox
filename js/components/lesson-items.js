@@ -93,7 +93,7 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
     centeredSlides: true,
     spaceBetween: 30,
     centeredSlides: true,
-    slidesPerView: "auto",
+    slidesPerView: (screen.width > 992) ? "auto" : 1,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -101,8 +101,8 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
         modifier: 1,
         slideShadows: true,
     },
-    // direction: 'horizontal',
-    // loop: true,
+    direction: 'horizontal',
+    loop: true,
     lazy: true,
     mousewheel: false, // true is good for vertical 
     freeMode: false, // scroll without section parting
@@ -111,12 +111,7 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
         enabled: false,
     },
 
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
-
-    // If we need pagination
+    // Pagination
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -125,14 +120,10 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
         //   return '<span class="' + className + '">' + (index + 1) + "</span>";
         // },
     },
-
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
-    // And if we need scrollbar
     scrollbar: {
         el: '.swiper-scrollbar',
         hide: true,
