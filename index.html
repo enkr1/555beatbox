@@ -263,52 +263,63 @@
 
     <section class="contact contact-section">
       <div class="container" id="contact">
-        <div class="section-heading">
-          <h1>Contact</h1>
-          <p>Drop us a "beat"!</p>
-        </div>
 
-        <!-- <div class="info-anim">
+        <div class="design-line-2">
+          <div class="design-line-1">
+
+            <div class="section-heading">
+              <h1>Contact</h1>
+              <p>Drop us a "beat"!</p>
+            </div>
+
+            <!-- <div class="info-anim">
                   <div class="info-anim-inner">
                       <h1>Web Design Service</h1>
                       <p>I do provide web design services!</p>
                   </div>
               </div> -->
 
-        <!-- <div class="typing-area">
+            <!-- <div class="typing-area">
           <p class="typing"></p>
         </div> -->
 
-        <form class="contact-form" action="https://formspree.io/f/mdoylrqd" method="POST" name="form">
-          <div class="name-section">
-            <input type="text" id="contact-input-name" name="contact-input-name" pattern=".*\S.*"
-              onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
-            <label class="label-name" for="contact-input-name">
-              <span class="content-name">Name</span>
-            </label>
-          </div>
-          <!-- autocomplete="off"  -->
-          <div class="email-section">
-            <input type="email" id="contact-input-email" name="contact-input-email"
-              onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
-            <label class="label-email" for="contact-input-email">
-              <span class="content-email">Email</span>
-            </label>
-          </div>
+            <form class="contact-form" action="https://formspree.io/f/mdoylrqd" method="POST" name="form">
+              <div class="name-section">
+                <input type="text" id="contact-input-name" name="contact-input-name" pattern=".*\S.*"
+                  onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
+                <label class="label-name" for="contact-input-name">
+                  <span class="content-name">Name</span>
+                </label>
+              </div>
+              <!-- autocomplete="off" -->
+              <div class="email-section">
+                <input type="email" id="contact-input-email" name="contact-input-email"
+                  onkeyup="this.setAttribute('value', this.value);" autocomplete="off" required />
+                <label class="label-email" for="contact-input-email">
+                  <span class="content-email">Email</span>
+                </label>
+              </div>
 
-          <div class="message-section">
-            <textarea name="contact-input-message" id="contact-input-message" rows="1" pattern="^\s?(?=\S).*"
-              onkeyup="this.setAttribute('value', this.value);" required></textarea>
-            <label class="label-message" for="contact-input-message">
-              <span class="content-message">Message</span>
-            </label>
+              <div class="message-section">
+                <textarea name="contact-input-message" id="contact-input-message" rows="1" pattern="^\s?(?=\S).*"
+                  onkeyup="this.setAttribute('value', this.value);" required></textarea>
+                <label class="label-message" for="contact-input-message">
+                  <span class="content-message">Message</span>
+                </label>
+
+              </div>
+
+              <div data-aos="flip-right" data-aos-delay="100">
+                <input id="contact-form-submit-button" class="btn contact-submit-btn" type="submit" value="Submit" />
+              </div>
+
+            </form>
+
           </div>
+        </div>
 
-          <input id="contact-form-submit-button" class="btn contact-submit-btn" type="submit" value="Submit"
-            data-aos="flip-right" data-aos-delay="100" />
-
-        </form>
       </div>
+
     </section>
   </div>
   <footer-component></footer-component>
