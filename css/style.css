@@ -889,6 +889,13 @@ section {
   height: fit-content;
   padding: .4rem;
 }
+.nav-list .nav-logo a img {
+  width: 5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: .4rem;
+}
 .nav-list.top-nav-list .icon-li {
   display: -webkit-box;
   display: -ms-flexbox;

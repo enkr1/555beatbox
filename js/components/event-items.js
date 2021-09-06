@@ -42,7 +42,7 @@ var listOfEvents = [];
 
 listOfEvents.push(
     new Event(
-        "Bijou 1",
+        "BIJOU 1",
         "09 Nov 2021",
         "We are rising 555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://cdn.discordapp.com/attachments/826877621061156904/826879203403759686/33.jpg",
@@ -50,14 +50,14 @@ listOfEvents.push(
         "sign up"
     ),
     new Event(
-        "Radiance 2",
+        "RADIANCE 2",
         "18 Jan 2020",
         "We are rising 555555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://media.discordapp.net/attachments/826877621061156904/826879201029521468/20.jpg",
         "https://enkr1.github.io"
     ),
     new Event(
-        "Radiance 1",
+        "RADIANCE 1",
         "09 Nov 2019",
         "We are rising 555. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa laboriosam, earum esse libero nostrum consequuntur nesciunt?",
         "https://media.discordapp.net/attachments/826877621061156904/826879196735209492/24.jpg",
