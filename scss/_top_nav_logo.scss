@@ -1,0 +1,68 @@
+.main-nav-logo {
+    position: fixed;
+    width: 8rem;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 9999;
+    padding: 1.4rem;
+
+    // text-align: center;
+    // letter-spacing: $logo-text-letter-spacing;
+    // font-size: $logo-text-font-size;
+    // user-select: none;
+
+    @media all and (max-width: $screen_md_2) {
+        display: none;
+    }
+
+    a {
+        white-space: nowrap;
+        font-weight: 100;
+        color: $logo-color;
+
+        svg {
+            width: 4rem;
+            height: fit-content;
+            padding: .4rem;
+        }
+
+        img {
+            width: 5rem;
+            height: fit-content;
+            padding: .4rem;
+        }
+    }
+
+
+    // #svg-beatbox {
+    //     svg {
+    //         height: fit-content;
+    //         width: 12rem;
+    //         fill: $theme-color;
+
+    //         // small laptop
+    //         @media all and (max-width: $screen_md_1) {
+    //             width: 70em;
+    //         }
+
+    //         // tablet
+    //         @media all and (max-width: $screen_sm) {
+    //             width: 40em;
+    //         }
+
+    //         // mobile 
+    //         @media all and (max-width: $screen_xs) {
+    //             width: 30em;
+    //         }
+
+    //         @media all and (max-width: $screen_xxs) {
+    //             width: 26em;
+    //         }
+
+    //         path {
+    //             animation: line-anime 5s ease forwards .8s;
+    //         }
+    //     }
+    // }
+}

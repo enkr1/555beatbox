@@ -50,7 +50,11 @@ docReady(function () {
             gif.classList.add('preload-finish');
             dump("GIF Removed!");
             call_back();
-        }, 5000);
+        },
+            // TODO: Change back to 5s before pushing
+            // 0
+            5000
+        );
     };
     // code
     dump("Preloading...");

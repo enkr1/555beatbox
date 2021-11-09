@@ -15,9 +15,16 @@ header {
     @media all and (min-width: $screen_md_2 + 1) {
         z-index: 999;
         position: fixed;
-        // mix-blend-mode: difference;
+
+        // isolation: isolate;
+        mix-blend-mode: difference;
         // backdrop-filter: sepia(100%);
         // backdrop-filter: invert(1);
+
+        // &::before {
+        //     content: '';
+        //     mix-blend-mode: difference;
+        // }
     }
 }
 
@@ -54,75 +61,84 @@ header {
         }
     }
 
-    .nav-logo {
-        text-align: center;
-        letter-spacing: $logo-text-letter-spacing;
-        font-size: $logo-text-font-size;
-        height: 50%;
-        // padding-bottom: 1rem;
-        // user-select: none;
+    .nav-link-container {
+        justify-content: flex-end;
+        // mix-blend-mode: difference;
 
         @media all and (max-width: $screen_md_2) {
-            display: none;
+            justify-content: center;
+            flex-direction: column;
         }
 
-        a {
-            white-space: nowrap;
-            font-weight: 100;
-            color: $logo-color;
+        li {
+            padding: 1.4rem 2rem;
 
-            svg {
-                width: 4rem;
-                height: fit-content;
-                padding: .4rem;
+            @media all and (max-width: $screen_lg) {
+                padding: 1.4rem 1.2rem;
             }
 
-            img {
-                width: 5rem;
-                height: fit-content;
-                padding: .4rem;
+            @media all and (max-width: $screen_sm) {
+                padding: 1rem 0;
             }
+
         }
 
+        // Menu items
+        a.nav-link,
+        .nav-link {
+            font-family: "hansonBold";
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: $nav-bar-font-color;
+            user-select: none;
 
-        // #svg-beatbox {
-        //     svg {
-        //         height: fit-content;
-        //         width: 12rem;
-        //         fill: $theme-color;
+            // Top menu social media icons
+            &.icon-link {
+                padding: .6rem 1.4rem;
+            }
 
-        //         // small laptop
-        //         @media all and (max-width: $screen_md_1) {
-        //             width: 70em;
-        //         }
+            @media all and (max-width: $screen_lg) {
+                // font-size: 1.2em;
+                // padding: 1.2rem;
+            }
 
-        //         // tablet
-        //         @media all and (max-width: $screen_sm) {
-        //             width: 40em;
-        //         }
+            // @media all and (max-width: $screen_md_2) {
+            //     color: $theme-font-light-color;
+            // }
 
-        //         // mobile 
-        //         @media all and (max-width: $screen_xs) {
-        //             width: 30em;
-        //         }
+            // Apply when reach $screen_md_2 (992).
+            @media all and (max-width: $screen_md_2) {
+                font-size: 1.8rem;
+                letter-spacing: .1rem;
+                color: rgba(255, 255, 255, 0.7) !important;
 
-        //         @media all and (max-width: $screen_xxs) {
-        //             width: 26em;
-        //         }
+                p {
+                    font-size: 1.2rem;
+                }
+            }
 
-        //         path {
-        //             animation: line-anime 5s ease forwards .8s;
-        //         }
-        //     }
-        // }
+            @media all and (max-width: $screen_sm) {
+                font-size: 1.2rem;
+                padding: 5% 1rem;
+            }
+
+            &:hover,
+            &:focus {
+                display: inline;
+                transition: all .2s ease-in-out;
+                color: $theme-color;
+            }
+        }
     }
 
     // Once .top-nav-list is added, the style here only apply to the top nav.
     &.top-nav-list {
         .icon-li {
-            display: flex;
+            display: none;
 
             @media all and (max-width: $screen_md_2) {
+                display: flex;
                 justify-content: center;
                 flex-direction: row;
             }
@@ -165,64 +181,6 @@ header {
         // .top-media-social-icon-container {
         //     flex: 1;
         // }
-    }
-
-    .nav-link-container {
-        justify-content: flex-end;
-
-        @media all and (max-width: $screen_md_2) {
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        // Menu items
-        a.nav-link,
-        .nav-link {
-            font-family: "hansonBold";
-            letter-spacing: .2rem;
-            text-transform: uppercase;
-            font-size: 1.2rem;
-            padding: .6rem 2rem;
-            color: $nav-bar-font-color;
-            user-select: none;
-
-            // Top menu social media icons
-            &.icon-link {
-                padding: .6rem 1.4rem;
-            }
-
-            @media all and (max-width: $screen_lg) {
-                // font-size: 1.2em;
-                padding: 1.2rem;
-            }
-
-            // @media all and (max-width: $screen_md_2) {
-            //     color: $theme-font-light-color;
-            // }
-
-            // Apply when reach $screen_md_2 (992).
-            @media all and (max-width: $screen_md_2) {
-                font-size: 1.8rem;
-                letter-spacing: .1rem;
-                color: rgba(255, 255, 255, 0.7) !important;
-
-                p {
-                    font-size: 1.2rem;
-                }
-            }
-
-            @media all and (max-width: $screen_sm) {
-                font-size: 1.2rem;
-                padding: 5% 1rem;
-            }
-
-            &:hover,
-            &:focus {
-                display: inline;
-                transition: all .2s ease-in-out;
-                color: $theme-color;
-            }
-        }
     }
 
 }
