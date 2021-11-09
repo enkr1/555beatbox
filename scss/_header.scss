@@ -15,7 +15,7 @@ header {
     @media all and (min-width: $screen_md_2 + 1) {
         z-index: 999;
         position: fixed;
-        mix-blend-mode: difference;
+        // mix-blend-mode: difference;
         // backdrop-filter: sepia(100%);
         // backdrop-filter: invert(1);
     }

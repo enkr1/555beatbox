@@ -827,7 +827,6 @@ section {
   header {
     z-index: 999;
     position: fixed;
-    mix-blend-mode: difference;
   }
 }
 

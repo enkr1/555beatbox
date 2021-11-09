@@ -93,7 +93,7 @@ const lessonSwiper = new Swiper('.lesson-swiper', {
     centeredSlides: true,
     spaceBetween: 30,
     centeredSlides: true,
-    slidesPerView: (screen.width > 992) ? "auto" : 1,
+    slidesPerView: (screen.width > 992) ? "auto" : 1, // TODO: Check if this is what causes the problem
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
