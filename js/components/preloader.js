@@ -21,7 +21,11 @@ class Preloader extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
 <div class="preload">
-    <div class="preload-box"></div>
+    <div class="preload-box">
+        <picture>
+            <img class="preload-gif" src="/images/logo-animation.gif" alt="555 Beatbox Initiative">
+        </picture>
+    </div>
 </div>
         `;
     }
@@ -32,23 +36,45 @@ customElements.define('preloader-component', Preloader);
 docReady(function () {
     // DOM is loaded and ready for manipulation here
     const preload = document.querySelector('.preload');
+    const gif = document.querySelector('.preload-gif');
     // const preloadTop = document.querySelector('.preload-top');
     // const preloadBot = document.querySelector('.preload-bot');
     // const svgLoading = document.querySelector('.svg-loading');
     // const preloadBox = document.querySelector('.preload-box');
 
     document.body.classList.remove("hide-all-in-body");
-    setTimeout(function () {
-        // svgLoading.classList.add('loading-finish');
-        preload.classList.add('preload-finish');
-        // preloadTop.classList.add('moveup');
-        // preloadBot.classList.add('movedown');
-        // preloadBox.classList.add('clear-blur');
-        // REMOVE THE HIDE CLASS FROM BODY
 
-        // only when finish loading, add y scroll 
-        var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
-        root.classList.add('enablescroll');
-    }, 500);
+    // https://medium.com/@moulayjam/what-is-settimeout-in-javascript-and-how-to-use-settimeout-synchronously-5653c5ffee3e
+    var secondStep = function (call_back) {
+        setTimeout(function () {
+            gif.classList.add('preload-finish');
+            dump("GIF Removed!");
+            call_back();
+        }, 5000);
+    };
+    // code
+    dump("Preloading...");
+    secondStep(function () {
+        dump("Final unload...");
+        setTimeout(function () {
 
+            // svgLoading.classList.add('loading-finish');
+
+            // /*
+            preload.classList.add('preload-finish');
+            // */
+
+            // preloadTop.classList.add('moveup');
+            // preloadBot.classList.add('movedown');
+            // preloadBox.classList.add('clear-blur');
+            // REMOVE THE HIDE CLASS FROM BODY
+
+            // /*
+            // only when finish loading, add y scroll 
+            var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
+            root.classList.add('enablescroll');
+            // */
+
+        }, 000);
+    });
 });
