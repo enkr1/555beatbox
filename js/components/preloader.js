@@ -23,7 +23,7 @@ class Preloader extends HTMLElement {
 <div class="preload">
     <div class="preload-box">
         <picture>
-            <img class="preload-gif" src="/images/logo-animation.gif" alt="555 Beatbox Initiative">
+            <img class="preload-gif" src="images/logo-animation.gif" alt="555 Beatbox Initiative">
         </picture>
     </div>
 </div>
