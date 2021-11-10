@@ -715,6 +715,15 @@ section {
   right: 20%;
 }
 
+.reduce-opacity {
+  opacity: 0.3;
+}
+
+.move-out {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
 .preload {
   position: fixed;
   top: 0;
@@ -753,7 +762,12 @@ section {
           align-items: center;
 }
 .preload .preload-box img {
-  width: 20rem;
+  width: 30rem;
+}
+@media all and (max-width: 992px) {
+  .preload .preload-box img {
+    width: 20rem;
+  }
 }
 .preload #svg-loading {
   width: 100%;
@@ -2410,3 +2424,80 @@ input.contact-submit-btn:active {
 }
 
 /*End footer*/
+.floating-social-media-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.floating-social-media-container ul {
+  padding: 2rem 0 1rem 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+@media all and (max-width: 992px) {
+  .floating-social-media-container ul {
+    padding: 1rem 0 .5rem 0;
+  }
+}
+.floating-social-media-container ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30%;
+  height: 2px;
+  background-color: #EF3340;
+  z-index: -1;
+  -webkit-transform: translate(-45%, 0) rotate(45deg);
+          transform: translate(-45%, 0) rotate(45deg);
+}
+.floating-social-media-container ul::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #EF3340;
+  z-index: -1;
+}
+.floating-social-media-container ul:hover {
+  opacity: 1 !important;
+}
+.floating-social-media-container ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 0 1.8rem 1rem;
+}
+@media all and (max-width: 992px) {
+  .floating-social-media-container ul li {
+    padding: 0 1rem 0;
+    margin: 1rem 0 2rem;
+  }
+}
+.floating-social-media-container ul li a {
+  text-decoration: none;
+}
+.floating-social-media-container ul li a img {
+  width: 4rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+@media all and (max-width: 768px) {
+  .floating-social-media-container ul li a img {
+    width: 3rem !important;
+  }
+}
+.floating-social-media-container ul li a:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}

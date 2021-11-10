@@ -3,27 +3,28 @@ GitHub: @enkr1, Instagram: @enkr1
 */
 
 // Variables
-@import "variables";
+@import "_variables";
 
 // Custom import fonts
-@import "imported_fonts";
-@import "swiper";
+@import "_imported_fonts";
+@import "_swiper";
 
 // Global and reusable 
-@import "animations";
-@import "global";
+@import "_animations";
+@import "_global";
 
 // Sections
-@import "preload";
-@import "top_nav_logo";
-@import "header";
-@import "home";
-@import "about";
-@import "event";
-@import "video";
-@import "lesson";
-@import "specialization";
-@import "contact";
-@import "footer";
+@import "_preload";
+@import "_top_nav_logo";
+@import "_header";
+@import "_home";
+@import "_about";
+@import "_event";
+@import "_video";
+@import "_lesson";
+@import "_specialization";
+@import "_contact";
+@import "_footer";
+@import "_floating_social_media_container";
 
 // ...
