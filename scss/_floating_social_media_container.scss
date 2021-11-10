@@ -12,6 +12,10 @@
         padding: 2rem 0 1rem 0;
         transition: all 0.5s ease;
 
+        @media all and (max-width: $screen_md_2) {
+            padding: 1rem 0 .5rem 0;
+        }
+
         $fsm-line-width: 2px;
 
         &::before {
@@ -47,12 +51,21 @@
             cursor: pointer;
             padding: 0 1.8rem 1rem;
 
+            @media all and (max-width: $screen_md_2) {
+                padding: 0 1rem 0;
+                margin: 1rem 0 2rem;
+            }
+
             a {
                 text-decoration: none;
 
                 img {
-                    width: 4rem !important;
+                    width: 4rem;
                     transition: all 0.3s ease-in-out;
+
+                    @media all and (max-width: $screen_sm) {
+                        width: 3rem !important;
+                    }
                 }
 
                 &:hover img {

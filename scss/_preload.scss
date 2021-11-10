@@ -40,8 +40,12 @@
         // background-color: #000000;
 
         img {
-            width: 20rem;
+            width: 30rem;
+
             // animation: fade-out 6s;
+            @media all and (max-width: $screen_md_2) {
+                width: 20rem;
+            }
         }
     }
 
