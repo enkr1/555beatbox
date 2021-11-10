@@ -299,6 +299,27 @@ GitHub: @enkr1, Instagram: @enkr1
 /*End animations*/
 /*Start global*/
 /* https://stackoverflow.com/questions/3468154/what-is-webkit-and-how-is-it-related-to-css */
+/* width */
+::-webkit-scrollbar {
+  /* display: none; */
+  width: .2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+  opacity: .1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
+}
+
+/* Handle on hover */
 * {
   margin: 0;
   padding: 0;
@@ -410,27 +431,16 @@ img {
   -ms-user-select: none;
 }
 
-/* width */
-::-webkit-scrollbar {
-  /* display: none; */
-  width: .2rem;
+/* also for contact icon */
+li {
+  margin: 0 .5%;
+}
+@media all and (max-width: 992px) {
+  li {
+    margin: 2rem 0;
+  }
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: white;
-  opacity: .1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #121212;
-  border-radius: 2rem;
-  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
-          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
-}
-
-/* Handle on hover */
 .show {
   opacity: 1;
 }
@@ -1019,20 +1029,43 @@ section {
   width: 2.4rem;
 }
 
-/* also for contact icon */
-li {
-  margin: 0 .5%;
+.top-nav {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: fixed;
+  padding: 1.2rem 1.5rem;
+  /* right: -100vw; */
+  z-index: 900;
+  background-color: transparent;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  /* for debug */
+  /* background-color: rgba(245, 254, 241, 0.1); */
 }
 @media all and (max-width: 992px) {
-  li {
-    margin: 2rem 0;
+  .top-nav {
+    -webkit-transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    transition: all 800ms cubic-bezier(1, 0, 0, 1);
   }
 }
-
+@media all and (max-width: 992px) {
+  .top-nav {
+    height: 100vh;
+    right: -100vw;
+    background: linear-gradient(45deg, #121212, #EF3340);
+    /* border-bottom-left-radius: 100%; */
+    /* transition: all 800ms cubic-bezier(1, 0, 0, 1); */
+    opacity: 0;
+    background-size: 200% 200%;
+    -webkit-animation: mobile-bar-bg-mover 4s ease infinite;
+            animation: mobile-bar-bg-mover 4s ease infinite;
+  }
+}
 .top-nav.open {
   right: 0;
   opacity: 1;
-  border-radius: initial;
 }
 
 .toggle-nav-bar {
@@ -1083,98 +1116,37 @@ li {
 .bar {
   background: linear-gradient(45deg, #121212, #121212, #121212);
   width: 100%;
-  height: .6rem;
+  height: .4rem;
+  -webkit-transition: ease-in-out 650ms;
+  transition: ease-in-out 650ms;
 }
 @media all and (max-width: 768px) {
   .bar {
-    height: .4rem;
+    height: .3rem;
   }
 }
-
-.bar.half {
-  width: 100%;
-}
-
 .bar.start {
-  width: 100%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+}
+.bar.end {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 .open .bar.start {
   opacity: 0;
-  -webkit-transition: ease-in-out 650ms;
-  transition: ease-in-out 650ms;
-  -webkit-transform: rotate(-450deg) translateX(0rem);
-          transform: rotate(-450deg) translateX(0rem);
 }
-
 .open .bar.middle {
-  -webkit-transform: rotate(-630deg);
-          transform: rotate(-630deg);
-  /* opacity: 0;
-  transition: ease-in-out 650ms; */
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
 }
-
-.bar.end {
-  width: 100%;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57), -webkit-transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
 .open .bar.end {
   opacity: 0;
-  -webkit-transition: ease-in-out 650ms;
-  transition: ease-in-out 650ms;
-  -webkit-transform: rotate(-450deg) translateX(0rem);
-          transform: rotate(-450deg) translateX(0rem);
-}
-
-.top-nav {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: fixed;
-  padding: 1.2rem 1.5rem;
-  /* right: -100vw; */
-  z-index: 900;
-  background-color: transparent;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  /* for debug */
-  /* background-color: rgba(245, 254, 241, 0.1); */
-}
-@media all and (max-width: 992px) {
-  .top-nav {
-    -webkit-transition: all 800ms cubic-bezier(1, 0, 0, 1);
-    transition: all 800ms cubic-bezier(1, 0, 0, 1);
-  }
-}
-@media all and (max-width: 992px) {
-  .top-nav {
-    height: 100vh;
-    right: -100vw;
-    background: linear-gradient(45deg, #121212, #EF3340);
-    /* border-bottom-left-radius: 100%; */
-    /* transition: all 800ms cubic-bezier(1, 0, 0, 1); */
-    opacity: 0;
-    background-size: 200% 200%;
-    -webkit-animation: mobile-bar-bg-mover 4s ease infinite;
-            animation: mobile-bar-bg-mover 4s ease infinite;
-  }
 }
 
 .landing-section {
