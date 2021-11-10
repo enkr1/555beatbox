@@ -841,7 +841,7 @@ section {
   top: 0;
   left: 0;
   cursor: pointer;
-  z-index: 9999;
+  z-index: 9998;
   padding: 1.4rem;
 }
 @media all and (max-width: 992px) {
