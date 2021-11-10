@@ -1,7 +1,7 @@
 // NEW
 // Navigation bar 
 // ONLY AVAILABLE ON WEB
-@media all and (min-width: $screen_md_2 + 1px) {
+@media all and (min-width: ($screen_md_2 + 1px)) {
     //...
 }
 
@@ -12,7 +12,7 @@ header {
 
     // Only apply to screen bigger than 992px
     // Only apply to non-mobile devices
-    @media all and (min-width: $screen_md_2 + 1) {
+    @media all and (min-width: ($screen_md_2 + 1px)) {
         z-index: 999;
         position: fixed;
 
@@ -185,19 +185,41 @@ header {
 
 }
 
-/* also for contact icon */
-li {
-    margin: 0 .5%;
+.top-nav {
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    padding: 1.2rem 1.5rem;
+    /* right: -100vw; */
+    z-index: 900;
+    background-color: transparent;
+
+    transition: all .4s ease-in-out;
+
+    // Only apply cubic-bezier when mobile menu icon is shown.
+    @media all and (max-width: $screen_md_2) {
+        transition: all 800ms cubic-bezier(1, 0, 0, 1);
+    }
+
+    // transition: background-color 1s ease-in-out;
+    /* for debug */
+    /* background-color: rgba(245, 254, 241, 0.1); */
 
     @media all and (max-width: $screen_md_2) {
-        margin: 2rem 0;
+        height: 100vh;
+        right: -100vw;
+        background: $theme-mobile-bar-bg;
+        /* border-bottom-left-radius: 100%; */
+        /* transition: all 800ms cubic-bezier(1, 0, 0, 1); */
+        opacity: 0;
+        background-size: 200% 200%;
+        animation: mobile-bar-bg-mover 4s ease infinite;
     }
-}
 
-.top-nav.open {
-    right: 0;
-    opacity: 1;
-    border-radius: initial;
+    &.open {
+        right: 0;
+        opacity: 1;
+    }
 }
 
 .toggle-nav-bar {
@@ -239,79 +261,40 @@ li {
 .bar {
     background: $theme-mobile-bar-color;
     width: 100%;
-    height: .6rem;
+    height: .4rem;
+    transition: ease-in-out 650ms;
 
     @media all and (max-width: $screen_sm) {
-        height: .4rem;
+        height: .3rem;
+    }
+
+    &.start {
+        align-self: flex-end;
+        transform-origin: right;
+
+        // transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    }
+
+    &.end {
+        align-self: flex-end;
+        transform-origin: right;
+
+        // transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
     }
 }
 
-.bar.half {
-    width: 100%;
-}
-
-.bar.start {
-    width: 100%;
-    align-self: flex-end;
-    transform-origin: right;
-
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.start {
-    opacity: 0;
-    transition: ease-in-out 650ms;
-    transform: rotate(-450deg) translateX(0rem);
-}
-
-.open .bar.middle {
-    transform: rotate(-630deg);
-    /* opacity: 0;
-    transition: ease-in-out 650ms; */
-}
-
-.bar.end {
-    width: 100%;
-    align-self: flex-end;
-    transform-origin: right;
-
-    transition: transform 650ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-
-.open .bar.end {
-    opacity: 0;
-    transition: ease-in-out 650ms;
-    transform: rotate(-450deg) translateX(0rem);
-}
-
-.top-nav {
-    width: 100%;
-    height: fit-content;
-    position: fixed;
-    padding: 1.2rem 1.5rem;
-    /* right: -100vw; */
-    z-index: 900;
-    background-color: transparent;
-
-    transition: all .4s ease-in-out;
-
-    // Only apply cubic-bezier when mobile menu icon is shown.
-    @media all and (max-width: $screen_md_2) {
-        transition: all 800ms cubic-bezier(1, 0, 0, 1);
-    }
-
-    // transition: background-color 1s ease-in-out;
-    /* for debug */
-    /* background-color: rgba(245, 254, 241, 0.1); */
-
-    @media all and (max-width: $screen_md_2) {
-        height: 100vh;
-        right: -100vw;
-        background: $theme-mobile-bar-bg;
-        /* border-bottom-left-radius: 100%; */
-        /* transition: all 800ms cubic-bezier(1, 0, 0, 1); */
+.open {
+    .bar.start {
         opacity: 0;
-        background-size: 200% 200%;
-        animation: mobile-bar-bg-mover 4s ease infinite;
+        // transform: rotate(-450deg) translateX(0rem);
+    }
+
+    .bar.middle {
+        transform: rotate(-270deg);
+    }
+
+    .bar.end {
+        opacity: 0;
+        // transform: rotate(-450deg) translateX(0rem);
     }
 }

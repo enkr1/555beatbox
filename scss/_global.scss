@@ -3,6 +3,30 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans');
 
+/* width */
+::-webkit-scrollbar {
+    /* display: none; */
+    width: .2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+    opacity: .1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $theme-dark-color-2;
+    border-radius: 2rem;
+    box-shadow: $neumorphism-box-shadow;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    // background: $theme-color;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -137,28 +161,13 @@ img {
     -ms-user-select: none;
 }
 
-/* width */
-::-webkit-scrollbar {
-    /* display: none; */
-    width: .2rem;
-}
+/* also for contact icon */
+li {
+    margin: 0 .5%;
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: white;
-    opacity: .1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: $theme-dark-color-2;
-    border-radius: 2rem;
-    box-shadow: $neumorphism-box-shadow;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    // background: $theme-color;
+    @media all and (max-width: $screen_md_2) {
+        margin: 2rem 0;
+    }
 }
 
 .show {
