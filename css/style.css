@@ -1841,9 +1841,44 @@ box-shadow:
 }
 
 /*End event*/
-#video .container .video-slider iframe {
-  width: 80vw;
-  height: 80vh;
+#video .container {
+  height: 100vh;
+  overflow: hidden;
+}
+#video .container::before, #video .container::after {
+  content: '';
+  position: absolute;
+  width: 300rem;
+  height: 1px;
+  background-color: #EF3340;
+  opacity: .3;
+}
+#video .container::before {
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(34deg);
+          transform: translateX(-50%) rotate(34deg);
+  z-index: -1;
+}
+#video .container::after {
+  bottom: 0;
+  left: 30%;
+  -webkit-transform: translateX(-50%) rotate(-31deg);
+          transform: translateX(-50%) rotate(-31deg);
+  z-index: -1;
+}
+#video .container .video-swiper .swiper-wrapper .video-item {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#video .container .video-swiper .swiper-wrapper .video-item iframe {
+  height: 75vh;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  padding: 1rem;
+}
+#video .container .video-swiper .swiper-wrapper .video-item.swiper-slide-active iframe {
+  border: 1px solid #EF3340;
 }
 
 #lesson .container a {
@@ -2011,7 +2046,11 @@ box-shadow:
   border: 1px solid #EF3340;
   -webkit-transform: translate(-1rem, -1rem);
           transform: translate(-1rem, -1rem);
-  padding: 2rem;
+}
+@media all and (max-width: 992px) {
+  .contact .container .design-line-2 .design-line-1 {
+    padding: 2rem;
+  }
 }
 @media all and (max-width: 768px) {
   .contact .container {

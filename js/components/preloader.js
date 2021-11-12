@@ -53,8 +53,8 @@ docReady(function () {
             call_back(); // This will be the parameter function.
         },
             // TODO: Change back to 4.5s before pushing
-            // 0
-            4500
+            0
+            // 4500
         );
     };
 
