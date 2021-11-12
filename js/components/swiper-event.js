@@ -98,12 +98,12 @@ class EventItems extends HTMLElement {
 }
 
 
-customElements.define('event-items-component', EventItems);
+customElements.define('swiper-event-component', EventItems);
 
 
 // Official site: https://swiperjs.com/get-started
 // gh: https://github.com/nolimits4web/swiper/
-const eventSwiper = new Swiper('.event-swiper', {
+const swiperEvent = new Swiper('.event-swiper', {
     grabCursor: true,
     spaceBetween: 30,
     centeredSlides: true,
@@ -114,7 +114,7 @@ const eventSwiper = new Swiper('.event-swiper', {
     freeMode: false, // scroll without section parting
 
     keyboard: {
-        enabled: true,
+        enabled: false,
     },
 
     autoplay: {

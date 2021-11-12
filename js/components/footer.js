@@ -49,14 +49,20 @@ class Footer extends HTMLElement {
                 </li>
 
                 <li>
-                    <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152" class="icon-link">
-                        <img src="images/social-media-icons/facebook-logo-coloured.svg" alt="555 Beatbox Initiative | Facebook">
+                    <a target="_blank" href="https://www.instagram.com/555beatboxsg/" class="icon-link">
+                        <img src="images/social-media-icons/instagram-logo-coloured.svg" alt="555 Beatbox Initiative | Instagram">
                     </a>
                 </li>
 
                 <li>
-                    <a target="_blank" href="https://www.instagram.com/555beatboxsg/" class="icon-link">
-                        <img src="images/social-media-icons/instagram-logo-coloured.svg" alt="555 Beatbox Initiative | Instagram">
+                  <a target="_blank" href="https://vt.tiktok.com/ZSerKduym/" class="">
+                    <img src="images/social-media-icons/tiktok-logo-coloured.svg" alt="555 Beatbox Initiative | TikTok">
+                  </a>
+                </li>
+
+                <li>
+                    <a target="_blank" href="https://www.facebook.com/555-Beatbox-Initiative-104202838540152" class="icon-link">
+                        <img src="images/social-media-icons/facebook-logo-coloured.svg" alt="555 Beatbox Initiative | Facebook">
                     </a>
                 </li>
 
@@ -76,7 +82,7 @@ class Footer extends HTMLElement {
         </div>
     </div>
 
-    <div class="up" id="up" onclick="topFunction()">
+    <div class="up" id="up">
         <i class="fas fa-chevron-up"></i>
     </div>
 
@@ -90,22 +96,28 @@ class Footer extends HTMLElement {
 
 customElements.define('footer-component', Footer);
 
-//  $('#up').on('click', function () {
-//     $('html, body').animate({
-//         scrollTop: 0
-//     }, 3000)
-// });
+// NOTE: This function is used when css scroll smooth behaviour is not used.
+$('#up').on('click', function () {
+    $('html, body').animate({
+        scrollTop: 0
+    }, 3000)
+});
 
 $(window).scroll(function () {
     if ($(this).scrollTop() > 800) {
-        $('.up').fadeIn();
+        $('#up').fadeIn();
     } else {
-        $('.up').fadeOut();
+        $('#up').fadeOut();
     }
 });
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+// // When the user clicks on the button, scroll to the top of the document
+// function topFunction() {
+//     dump("topFunction clicked");
+//     // document.body.scrollTop = 0; // For Safari
+//     // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// }

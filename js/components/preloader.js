@@ -44,41 +44,39 @@ docReady(function () {
 
     document.body.classList.remove("hide-all-in-body");
 
+    // dump("Preloading...");
     // https://medium.com/@moulayjam/what-is-settimeout-in-javascript-and-how-to-use-settimeout-synchronously-5653c5ffee3e
     var secondStep = function (call_back) {
         setTimeout(function () {
             gif.classList.add('preload-finish');
             // dump("GIF Removed!");
-            call_back();
+            call_back(); // This will be the parameter function.
         },
             // TODO: Change back to 4.5s before pushing
-            // 0
-            4500
+            0
+            // 4500
         );
     };
-    // code
-    // dump("Preloading...");
+
     secondStep(function () {
         // dump("Final unload...");
-        setTimeout(function () {
 
-            // svgLoading.classList.add('loading-finish');
+        // svgLoading.classList.add('loading-finish');
 
-            // /*
-            preload.classList.add('preload-finish');
-            // */
+        // /*
+        preload.classList.add('preload-finish');
+        // */
 
-            // preloadTop.classList.add('moveup');
-            // preloadBot.classList.add('movedown');
-            // preloadBox.classList.add('clear-blur');
-            // REMOVE THE HIDE CLASS FROM BODY
+        // preloadTop.classList.add('moveup');
+        // preloadBot.classList.add('movedown');
+        // preloadBox.classList.add('clear-blur');
+        // REMOVE THE HIDE CLASS FROM BODY
 
-            // /*
-            // only when finish loading, add y scroll 
-            var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
-            root.classList.add('enablescroll');
-            // */
+        // /*
+        // only when finish loading, add y scroll 
+        var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
+        root.classList.add('enablescroll');
+        // */
 
-        }, 000);
     });
 });

@@ -82,12 +82,12 @@ class LessonItems extends HTMLElement {
 }
 
 
-customElements.define('lesson-items-component', LessonItems);
+customElements.define('swiper-lesson-component', LessonItems);
 
 
 // Official site: https://swiperjs.com/get-started
 // gh: https://github.com/nolimits4web/swiper/
-const lessonSwiper = new Swiper('.lesson-swiper', {
+const swiperLesson = new Swiper('.lesson-swiper', {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
