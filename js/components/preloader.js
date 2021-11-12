@@ -48,18 +48,18 @@ docReady(function () {
     var secondStep = function (call_back) {
         setTimeout(function () {
             gif.classList.add('preload-finish');
-            dump("GIF Removed!");
+            // dump("GIF Removed!");
             call_back();
         },
-            // TODO: Change back to 5s before pushing
+            // TODO: Change back to 4.5s before pushing
             // 0
             4500
         );
     };
     // code
-    dump("Preloading...");
+    // dump("Preloading...");
     secondStep(function () {
-        dump("Final unload...");
+        // dump("Final unload...");
         setTimeout(function () {
 
             // svgLoading.classList.add('loading-finish');
