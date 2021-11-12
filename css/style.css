@@ -1873,12 +1873,14 @@ box-shadow:
 }
 #video .container .video-swiper .swiper-wrapper .video-item iframe {
   height: 75vh;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   padding: 1rem;
+  opacity: .5;
 }
 #video .container .video-swiper .swiper-wrapper .video-item.swiper-slide-active iframe {
   border: 1px solid #EF3340;
+  opacity: 1;
 }
 
 #lesson .container a {

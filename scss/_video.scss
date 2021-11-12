@@ -42,9 +42,10 @@
                     // ...
                     iframe {
                         height: 75vh;
-                        transition: all 0.1s ease-in-out;
+                        transition: all 0.3s ease-in-out;
                         // transform: translateY(.1rem);
                         padding: 1rem;
+                        opacity: .5;
                     }
 
                     // NOTE: This is after before overwriting iframe too.
@@ -53,8 +54,10 @@
                         // // ...
                         iframe {
                             border: 1px solid $theme-color;
+                            opacity: 1;
                             // box-shadow: inset 0 0 0 $path-width;
                             // animation: clipMe $anime-time linear infinite;
+
                         }
                     }
 
