@@ -1,0 +1,310 @@
+/* Global styling */
+/* Handle on hover */
+* {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::-moz-selection {
+    color: #292929;
+    mix-blend-mode: overlay;
+    background-color: #fad25a80;
+}
+
+*::selection {
+    color: #292929;
+    mix-blend-mode: overlay;
+    background-color: #fad25a80;
+}
+
+::-webkit-scrollbar {
+    /* display: none; */
+    width: .2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+    opacity: .1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #121212;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+    color: #292929;
+    /*   overflow-x: hidden; */
+    /*   overflow-y: hidden; */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
+    /* This will be displayed if it is loading for too long */
+    /*   background-color: white; */
+    /*  Neumorphism Theme */
+    -webkit-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
+}
+
+/* all links */
+a {
+    text-decoration: none;
+    color: #fad25a;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.nav-links a {
+    font-size: 1.6rem !important;
+}
+
+a:hover {
+    color: #d3aa30;
+}
+
+/* all p/fonts */
+p {
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+    word-spacing: 0.2rem;
+    letter-spacing: 1px;
+    /*   color: #292929; */
+}
+
+.site-header-section a.menu-link {
+    font-size: 1.2rem !important;
+    /*   font-weight: 100; */
+    /*   line-height: 1.6; */
+    word-spacing: 0.2rem;
+    letter-spacing: 1px;
+}
+
+@media all and (max-width: 768px) {
+    p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        word-spacing: 0;
+        letter-spacing: 0;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    #ast-mobile-header.ast-mobile-header-wrap {
+        /* 		display: none !important; */
+        position: fixed;
+
+    }
+
+    .ast-above-header-wrap {
+        width: 100vw;
+    }
+}
+
+/* all image */
+img {
+    width: 100%;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+h2 {
+    color: #ef3340 !important;
+    font-size: 2.4rem !important;
+
+}
+
+input,
+textarea {
+    color: white !important;
+    background: transparent !important;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.search-form {
+    background: transparent !important;
+}
+
+
+
+.post.type-post {
+    margin: 20vh 0 !important;
+}
+
+
+
+#svg-beatbox svg {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    fill: #EF3340;
+}
+
+#svg-beatbox svg path {
+    -webkit-animation: line-anime 5s ease forwards 0s;
+    animation: line-anime 5s ease forwards 0s;
+}
+
+@media all and (max-width: 1024px) {
+    #svg-beatbox svg {
+        width: 70rem;
+    }
+
+    /* Overwriting */
+    .elementor-15 .elementor-element.elementor-element-4c147b6 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #svg-beatbox svg {
+        width: 40rem;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #svg-beatbox svg {
+        width: 30rem;
+    }
+}
+
+@media all and (max-width: 320px) {
+    #svg-beatbox svg {
+        width: 28rem;
+    }
+}
+
+/* Start of Post */
+article.page,
+.ast-archive-description {
+    background: transparent !important;
+}
+
+article.post {
+    background: transparent !important;
+    border: 1px solid white !important;
+}
+
+/* section.elementor-section.elementor-top-section {
+    min-height: 30vh !important;
+}
+
+.elementor-container.elementor-column-gap-no {
+    margin: auto !important;
+} */
+/* Comment from others */
+#comments.comments-area .comments-title,
+#comments.comments-area ol.ast-comment-list li {
+    background-color: #121212d4 !important;
+}
+
+/* Comment box */
+#comments .comment-respond {
+    background: transparent !important;
+}
+
+/* Submit button */
+#comments .form-submit input.submit {
+    font-size: 1.6rem !important;
+    padding: 0 !important;
+}
+
+/* Reply */
+#comments a.comment-reply-link {
+    padding: 1rem;
+}
+
+/* End of Post */
+
+
+
+/* Start of search not found & 404 */
+section.no-results.not-found {
+    background: transparent !important;
+    border: 1px solid white !important;
+}
+
+section.error-404.not-found {
+    background: transparent !important;
+}
+
+.ast-404-search input.search-submit {
+    display: none !important;
+}
+
+/* End of 404 */
+
+
+/* Start of Contact */
+form.wpforms-form button {
+    font-size: 1.2rem;
+}
+
+/* End of Contact */
+
+
+
+/* Start of Footer */
+#menu-footer-menu li[class*="menu-item-"] a {
+    font-size: 1.8rem !important;
+}
+
+.ast-footer-copyright p {
+    font-size: 1.2rem;
+    letter-spacing: unset;
+}
+
+/* End of Footer */
+
+
+
+/* Animation */
+/* main page headline */
+@-webkit-keyframes line-anime {
+    0% {
+        /*     fill: #EF3340; */
+    }
+
+    100% {
+        /*     fill: #0000; */
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes line-anime {
+    0% {
+        /*     fill: #EF3340; */
+    }
+
+    100% {
+        /*     fill: #0000; */
+        stroke-dashoffset: 0;
+    }
+}
