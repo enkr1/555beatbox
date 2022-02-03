@@ -1,4 +1,4 @@
-/* Global styling */
+/* Start of global styling */
 /* Handle on hover */
 * {
     font-size: 1.4rem;
@@ -40,6 +40,7 @@
 }
 
 html {
+    scroll-behavior: smooth !important;
     font-size: 62.5%;
     font-family: 'DM Sans', sans-serif;
     color: #292929;
@@ -75,7 +76,7 @@ a:hover {
     color: #d3aa30;
 }
 
-/* all p/fonts */
+/* all fonts */
 p {
     font-size: 1.4rem;
     font-weight: 100;
@@ -139,17 +140,11 @@ textarea {
     font-size: 1.4rem;
 }
 
-.search-form {
-    background: transparent !important;
-}
+/* Start of global styling */
 
 
 
-.post.type-post {
-    margin: 20vh 0 !important;
-}
-
-
+/* Start of landing */
 
 #svg-beatbox svg {
     width: auto;
@@ -201,12 +196,28 @@ textarea {
     }
 }
 
+/* End of landing */
+
+
+
 /* Start of Post */
+.post.type-post {
+    margin: 20vh 0 0 0;
+}
+
+/*
+1. The container
+2. Search Results for: ...
+3. Any of the type in a page as .post
+*/
 article.page,
-.ast-archive-description {
+section.ast-archive-description,
+article[class*="type-"] {
     background: transparent !important;
 }
 
+/* The result rows & articile post */
+.ast-row article,
 article.post {
     background: transparent !important;
     border: 1px solid white !important;
@@ -245,6 +256,31 @@ article.post {
 
 
 
+/* Search style is after because of some similar classes that need to be overwritten */
+/* Start of Search related things */
+.search-form {
+    background: transparent !important;
+}
+
+/* Search Results for: ... */
+.ast-row article {
+    margin: 1.6rem 0 !important;
+}
+
+/* The font */
+section.ast-archive-description h1.page-title.ast-archive-title {
+    font-size: 2.4rem;
+}
+
+.ast-archive-description h1.page-title.ast-archive-title span {
+    font-size: 2.4rem;
+    opacity: .5;
+}
+
+/* End of Search */
+
+
+
 /* Start of search not found & 404 */
 section.no-results.not-found {
     background: transparent !important;
@@ -262,7 +298,12 @@ section.error-404.not-found {
 /* End of 404 */
 
 
+
 /* Start of Contact */
+#contact {
+    scroll-margin-top: 12.5rem;
+}
+
 form.wpforms-form button {
     font-size: 1.2rem;
 }
@@ -272,8 +313,12 @@ form.wpforms-form button {
 
 
 /* Start of Footer */
-#menu-footer-menu li[class*="menu-item-"] a {
+/* #menu-footer-menu li[class*="menu-item-"] a {
     font-size: 1.8rem !important;
+} */
+
+aside.footer-widget-area.widget-area.site-footer-focus-item.footer-widget-area-inner * {
+    font-size: 1.6rem !important;
 }
 
 .ast-footer-copyright p {
@@ -284,27 +329,27 @@ form.wpforms-form button {
 /* End of Footer */
 
 
-
+/* ===================================================== */
 /* Animation */
 /* main page headline */
 @-webkit-keyframes line-anime {
     0% {
-        /*     fill: #EF3340; */
+        /* fill: #EF3340; */
     }
 
     100% {
-        /*     fill: #0000; */
+        /* fill: #0000; */
         stroke-dashoffset: 0;
     }
 }
 
 @keyframes line-anime {
     0% {
-        /*     fill: #EF3340; */
+        /* fill: #EF3340; */
     }
 
     100% {
-        /*     fill: #0000; */
+        /* fill: #0000; */
         stroke-dashoffset: 0;
     }
 }
