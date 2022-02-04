@@ -1,6 +1,4 @@
 /* Start of global styling */
-/* Handle on hover */
-
 :root {
     --theme-color: #ef3340;
 }
@@ -63,6 +61,21 @@ body {
     /*  Neumorphism Theme */
     -webkit-transition: all .6s ease-in-out;
     transition: all .6s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input.btn {
+    font-family: 'hansonBold' !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    letter-spacing: .3rem;
 }
 
 /* all links */
@@ -144,7 +157,32 @@ textarea {
     font-size: 1.4rem;
 }
 
-/* Start of global styling */
+/* End of global styling */
+
+
+
+/* Start of Swiper styling */
+.swiper-button-next,
+.swiper-button-prev {
+    background-image: unset !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    color: var(--theme-color) !important;
+}
+
+.swiper-lazy-preloader-white:after {
+    background-image: unset !important;
+}
+
+.event-swiper .swiper-button-next,
+.event-swiper .swiper-button-prev,
+.event-swiper .swiper-lazy-preloader-white {
+    top: 35% !important;
+}
+
+/* End of Swiper styling */
 
 
 
@@ -318,6 +356,10 @@ section.error-404.not-found {
     background: transparent !important;
 }
 
+section.error-404.not-found .page-header .page-title {
+    font-size: 6rem;
+}
+
 .ast-404-search input.search-submit {
     display: none !important;
 }
@@ -360,6 +402,11 @@ section.error-404.not-found {
 .event-swiper .swiper-wrapper .event-item.swiper-slide-active img {
     border: 1px solid #EF3340;
     opacity: 1;
+}
+
+/* Single event page, NOW IT IS NOT CUSTOMISED */
+.type-events .entry-header .entry-title {
+    font-size: 8rem !important;
 }
 
 /* End of Event */

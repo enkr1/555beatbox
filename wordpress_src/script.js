@@ -49,12 +49,6 @@ const swiperLesson = new Swiper('.event-swiper', {
   },
   // Pagination
   pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-    dynamicBullets: true,
-    // renderBullet: function (index, className) {
-    //   return '<span class="' + className + '">' + (index + 1) + "</span>";
-    // },
     hide: true,
   },
   navigation: {
@@ -62,7 +56,6 @@ const swiperLesson = new Swiper('.event-swiper', {
     prevEl: '.swiper-button-prev',
   },
   scrollbar: {
-    el: '.swiper-scrollbar',
     hide: true,
   },
 });

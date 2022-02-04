@@ -1,0 +1,30 @@
+/*
+ Theme Name:   Astra Child Theme
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Astra Child Theme
+ Author:       PANG Jing Hui
+ Author URI:   https://enkr1.github.io
+ Template:     astra
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  astra
+*/
+
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans");
+
+@font-face {
+  font-family: 'hansonLight';
+  src: url("fonts/hanson-hairline-webfont.woff2") format("woff2"), url("fonts/hanson-hairline-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'hansonBold';
+  src: url("fonts/hanson-bold-webfont.woff2") format("woff2"), url("fonts/hanson-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

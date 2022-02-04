@@ -153,58 +153,67 @@ add_filter("pre_get_posts", "searchfilter");
 function featured_event_list($atts = [], $content = null, $tag = "") { // TODO: Rename
   $args = [
     'post_type' => 'events',
-    'posts_per_page' => 3,
+    'posts_per_page' => $atts["posts_per_page"] ?? -1,
   ];
   $query = new WP_Query($args);
 
   // TODO: Proper handling.
   if (!$query->have_posts()) return "No events...";
 
-  $swiperContainer = "";
+  $eventSection = "";
   $featuredEventList = "";
   $isMain = $atts["is_main"] ?? false;
 
   while ($query->have_posts()) :
     $query->the_post();
-    $eventThumbnailId = get_post_gallery_images()[0];
+    $eventThumbnailId = get_post_gallery_images()[0] ?? 0;
     $eventThumbnail = wp_get_attachment_image_src($eventThumbnailId)[0] ?? "https://www.555beatboxsg.com/wp-content/uploads/2022/01/coming-soon.jpg"; // TODO: Better null handling
     $product_thumbnail_alt = get_post_meta($eventThumbnailId, '_wp_attachment_image_alt', true) ?? "555 Beatbox Initiative | Event Image";
 
-    // $featuredEventList .= "eventThumbnailId:" . $eventThumbnailId . ", eventThumbnail:" . $eventThumbnail . ", product_thumbnail_alt:" . $product_thumbnail_alt;
-
     $featuredEventList .=
-      '<div class="swiper-slide event-item">' .
+      '<div class="swiper-slide event-item">' . // A
+
       '<picture class="event-img-div">' .
       '<img src="' . $eventThumbnail . '" alt="' . $product_thumbnail_alt . '" class="swiper-lazy"/>' .
       '</picture>' .
 
-      '<div class="event-content">' .
+      '<div class="event-content">' . // B
+
       '<h1 class="event-title">' . get_the_title() . '</h1>' .
 
-      '<div class="event-description">' .
+      '<div class="event-description">' . // C
+
       '<p class="posted-detail">' . get_the_excerpt() . '</p>' .
       // ' - Posted ' . human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago' .
       // '<a target="_blank" href="' . get_permalink() . '" class="cta">VIEW</a>' .
-      '</div>' .
-      '</div>' .
+
+      '</div>' . // C
+
+      '</div>' . // B
+
       '<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>' .
-      '</div>';
+
+      '</div>'; // A
 
   endwhile;
 
   wp_reset_postdata();
 
-  $swiperContainer .= '<div class="swiper event-swiper"><div class="swiper-wrapper">' .
+  $eventSection .=
+    '<div class="swiper event-swiper"><div class="swiper-wrapper">' .
     $featuredEventList .
-    '</div></div>';
+    '</div>' .
+    // '<div class="swiper-button-prev swiper-button"></div>' .
+    // '<div class="swiper-button-next swiper-button"></div>' .
+    '</div>';
 
-  if ($isMain) $swiperContainer =
+  if ($isMain) $eventSection =
     "<div class='home-page-event-section'>
       <h1 class='home-page-event-title'>EVENTS</h1>
-      $swiperContainer
+      $eventSection
     </div>";
 
-  return html_entity_decode($swiperContainer);
+  return html_entity_decode($eventSection);
 }
 
 /**
