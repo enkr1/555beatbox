@@ -157,6 +157,32 @@ textarea {
     font-size: 1.4rem;
 }
 
+
+/* ===================================================== */
+/* Animation */
+/* main page headline */
+@-webkit-keyframes line-anime {
+    0% {
+        /* fill: var(--theme-color); */
+    }
+
+    100% {
+        /* fill: #0000; */
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes line-anime {
+    0% {
+        /* fill: var(--theme-color); */
+    }
+
+    100% {
+        /* fill: #0000; */
+        stroke-dashoffset: 0;
+    }
+}
+
 /* End of global styling */
 
 
@@ -368,19 +394,23 @@ section.error-404.not-found .page-header .page-title {
 
 
 
-/* Start of Event */
-/* Home's */
-.home-page-event-section {
+/* Start of Home page & global styling on the home page */
+.home-page-section {
     height: 100%;
     min-height: 100vh;
 }
 
-.home-page-event-section .home-page-event-title {
+.home-page-section .home-page-title {
     /* font-size: 2.4rem; */
     text-align: center;
     color: var(--theme-color);
 }
 
+/* End of Home page & global styling on the home page */
+
+
+
+/* Start of Event */
 .event-swiper .event-content .event-title {
     margin: 2rem 0 0 0;
 }
@@ -412,6 +442,36 @@ section.error-404.not-found .page-header .page-title {
 /* End of Event */
 
 
+
+/* Start of Lesson */
+.home-page-lesson-section {
+    padding: 20rem 0 10rem !important;
+}
+
+.lesson-swiper {
+    width: 100%;
+}
+
+.lesson-swiper .swiper-slide {
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.lesson-swiper .swiper-slide picture img {
+    height: 70vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 2px solid #EF3340;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+/* End of Lesson */
+
+
+
 /* Start of Contact */
 #contact {
     scroll-margin-top: 12.5rem;
@@ -440,29 +500,3 @@ aside.footer-widget-area.widget-area.site-footer-focus-item.footer-widget-area-i
 }
 
 /* End of Footer */
-
-
-/* ===================================================== */
-/* Animation */
-/* main page headline */
-@-webkit-keyframes line-anime {
-    0% {
-        /* fill: var(--theme-color); */
-    }
-
-    100% {
-        /* fill: #0000; */
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes line-anime {
-    0% {
-        /* fill: var(--theme-color); */
-    }
-
-    100% {
-        /* fill: #0000; */
-        stroke-dashoffset: 0;
-    }
-}

@@ -39,44 +39,7 @@ add_action("wp_enqueue_scripts", "my_custom_scripts");
 
 // // https://www.cloudways.com/blog/how-to-create-custom-post-types-in-wordpress/
 // /* Custom Post type start */
-// function cw_post_type_instructor() {
-//   register_post_type("instructors", [
-//     "supports" => [
-//       "title", // post title
-//       "editor", // post content
-//       "author", // post author
-//       "thumbnail", // featured images
-//       "excerpt", // post excerpt
-//       "custom-fields", // custom fields
-//       "comments", // post comments
-//       "revisions", // post revisions
-//       "post-formats", // post formats
-//     ],
-//     "labels" => [
-//       "name" => _x("Instructors", "plural"),
-//       "singular_name" => _x("Instructor", "singular"),
-//       "menu_name" => _x("Instructors", "admin menu"),
-//       "name_admin_bar" => _x("Instructors", "admin bar"),
-//       "add_new" => _x("Add New Instructor", "add new"),
-//       "add_new_item" => __("Add New Instructor"),
-//       "new_item" => __("New Instructor"),
-//       "edit_item" => __("Edit Instructor"),
-//       "view_item" => __("View Instructor"),
-//       "all_items" => __("All Instructors"),
-//       "search_items" => __("Search Instructors"),
-//       "not_found" => __("No Instructors Found."),
-//     ],
-//     "public" => true,
-//     "query_var" => true,
-//     "rewrite" => array("slug" => "all-instructors"),
-//     "has_archive" => true,
-//     "hierarchical" => false,
-//     "menu_icon" => "dashicons-buddicons-buddypress-logo",
-//   ]);
-// }
-// add_action("init", "cw_post_type_instructor");
-
-function cw_post_type_event() {
+function register_custom_post_types() {
   register_post_type("events", [
     "supports" => [
       "title", // post title
@@ -112,8 +75,83 @@ function cw_post_type_event() {
     "hierarchical" => false,
     "menu_icon" => "dashicons-calendar-alt",
   ]);
+
+  // REF: https://developer.wordpress.org/reference/functions/register_post_type/
+  register_post_type("Lessons", [
+    "supports" => [
+      "title", // post title
+      "editor", // post content
+      "author", // post author
+      "thumbnail", // featured images
+      "excerpt", // post excerpt
+      "custom-fields", // custom fields
+      "comments", // post comments
+      "revisions", // post revisions
+      "post-formats", // post formats
+      // "page-attributes",
+    ],
+    "labels" => [
+      "name" => _x("Lessons", "plural"),
+      "singular_name" => _x("Lesson", "singular"),
+      "menu_name" => _x("Lessons", "admin menu"),
+      "name_admin_bar" => _x("Lessons", "admin bar"),
+      "add_new" => _x("Add New Lesson", "add new"),
+      "add_new_item" => __("Add New Lesson"),
+      "new_item" => __("New Lesson"),
+      "edit_item" => __("Edit Lesson"),
+      "view_item" => __("View Lesson"),
+      "all_items" => __("All Lessons"),
+      "search_items" => __("Search Lessons"),
+      "not_found" => __("No Lessons Found."),
+    ],
+    "public" => true,
+    "query_var" => true,
+    "rewrite" => [
+      "slug" => "all-lessons",
+    ],
+    "has_archive" => true,
+    "hierarchical" => false,
+    "menu_icon" => "dashicons-book",
+  ]);
+
+  // REF: Icon https://developer.wordpress.org/resource/dashicons/#book
+
+  //   register_post_type("instructors", [
+  //     "supports" => [
+  //       "title", // post title
+  //       "editor", // post content
+  //       "author", // post author
+  //       "thumbnail", // featured images
+  //       "excerpt", // post excerpt
+  //       "custom-fields", // custom fields
+  //       "comments", // post comments
+  //       "revisions", // post revisions
+  //       "post-formats", // post formats
+  //     ],
+  //     "labels" => [
+  //       "name" => _x("Instructors", "plural"),
+  //       "singular_name" => _x("Instructor", "singular"),
+  //       "menu_name" => _x("Instructors", "admin menu"),
+  //       "name_admin_bar" => _x("Instructors", "admin bar"),
+  //       "add_new" => _x("Add New Instructor", "add new"),
+  //       "add_new_item" => __("Add New Instructor"),
+  //       "new_item" => __("New Instructor"),
+  //       "edit_item" => __("Edit Instructor"),
+  //       "view_item" => __("View Instructor"),
+  //       "all_items" => __("All Instructors"),
+  //       "search_items" => __("Search Instructors"),
+  //       "not_found" => __("No Instructors Found."),
+  //     ],
+  //     "public" => true,
+  //     "query_var" => true,
+  //     "rewrite" => array("slug" => "all-instructors"),
+  //     "has_archive" => true,
+  //     "hierarchical" => false,
+  //     "menu_icon" => "dashicons-buddicons-buddypress-logo",
+  //   ]);
+  // }
 }
-add_action("init", "cw_post_type_event", 0);
+add_action("init", "register_custom_post_types");
 
 
 // Search filter
@@ -150,31 +188,28 @@ add_filter("pre_get_posts", "searchfilter");
  * Here goes a list of shortcodes that can be used in this child theme.
  */
 
-function featured_event_list($atts = [], $content = null, $tag = "") { // TODO: Rename
-  $args = [
+function featured_event_list($atts = [], $content = null, $tag = "") {
+  $query = new WP_Query([
     'post_type' => 'events',
     'posts_per_page' => $atts["posts_per_page"] ?? -1,
-  ];
-  $query = new WP_Query($args);
+  ]);
+  if (!$query->have_posts()) return; // NOTE: Edge case.
 
-  // TODO: Proper handling.
-  if (!$query->have_posts()) return "No events...";
-
-  $eventSection = "";
-  $featuredEventList = "";
+  $parentContainer = "";
+  $itemList = "";
   $isMain = $atts["is_main"] ?? false;
 
   while ($query->have_posts()) :
     $query->the_post();
-    $eventThumbnailId = get_post_gallery_images()[0] ?? 0;
-    $eventThumbnail = wp_get_attachment_image_src($eventThumbnailId)[0] ?? "https://www.555beatboxsg.com/wp-content/uploads/2022/01/coming-soon.jpg"; // TODO: Better null handling
-    $product_thumbnail_alt = get_post_meta($eventThumbnailId, '_wp_attachment_image_alt', true) ?? "555 Beatbox Initiative | Event Image";
+    $thumbnailId = get_post_thumbnail_id();
+    $thumbnailSrc = wp_get_attachment_image_src($thumbnailId, "full")[0] ?? "https://www.555beatboxsg.com/wp-content/uploads/2022/01/coming-soon.jpg"; // TODO: Better null handling
+    $thumbnailAlt = get_post_meta($thumbnailId, '_wp_attachment_image_alt', true) ?? "555 Beatbox Initiative | Event Image";
 
-    $featuredEventList .=
+    $itemList .=
       '<div class="swiper-slide event-item">' . // A
 
       '<picture class="event-img-div">' .
-      '<img src="' . $eventThumbnail . '" alt="' . $product_thumbnail_alt . '" class="swiper-lazy"/>' .
+      '<img src="' . $thumbnailSrc . '" alt="' . $thumbnailAlt . '" class="swiper-lazy"/>' .
       '</picture>' .
 
       '<div class="event-content">' . // B
@@ -199,21 +234,80 @@ function featured_event_list($atts = [], $content = null, $tag = "") { // TODO: 
 
   wp_reset_postdata();
 
-  $eventSection .=
+  $parentContainer .=
     '<div class="swiper event-swiper"><div class="swiper-wrapper">' .
-    $featuredEventList .
+    $itemList .
     '</div>' .
     // '<div class="swiper-button-prev swiper-button"></div>' .
     // '<div class="swiper-button-next swiper-button"></div>' .
     '</div>';
 
-  if ($isMain) $eventSection =
-    "<div class='home-page-event-section'>
-      <h1 class='home-page-event-title'>EVENTS</h1>
-      $eventSection
+  if ($isMain) $parentContainer =
+    "<div class='home-page-section'>
+      <h1 class='home-page-title'>EVENTS</h1>
+      $parentContainer
     </div>";
 
-  return html_entity_decode($eventSection);
+  return html_entity_decode($parentContainer);
+}
+
+
+function featured_lesson_list($atts = [], $content = null, $tag = "") {
+  $query = new WP_Query([
+    'post_type' => 'lessons',
+    'posts_per_page' => $atts["posts_per_page"] ?? -1,
+  ]);
+  if (!$query->have_posts()) return; // NOTE: Edge case.
+
+  $parentContainer = "";
+  $itemList = "";
+  $isMain = $atts["is_main"] ?? false;
+
+  while ($query->have_posts()) :
+    $query->the_post();
+
+    $thumbnailId = get_post_thumbnail_id();
+    $thumbnailSrc = wp_get_attachment_image_src($thumbnailId, "full")[0] ?? "https://www.555beatboxsg.com/wp-content/uploads/2022/01/coming-soon.jpg"; // TODO: Better null handling
+    $thumbnailAlt = get_post_meta($thumbnailId, '_wp_attachment_image_alt', true) ?? "555 Beatbox Initiative | Lesson Image";
+
+    $itemList .=
+      '<div class="swiper-slide lesson-item">' . // A
+
+      '<picture class="lesson-img-div">' .
+      '<img src="' . $thumbnailSrc . '" alt="' . $thumbnailAlt . '" class="swiper-lazy"/>' .
+      '</picture>' .
+
+      '<div class="lesson-content">' . // B
+      '<h1 class="lesson-title">' . get_the_title() . '</h1>' .
+      // '<p class="posted-detail">' . get_the_excerpt() . '</p>' .
+      // ' - Posted ' . human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago' .
+      // '<a target="_blank" href="' . get_permalink() . '" class="cta">VIEW</a>' .
+
+      '</div>' . // B
+
+      '<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>' .
+
+      '</div>'; // A
+
+  endwhile;
+
+  wp_reset_postdata();
+
+  $parentContainer .=
+    '<div class="swiper lesson-swiper"><div class="swiper-wrapper">' .
+    $itemList .
+    '</div>' .
+    '<div class="swiper-button-prev swiper-button"></div>' .
+    '<div class="swiper-button-next swiper-button"></div>' .
+    '</div>';
+
+  if ($isMain) $parentContainer =
+    "<div class='home-page-section home-page-lesson-section'>
+      <h1 class='home-page-title'>LESSONS</h1>
+      $parentContainer
+    </div>";
+
+  return html_entity_decode($parentContainer);
 }
 
 /**
@@ -223,6 +317,18 @@ function featured_event_list($atts = [], $content = null, $tag = "") { // TODO: 
  */
 function register_shortcodes() {
   add_shortcode("featured_event_list", "featured_event_list");
+  add_shortcode("featured_lesson_list", "featured_lesson_list");
 }
 
 add_action('init', 'register_shortcodes');
+
+
+function defer_parsing_of_js($url) {
+  if (is_user_logged_in()) return $url; //don't break WP Admin
+  if (FALSE === strpos($url, '.js')) return $url;
+  if (strpos($url, 'jquery.js')) return $url;
+  // only defer app.js
+  return (strpos($url, 'app.js')) ? str_replace(' src', ' defer src', $url) : $url;
+  // return str_replace(' src', ' defer src', $url);
+}
+add_filter('script_loader_tag', 'defer_parsing_of_js', 10);
