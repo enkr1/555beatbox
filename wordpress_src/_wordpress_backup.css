@@ -148,6 +148,15 @@ textarea {
 
 
 
+/* Start of elementor overwriting */
+.elementor-image-box-description {
+    font-size: 1.6rem !important;
+}
+
+/* End of elementor overwriting */
+
+
+
 /* Start of landing */
 
 #svg-beatbox svg {
@@ -315,6 +324,45 @@ section.error-404.not-found {
 
 /* End of 404 */
 
+
+
+/* Start of Event */
+/* Home's */
+.home-page-event-section {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.home-page-event-section .home-page-event-title {
+    /* font-size: 2.4rem; */
+    text-align: center;
+    color: var(--theme-color);
+}
+
+.event-swiper .event-content .event-title {
+    margin: 2rem 0 0 0;
+}
+
+.event-swiper .swiper-wrapper .event-item {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.event-swiper .swiper-wrapper .event-item img {
+    height: 75vh;
+    object-fit: cover;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem;
+    opacity: .5;
+}
+
+.event-swiper .swiper-wrapper .event-item.swiper-slide-active img {
+    border: 1px solid #EF3340;
+    opacity: 1;
+}
+
+/* End of Event */
 
 
 /* Start of Contact */
