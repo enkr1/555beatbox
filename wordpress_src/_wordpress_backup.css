@@ -1,5 +1,10 @@
 /* Start of global styling */
 /* Handle on hover */
+
+:root {
+    --theme-color: #ef3340;
+}
+
 * {
     font-size: 1.4rem;
     margin: 0;
@@ -127,9 +132,8 @@ img {
 }
 
 h2 {
-    color: #ef3340 !important;
+    color: var(--theme-color) !important;
     font-size: 2.4rem !important;
-
 }
 
 input,
@@ -157,7 +161,7 @@ textarea {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    fill: #EF3340;
+    fill: var(--theme-color);
 }
 
 #svg-beatbox svg path {
@@ -287,6 +291,20 @@ section.no-results.not-found {
     border: 1px solid white !important;
 }
 
+/* The empty search container (404) */
+section.no-results.not-found .page-content {
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+/* Search again submit button */
+section.no-results.not-found .page-content input.search-submit {
+    font-size: 1.2rem;
+    color: var(--theme-color) !important;
+}
+
 section.error-404.not-found {
     background: transparent !important;
 }
@@ -334,7 +352,7 @@ aside.footer-widget-area.widget-area.site-footer-focus-item.footer-widget-area-i
 /* main page headline */
 @-webkit-keyframes line-anime {
     0% {
-        /* fill: #EF3340; */
+        /* fill: var(--theme-color); */
     }
 
     100% {
@@ -345,7 +363,7 @@ aside.footer-widget-area.widget-area.site-footer-focus-item.footer-widget-area-i
 
 @keyframes line-anime {
     0% {
-        /* fill: #EF3340; */
+        /* fill: var(--theme-color); */
     }
 
     100% {

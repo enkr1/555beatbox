@@ -116,9 +116,21 @@ add_action('init', 'cw_post_type_event', 0);
 // Search filter
 function searchfilter($query) {
   if ($query->is_search && !is_admin()) {
-    $query->set('post_type', get_post_types());
+    $query->set(
+      'post_type',
+      [
+        "post",
+      ]
+    );
+    // $query->set('post_type', get_post_types([], "names"));
   }
 
   return $query;
 }
 add_filter('pre_get_posts', 'searchfilter');
+
+// TODO: Remove this whenever releasing and doing final push.
+// define('WP_DEBUG', true);
+
+// var_dump(get_post_types());
+// $post_types = get_post_types("", "names");
