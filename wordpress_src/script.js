@@ -44,37 +44,6 @@ docReady(function () {
   // ==================== SWIPER ====================
   // Official site: https://swiperjs.com/get-started
   // gh: https://github.com/nolimits4web/swiper/
-  const swiperEvent = new Swiper('.event-swiper', {
-    grabCursor: true,
-    spaceBetween: 30,
-    centeredSlides: true,
-    slidesPerView: 1.5, // https://stackoverflow.com/questions/38406690/swiper-slides-showing-end-start-of-previous-next-slides-like-airbnb-slider
-    direction: 'horizontal',
-    loop: true,
-    lazy: true,
-    mousewheel: false, // true is good for vertical
-    freeMode: false, // scroll without section parting
-    keyboard: {
-      enabled: false,
-    },
-
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    // Pagination
-    pagination: {
-      hide: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    scrollbar: {
-      hide: true,
-    },
-  });
-
   const swiperLesson = new Swiper('.lesson-swiper', {
     effect: "coverflow",
     grabCursor: true,
@@ -120,7 +89,36 @@ docReady(function () {
 
   });
 
+  const swiperEvent = new Swiper('.event-swiper', {
+    grabCursor: true,
+    spaceBetween: 30,
+    centeredSlides: true,
+    slidesPerView: 1.5, // https://stackoverflow.com/questions/38406690/swiper-slides-showing-end-start-of-previous-next-slides-like-airbnb-slider
+    direction: 'horizontal',
+    loop: true,
+    lazy: true,
+    mousewheel: false, // true is good for vertical
+    freeMode: false, // scroll without section parting
+    keyboard: {
+      enabled: false,
+    },
 
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    // Pagination
+    pagination: {
+      hide: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    scrollbar: {
+      hide: true,
+    },
+  });
 
   // This generates the animation of the main landing text
   const svgBeatbox = document.querySelectorAll("#svg-beatbox path");

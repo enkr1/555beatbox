@@ -1,5 +1,15 @@
 <?php
 
+// TODO: Remove this whenever releasing and doing final push.
+// define("WP_DEBUG", true);
+
+// var_dump(get_post_types());
+// $post_types = get_post_types("", "names");
+// var_dump($post_types);
+
+// ================================================================================
+
+
 // Exit if accessed directly
 if (!defined("ABSPATH")) exit;
 
@@ -114,8 +124,44 @@ function register_custom_post_types() {
     "menu_icon" => "dashicons-book",
   ]);
 
-  // REF: Icon https://developer.wordpress.org/resource/dashicons/#book
+  register_post_type("Testimonials", [
+    "supports" => [
+      "title", // post title
+      "editor", // post content
+      "author", // post author
+      "thumbnail", // featured images
+      // "excerpt", // post excerpt
+      // "custom-fields", // custom fields
+      // "comments", // post comments
+      // "revisions", // post revisions
+      // "post-formats", // post formats
+      // "page-attributes",
+    ],
+    "labels" => [
+      "name" => _x("Testimonials", "plural"),
+      "singular_name" => _x("Testimonial", "singular"),
+      "menu_name" => _x("Testimonials", "admin menu"),
+      "name_admin_bar" => _x("Testimonials", "admin bar"),
+      "add_new" => _x("Add New Testimonial", "add new"),
+      "add_new_item" => __("Add New Testimonial"),
+      "new_item" => __("New Testimonial"),
+      "edit_item" => __("Edit Testimonial"),
+      "view_item" => __("View Testimonial"),
+      "all_items" => __("All Testimonials"),
+      "search_items" => __("Search Testimonials"),
+      "not_found" => __("No Testimonials Found."),
+    ],
+    "public" => true,
+    "query_var" => true,
+    "rewrite" => [
+      "slug" => "all-testimonials",
+    ],
+    "has_archive" => true,
+    "hierarchical" => false,
+    "menu_icon" => "dashicons-format-status",
+  ]);
 
+  // REF: Icon https://developer.wordpress.org/resource/dashicons/#book
   //   register_post_type("instructors", [
   //     "supports" => [
   //       "title", // post title
@@ -171,22 +217,70 @@ function searchfilter($query) {
 }
 add_filter("pre_get_posts", "searchfilter");
 
-
-
-// TODO: Remove this whenever releasing and doing final push.
-// define("WP_DEBUG", true);
-
-// var_dump(get_post_types());
-// $post_types = get_post_types("", "names");
-// var_dump($post_types);
-
-
-
+// ================================================================================
 // require __DIR__ . '/shortcodes.php';
 // Decided to just leave it as 1 page, easier for me to update.
 /**
  * Here goes a list of shortcodes that can be used in this child theme.
  */
+
+function featured_lesson_list($atts = [], $content = null, $tag = "") {
+  $query = new WP_Query([
+    'post_type' => 'lessons',
+    'posts_per_page' => $atts["posts_per_page"] ?? -1,
+  ]);
+  if (!$query->have_posts()) return; // NOTE: Edge case.
+
+  $parentContainer = "";
+  $itemList = "";
+  $isMain = $atts["is_main"] ?? false;
+
+  while ($query->have_posts()) :
+    $query->the_post();
+
+    $thumbnailId = get_post_thumbnail_id();
+    $thumbnailSrc = wp_get_attachment_image_src($thumbnailId, "full")[0] ?? "https://www.555beatboxsg.com/wp-content/uploads/2022/01/coming-soon.jpg"; // TODO: Better null handling
+    $thumbnailAlt = get_post_meta($thumbnailId, '_wp_attachment_image_alt', true) ?? "555 Beatbox Initiative | Lesson Image";
+
+    $itemList .=
+      '<div class="swiper-slide lesson-item">' . // A
+
+      '<picture class="lesson-img-div">' .
+      '<img src="' . $thumbnailSrc . '" alt="' . $thumbnailAlt . '" class="swiper-lazy"/>' .
+      '</picture>' .
+
+      '<div class="lesson-content">' . // B
+      '<h1 class="lesson-title">' . get_the_title() . '</h1>' .
+      // '<p class="posted-detail">' . get_the_excerpt() . '</p>' .
+      // ' - Posted ' . human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago' .
+      // '<a target="_blank" href="' . get_permalink() . '" class="cta">VIEW</a>' .
+
+      '</div>' . // B
+
+      '<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>' .
+
+      '</div>'; // A
+
+  endwhile;
+
+  wp_reset_postdata();
+
+  $parentContainer .=
+    '<div class="swiper lesson-swiper"><div class="swiper-wrapper">' .
+    $itemList .
+    '</div>' .
+    // '<div class="swiper-button-prev swiper-button"></div>' .
+    // '<div class="swiper-button-next swiper-button"></div>' .
+    '</div>';
+
+  if ($isMain) $parentContainer =
+    "<div class='home-page-section home-page-lesson-section'>
+      <h1 class='home-page-title'>LESSONS</h1>
+      $parentContainer
+    </div>";
+
+  return html_entity_decode($parentContainer);
+}
 
 function featured_event_list($atts = [], $content = null, $tag = "") {
   $query = new WP_Query([
@@ -238,8 +332,8 @@ function featured_event_list($atts = [], $content = null, $tag = "") {
     '<div class="swiper event-swiper"><div class="swiper-wrapper">' .
     $itemList .
     '</div>' .
-    // '<div class="swiper-button-prev swiper-button"></div>' .
-    // '<div class="swiper-button-next swiper-button"></div>' .
+    '<div class="swiper-button-prev swiper-button"></div>' .
+    '<div class="swiper-button-next swiper-button"></div>' .
     '</div>';
 
   if ($isMain) $parentContainer =
@@ -251,41 +345,36 @@ function featured_event_list($atts = [], $content = null, $tag = "") {
   return html_entity_decode($parentContainer);
 }
 
-
-function featured_lesson_list($atts = [], $content = null, $tag = "") {
+function testimonial_list($atts = [], $content = null, $tag = "") {
   $query = new WP_Query([
-    'post_type' => 'lessons',
+    'post_type' => 'testimonials',
     'posts_per_page' => $atts["posts_per_page"] ?? -1,
   ]);
   if (!$query->have_posts()) return; // NOTE: Edge case.
 
   $parentContainer = "";
   $itemList = "";
-  $isMain = $atts["is_main"] ?? false;
 
   while ($query->have_posts()) :
     $query->the_post();
 
     $thumbnailId = get_post_thumbnail_id();
     $thumbnailSrc = wp_get_attachment_image_src($thumbnailId, "full")[0] ?? "https://www.555beatboxsg.com/wp-content/uploads/2022/01/coming-soon.jpg"; // TODO: Better null handling
-    $thumbnailAlt = get_post_meta($thumbnailId, '_wp_attachment_image_alt', true) ?? "555 Beatbox Initiative | Lesson Image";
+    $thumbnailAlt = get_post_meta($thumbnailId, '_wp_attachment_image_alt', true) ?? "555 Beatbox Initiative | " . get_the_title();
 
     $itemList .=
-      '<div class="swiper-slide lesson-item">' . // A
+      '<div class="testimonial-item">' . // A
 
-      '<picture class="lesson-img-div">' .
-      '<img src="' . $thumbnailSrc . '" alt="' . $thumbnailAlt . '" class="swiper-lazy"/>' .
-      '</picture>' .
-
-      '<div class="lesson-content">' . // B
-      '<h1 class="lesson-title">' . get_the_title() . '</h1>' .
-      // '<p class="posted-detail">' . get_the_excerpt() . '</p>' .
-      // ' - Posted ' . human_time_diff(get_the_time('U'), current_time('timestamp')) . ' ago' .
-      // '<a target="_blank" href="' . get_permalink() . '" class="cta">VIEW</a>' .
-
+      '<div class="testimonial-content">' . // B
+      '<p class="testimonial-text">' . get_the_content() . '</p>' .
       '</div>' . // B
 
-      '<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>' .
+      '<div class="testimonial-author">' . // C
+      '<picture class="testimonial-picture">' .
+      '<img src="' . $thumbnailSrc . '" alt="' . $thumbnailAlt . '"/>' .
+      '</picture>' .
+      '<h1 class="student-name">' . get_the_title() . '</h1>' .
+      '</div>' . // C
 
       '</div>'; // A
 
@@ -294,18 +383,10 @@ function featured_lesson_list($atts = [], $content = null, $tag = "") {
   wp_reset_postdata();
 
   $parentContainer .=
-    '<div class="swiper lesson-swiper"><div class="swiper-wrapper">' .
+    '<div class="testimonial-section">' .
+    '<h1 class="testimonial-title">STUDENTS\' FEEDBACK</h1>' .
     $itemList .
-    '</div>' .
-    '<div class="swiper-button-prev swiper-button"></div>' .
-    '<div class="swiper-button-next swiper-button"></div>' .
     '</div>';
-
-  if ($isMain) $parentContainer =
-    "<div class='home-page-section home-page-lesson-section'>
-      <h1 class='home-page-title'>LESSONS</h1>
-      $parentContainer
-    </div>";
 
   return html_entity_decode($parentContainer);
 }
@@ -318,6 +399,7 @@ function featured_lesson_list($atts = [], $content = null, $tag = "") {
 function register_shortcodes() {
   add_shortcode("featured_event_list", "featured_event_list");
   add_shortcode("featured_lesson_list", "featured_lesson_list");
+  add_shortcode("testimonial_list", "testimonial_list");
 }
 
 add_action('init', 'register_shortcodes');
