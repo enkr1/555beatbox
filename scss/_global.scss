@@ -49,6 +49,7 @@ html {
     font-family: 'DM Sans', sans-serif;
 
     color: $theme-font-light-color;
+
     overflow-x: hidden;
     overflow-y: hidden;
     // scroll-behavior: smooth;
@@ -99,12 +100,12 @@ h6 {
     // color: transparent !important;
 }
 
-// Common 
+// Common
 h1,
 h6,
 input.btn // label,
 
-// textarea 
+// textarea
     {
     font-family: 'hansonBold';
     user-select: none;
@@ -174,7 +175,7 @@ li {
     opacity: 1;
 }
 
-// Before 
+// Before
 span {
     opacity: 0.6;
     transition: all .3s ease;
@@ -277,7 +278,7 @@ section {
 
 // -------------------- Reusable classes --------------------
 
-// ICON 
+// ICON
 .icon-link {
     i {
         color: white;
@@ -362,6 +363,11 @@ section {
 // for js preload
 .enablescroll {
     overflow-y: visible;
+}
+
+.preload-finish {
+    opacity: 0 !important;
+    pointer-events: none;
 }
 
 .leaves {

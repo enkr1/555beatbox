@@ -90,7 +90,7 @@ class EventItems extends HTMLElement {
 
         <!--<div class="swiper-button-prev"></div>-->
         <!--<div class="swiper-button-next"></div>-->
-      
+
         <div class="swiper-scrollbar"></div>
 
         </div>`;
@@ -110,7 +110,7 @@ const swiperEvent = new Swiper('.event-swiper', {
     direction: 'horizontal',
     loop: true,
     lazy: true,
-    mousewheel: false, // true is good for vertical 
+    mousewheel: false, // true is good for vertical
     freeMode: false, // scroll without section parting
 
     keyboard: {
