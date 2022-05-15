@@ -47,10 +47,9 @@ docReady(function () {
   const swiperLesson = new Swiper('.lesson-swiper', {
     effect: "coverflow",
     grabCursor: true,
-    centeredSlides: true,
     spaceBetween: 30,
     centeredSlides: true,
-    slidesPerView: (screen.width > 992) ? "auto" : 1, // TODO: Check if this is what causes the problem
+    slidesPerView: (screen.width > 992) ? "auto" : 1.1, // TODO: Check if this is what causes the problem
     // slidesPerView: "auto",
     coverflowEffect: {
       rotate: 50,
@@ -123,12 +122,44 @@ docReady(function () {
   // This generates the animation of the main landing text
   const svgBeatbox = document.querySelectorAll("#svg-beatbox path");
 
-  for (let i = 0; i < svgBeatbox.length; i++) {
-    svgBeatbox[i].style.strokeDasharray = svgBeatbox[i].getTotalLength();
-    svgBeatbox[i].style.strokeDashoffset = svgBeatbox[i].getTotalLength();
-    // console.log(`Letter ${i} is ${svgBeatbox[i].getTotalLength()}`);
-  }
+  // Deley 4.5s before executing because of the GIF animation which will take 4.5s to load.
+  setTimeout(() => {
+    for (let i = 0; i < svgBeatbox.length; i++) {
+      svgBeatbox[i].classList.add("animated");
+      svgBeatbox[i].style.strokeDasharray = svgBeatbox[i].getTotalLength();
+      svgBeatbox[i].style.strokeDashoffset = svgBeatbox[i].getTotalLength();
+    }
+  }, 4400);
 
+
+  // Preload
+  docReady(function () {
+    // DOM is loaded and ready for manipulation here
+    const preload = document.querySelector('.preload');
+    const gif = document.querySelector('.preload-gif');
+
+    document.body.classList.remove("hide-all-in-body");
+
+    // https://medium.com/@moulayjam/what-is-settimeout-in-javascript-and-how-to-use-settimeout-synchronously-5653c5ffee3e
+    var secondStep = function (call_back) {
+      setTimeout(function () {
+        gif.classList.add('preload-finish');
+        // dump("GIF Removed!");
+        call_back(); // This will be the parameter function.
+      },
+        // TODO: Change back to 4.5s before pushing
+        // 0
+        4500
+      );
+    };
+
+    secondStep(function () {
+      preload.classList.add('preload-finish');
+      // only when finish loading, add y scroll
+      var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
+      root.classList.add('enablescroll');
+    });
+  });
 
   let endAt = performance.now();
   console.log(`🧪 The time spent to load: ${(endAt - startAt) / 1000} second(s).`);
