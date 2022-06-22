@@ -106,6 +106,15 @@ input.btn {
     letter-spacing: .3rem;
 }
 
+
+@media all and (max-width: 1024px) {}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 480px) {}
+
+@media all and (max-width: 320px) {}
+
 /* all links */
 a {
     text-decoration: none;
@@ -132,21 +141,13 @@ p {
     /*   color: #292929; */
 }
 
+
 .site-header-section a.menu-link {
     font-size: 1.2rem !important;
     /*   font-weight: 100; */
     /*   line-height: 1.6; */
     word-spacing: 0.2rem;
     letter-spacing: 1px;
-}
-
-@media all and (max-width: 768px) {
-    p {
-        font-size: 1.6rem;
-        line-height: 1.6;
-        word-spacing: 0;
-        letter-spacing: 0;
-    }
 }
 
 @media all and (max-width: 1024px) {
@@ -160,6 +161,28 @@ p {
         width: 100vw;
     }
 }
+
+@media all and (max-width: 768px) {
+    p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        word-spacing: 0;
+        letter-spacing: 0;
+    }
+}
+
+@media all and (max-width: 480px) {
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (max-width: 320px) {}
+
 
 /* all image */
 img {
@@ -183,6 +206,33 @@ textarea {
     background: transparent !important;
     outline: none;
     font-size: 1.4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .grid {}
+
+    .grid.grid-row-1-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid.grid-row-1-2 {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .grid.grid-row-2-1 {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .grid.grid-row-1-1-1 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 
@@ -259,6 +309,19 @@ textarea {
     font-size: 1.6rem !important;
 }
 
+@media all and (max-width: 1024px) {}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 480px) {
+    .elementor-image-box-description {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media all and (max-width: 320px) {}
+
+
 /* NOTE: This might accidentally overwrite other parts. */
 /* .elementor-widget-wrap.elementor-element-populated {
 } */
@@ -331,6 +394,15 @@ section.elementor-section.elementor-top-section.elementor-element.elementor-elem
 
 
 /* Start of Post */
+/* the image/thumb container at the top section of a single post */
+.post-thumb-img-content.post-thumb {
+    text-align: center;
+}
+
+.post-thumb-img-content.post-thumb img {
+    width: 60%;
+}
+
 .post.type-post {
     margin: 20vh 0 0 0;
 }
@@ -479,7 +551,8 @@ section.error-404.not-found .page-header .page-title {
 }
 
 .lesson-swiper .swiper-slide picture img {
-    height: 70vh;
+    max-height: 70vh;
+    height: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -538,6 +611,12 @@ section.error-404.not-found .page-header .page-title {
     padding: 10rem 0;
     display: flex;
     flex-direction: column;
+}
+
+@media all and (max-width: 480px) {
+    .testimonial-section {
+        padding: 1rem 0;
+    }
 }
 
 .testimonial-section .testimonial-item {
@@ -605,6 +684,13 @@ section.error-404.not-found .page-header .page-title {
 form.wpforms-form button {
     font-size: 1.2rem;
 }
+
+/* These classes is added in Elementor */
+.main-page-contact-form-section {
+    padding: 1rem 2rem !important;
+}
+
+.main-page-contact-form-container {}
 
 /* End of Contact */
 
