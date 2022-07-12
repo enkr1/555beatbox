@@ -333,6 +333,10 @@ section.elementor-section.elementor-top-section.elementor-element.elementor-elem
 }
 
 /* elementor-container elementor-column-gap-default */
+.Footer .widget.widget_block {
+    margin: unset;
+}
+
 /* End of elementor overwriting */
 
 
@@ -608,7 +612,7 @@ section.error-404.not-found .page-header .page-title {
 
 /* Start of Testimonial */
 .testimonial-section {
-    padding: 10rem 0;
+    padding: 6rem 0 0;
     display: flex;
     flex-direction: column;
 }
