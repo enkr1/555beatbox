@@ -571,7 +571,7 @@ section.error-404.not-found .page-header .page-title {
 
 /* Start of Event */
 .event-swiper .event-content .event-title {
-    margin: 2rem 0 0 0;
+    margin: 2rem 0 1.4rem 0;
 }
 
 .event-swiper .swiper-wrapper .event-item {
