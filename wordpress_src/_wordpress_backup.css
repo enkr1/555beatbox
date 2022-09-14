@@ -278,6 +278,15 @@ textarea {
 /* End of global styling */
 
 
+/* Start of reusable */
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End of reusable */
+
 
 /* Start of Swiper styling */
 .swiper-button-next,
@@ -596,6 +605,11 @@ section.error-404.not-found .page-header .page-title {
 /* Single event page, NOW IT IS NOT CUSTOMISED */
 .type-events .entry-header .entry-title {
     font-size: 8rem !important;
+}
+
+.event_emergence img {
+    margin: 1rem auto 1rem;
+    width: 30rem;
 }
 
 /* End of Event */
