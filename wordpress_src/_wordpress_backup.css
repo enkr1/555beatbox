@@ -53,27 +53,33 @@
 
 ::-webkit-scrollbar {
     /* display: none; */
-    width: .2rem;
+    width: 0.2rem;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
     background: white;
-    opacity: .1;
+    opacity: 0.1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: #121212;
     border-radius: 2rem;
-    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
-    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044), 0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07), 0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096), 0 100px 80px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096),
+        0 100px 80px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096),
+        0 100px 80px rgba(0, 0, 0, 0.22);
 }
 
 html {
     scroll-behavior: smooth !important;
     font-size: 62.5%;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     color: #292929;
     /*   overflow-x: hidden; */
     overflow-y: hidden;
@@ -87,8 +93,8 @@ body {
     /* This will be displayed if it is loading for too long */
     /*   background-color: white; */
     /*  Neumorphism Theme */
-    -webkit-transition: all .6s ease-in-out;
-    transition: all .6s ease-in-out;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
 h1,
@@ -98,14 +104,13 @@ h4,
 h5,
 h6,
 input.btn {
-    font-family: 'hansonBold' !important;
+    font-family: "hansonBold" !important;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
 }
-
 
 @media all and (max-width: 1024px) {}
 
@@ -119,8 +124,8 @@ input.btn {
 a {
     text-decoration: none;
     color: #fad25a;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-links a {
@@ -141,6 +146,13 @@ p {
     /*   color: #292929; */
 }
 
+/* Overwrite header */
+@media (min-width: 921px) {
+    .ast-theme-transparent-header #masthead {
+        position: fixed;
+        background: #00000030;
+    }
+}
 
 .site-header-section a.menu-link {
     font-size: 1.2rem !important;
@@ -154,7 +166,6 @@ p {
     #ast-mobile-header.ast-mobile-header-wrap {
         /* 		display: none !important; */
         position: fixed;
-
     }
 
     .ast-above-header-wrap {
@@ -182,7 +193,6 @@ p {
 }
 
 @media all and (max-width: 320px) {}
-
 
 /* all image */
 img {
@@ -235,7 +245,6 @@ textarea {
     }
 }
 
-
 /* ===================================================== */
 /* Animation */
 /* main page headline */
@@ -277,7 +286,6 @@ textarea {
 
 /* End of global styling */
 
-
 /* Start of reusable */
 .display-flex-center {
     display: flex;
@@ -286,7 +294,6 @@ textarea {
 }
 
 /* End of reusable */
-
 
 /* Start of Swiper styling */
 .swiper-button-next,
@@ -311,8 +318,6 @@ textarea {
 
 /* End of Swiper styling */
 
-
-
 /* Start of elementor overwriting */
 .elementor-image-box-description {
     font-size: 1.6rem !important;
@@ -330,7 +335,6 @@ textarea {
 
 @media all and (max-width: 320px) {}
 
-
 /* NOTE: This might accidentally overwrite other parts. */
 /* .elementor-widget-wrap.elementor-element-populated {
 } */
@@ -347,8 +351,6 @@ section.elementor-section.elementor-top-section.elementor-element.elementor-elem
 }
 
 /* End of elementor overwriting */
-
-
 
 /* Start of landing */
 
@@ -403,8 +405,6 @@ section.elementor-section.elementor-top-section.elementor-element.elementor-elem
 }
 
 /* End of landing */
-
-
 
 /* Start of Post */
 /* the image/thumb container at the top section of a single post */
@@ -469,8 +469,6 @@ article.post {
 
 /* End of Post */
 
-
-
 /* Search style is after because of some similar classes that need to be overwritten */
 /* Start of Search related things */
 .search-form {
@@ -489,12 +487,10 @@ section.ast-archive-description h1.page-title.ast-archive-title {
 
 .ast-archive-description h1.page-title.ast-archive-title span {
     font-size: 2.4rem;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 /* End of Search */
-
-
 
 /* Start of search not found & 404 */
 section.no-results.not-found {
@@ -530,8 +526,6 @@ section.error-404.not-found .page-header .page-title {
 
 /* End of 404 */
 
-
-
 /* Start of Home page & global styling on the home page */
 .home-page-section {
     height: 100%;
@@ -546,7 +540,25 @@ section.error-404.not-found .page-header .page-title {
 
 /* End of Home page & global styling on the home page */
 
+/* Start of About */
+#about-us-action-btn>span {
+    display: flex;
+    gap: 1.4rem;
+    padding: 0.2rem;
+}
 
+#about-us-action-btn span {
+    height: fit-content;
+    margin: auto;
+    font-family: "hansonBold";
+    color: var(--theme-color);
+}
+
+#about-us-action-btn span span i {
+    font-size: 3rem !important;
+}
+
+/* End of About */
 
 /* Start of Lesson */
 .home-page-lesson-section {
@@ -569,14 +581,12 @@ section.error-404.not-found .page-header .page-title {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    border: 2px solid #EF3340;
+    border: 2px solid #ef3340;
     -o-object-fit: contain;
     object-fit: contain;
 }
 
 /* End of Lesson */
-
-
 
 /* Start of Event */
 .event-swiper .event-content .event-title {
@@ -594,11 +604,11 @@ section.error-404.not-found .page-header .page-title {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     padding: 1rem;
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .event-swiper .swiper-wrapper .event-item.swiper-slide-active img {
-    border: 1px solid #EF3340;
+    border: 1px solid #ef3340;
     opacity: 1;
 }
 
@@ -613,8 +623,6 @@ section.error-404.not-found .page-header .page-title {
 }
 
 /* End of Event */
-
-
 
 @media all and (max-width: 1024px) {}
 
@@ -666,7 +674,7 @@ section.error-404.not-found .page-header .page-title {
 }
 
 .testimonial-section .testimonial-item .testimonial-text::before {
-    content: '‟';
+    content: "‟";
     margin: 0 0.4rem;
     font-size: 4rem;
     line-height: 4rem;
@@ -692,8 +700,6 @@ section.error-404.not-found .page-header .page-title {
 
 /* End of Testimonial */
 
-
-
 /* Start of Contact */
 #contact {
     scroll-margin-top: 12.5rem;
@@ -712,8 +718,6 @@ form.wpforms-form button {
 
 /* End of Contact */
 
-
-
 /* Start of Footer */
 /* #menu-footer-menu li[class*="menu-item-"] a {
     font-size: 1.8rem !important;
@@ -729,7 +733,6 @@ aside.footer-widget-area.widget-area.site-footer-focus-item.footer-widget-area-i
 }
 
 /* End of Footer */
-
 
 /* Start of Preload */
 
