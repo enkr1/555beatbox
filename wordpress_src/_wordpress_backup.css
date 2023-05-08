@@ -112,6 +112,10 @@ input.btn {
     letter-spacing: 0.3rem;
 }
 
+h1 {
+    font-size: 5.5rem;
+}
+
 @media all and (max-width: 1024px) {}
 
 @media all and (max-width: 768px) {}
@@ -559,6 +563,19 @@ section.error-404.not-found .page-header .page-title {
 }
 
 /* End of About */
+
+/* Start of 5CV */
+#cv-container .elementor-element-populated {
+    max-width: 82%;
+}
+
+@media all and (max-width: 768px) {
+    #cv-container .elementor-element-populated {
+        max-width: unset;
+    }
+}
+
+/* End of 5CV */
 
 /* Start of Lesson */
 .home-page-lesson-section {
