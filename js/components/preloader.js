@@ -1,4 +1,4 @@
-// From 
+// From
 // https://dev.to/anuradha9712/create-reusable-web-components-in-html-1llc
 
 class Preloader extends HTMLElement {
@@ -61,8 +61,6 @@ docReady(function () {
     secondStep(function () {
         // dump("Final unload...");
 
-        // svgLoading.classList.add('loading-finish');
-
         // /*
         preload.classList.add('preload-finish');
         // */
@@ -73,7 +71,7 @@ docReady(function () {
         // REMOVE THE HIDE CLASS FROM BODY
 
         // /*
-        // only when finish loading, add y scroll 
+        // only when finish loading, add y scroll
         var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
         root.classList.add('enablescroll');
         // */

@@ -1,0 +1,831 @@
+/* Start of global styling */
+:root {
+    --theme-color: #ef3340;
+    /* Media Breakpoints based on Bootstrap 3 */
+    /*
+    --screen_xl: 1440px;
+    --screen_lg: 1281px;
+    --screen_md_1: 1024px;
+    --screen_md_2: 992px;
+    */
+    /* tablet */
+    /*
+    --screen_sm: 768px;
+    --screen_xs: 480px;
+    --screen_xxs: 320px;
+    */
+}
+
+/*
+
+@media all and (max-width: 1024px) {
+}
+
+@media all and (max-width: 768px) {
+}
+
+@media all and (max-width: 480px) {
+}
+
+@media all and (max-width: 320px) {
+}
+*/
+
+* {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*::-moz-selection {
+    color: #292929;
+    mix-blend-mode: overlay;
+    background-color: #fad25a80;
+}
+
+*::selection {
+    color: #292929;
+    mix-blend-mode: overlay;
+    background-color: #fad25a80;
+}
+
+::-webkit-scrollbar {
+    /* display: none; */
+    width: 0.2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white;
+    opacity: 0.1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #121212;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096),
+        0 100px 80px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.044),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.058), 0 12.5px 10px rgba(0, 0, 0, 0.07),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.082), 0 41.8px 33.4px rgba(0, 0, 0, 0.096),
+        0 100px 80px rgba(0, 0, 0, 0.22);
+}
+
+html {
+    scroll-behavior: smooth !important;
+    font-size: 62.5%;
+    font-family: "DM Sans", sans-serif;
+    color: #292929;
+    /*   overflow-x: hidden; */
+    overflow-y: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
+    /* This will be displayed if it is loading for too long */
+    /*   background-color: white; */
+    /*  Neumorphism Theme */
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input.btn {
+    font-family: "hansonBold" !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    letter-spacing: 0.3rem;
+}
+
+h1 {
+    font-size: 5.5rem;
+}
+
+@media all and (max-width: 1024px) {}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 480px) {}
+
+@media all and (max-width: 320px) {}
+
+/* all links */
+a {
+    text-decoration: none;
+    color: #fad25a;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-links a {
+    font-size: 1.6rem !important;
+}
+
+a:hover {
+    color: #d3aa30;
+}
+
+/* all fonts */
+p {
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+    word-spacing: 0.2rem;
+    letter-spacing: 1px;
+    /*   color: #292929; */
+}
+
+/* Overwrite header */
+@media (min-width: 921px) {
+    .ast-theme-transparent-header #masthead {
+        position: fixed;
+        background: #00000030;
+    }
+}
+
+.site-header-section a.menu-link {
+    font-size: 1.2rem !important;
+    /*   font-weight: 100; */
+    /*   line-height: 1.6; */
+    word-spacing: 0.2rem;
+    letter-spacing: 1px;
+}
+
+@media all and (max-width: 1024px) {
+    #ast-mobile-header.ast-mobile-header-wrap {
+        /* 		display: none !important; */
+        position: fixed;
+    }
+
+    .ast-above-header-wrap {
+        width: 100vw;
+    }
+}
+
+@media all and (max-width: 768px) {
+    p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        word-spacing: 0;
+        letter-spacing: 0;
+    }
+}
+
+@media all and (max-width: 480px) {
+    h1 {
+        font-size: 3rem !important;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media all and (max-width: 320px) {}
+
+/* all image */
+img {
+    width: 100%;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+h2 {
+    color: var(--theme-color) !important;
+    font-size: 2.4rem !important;
+}
+
+input,
+textarea {
+    color: white !important;
+    background: transparent !important;
+    outline: none;
+    font-size: 1.4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+@media (min-width: 40rem) {
+    .grid {}
+
+    .grid.grid-row-1-1 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .grid.grid-row-1-2 {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .grid.grid-row-2-1 {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .grid.grid-row-1-1-1 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* ===================================================== */
+/* Animation */
+/* main page headline */
+@-webkit-keyframes line-anime {
+    0% {
+        /* fill: var(--theme-color); */
+    }
+
+    100% {
+        /* fill: #0000; */
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes line-anime {
+    0% {
+        /* fill: var(--theme-color); */
+    }
+
+    100% {
+        /* fill: #0000; */
+        stroke-dashoffset: 0;
+    }
+}
+
+/* For preload */
+.preload-finish {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+.enablescroll {
+    overflow-y: visible;
+}
+
+.hide-all-in-body {
+    opacity: 0;
+}
+
+/* End of global styling */
+
+/* Start of reusable */
+.display-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End of reusable */
+
+/* Start of Swiper styling */
+.swiper-button-next,
+.swiper-button-prev {
+    background-image: unset !important;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    color: var(--theme-color) !important;
+}
+
+.swiper-lazy-preloader-white:after {
+    background-image: unset !important;
+}
+
+.event-swiper .swiper-button-next,
+.event-swiper .swiper-button-prev,
+.event-swiper .swiper-lazy-preloader-white {
+    top: 35% !important;
+}
+
+/* End of Swiper styling */
+
+/* Start of elementor overwriting */
+.elementor-image-box-description {
+    font-size: 1.6rem !important;
+}
+
+@media all and (max-width: 1024px) {}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 480px) {
+    .elementor-image-box-description {
+        font-size: 1.3rem !important;
+    }
+}
+
+@media all and (max-width: 320px) {}
+
+/* NOTE: This might accidentally overwrite other parts. */
+/* .elementor-widget-wrap.elementor-element-populated {
+} */
+
+/* NOTE: This is a bad practice as if the post ID is changed, we have to re-copy the classes again in order to style it properly. */
+/* This is the students' feedback section */
+section.elementor-section.elementor-top-section.elementor-element.elementor-element-391009c.elementor-section-height-min-height.elementor-section-content-middle.elementor-section-boxed.elementor-section-height-default.elementor-section-items-middle .elementor-widget-wrap.elementor-element-populated {
+    padding: 0 !important;
+}
+
+/* elementor-container elementor-column-gap-default */
+.Footer .widget.widget_block {
+    margin: unset;
+}
+
+/* End of elementor overwriting */
+
+/* Start of landing */
+
+#svg-beatbox {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    fill: var(--theme-color);
+}
+
+#svg-beatbox path.animated {
+    -webkit-animation: line-anime 5s ease forwards 0s;
+    animation: line-anime 5s ease forwards 0s;
+}
+
+@media all and (max-width: 1024px) {
+    #svg-beatbox {
+        width: 70rem;
+    }
+
+    /* Overwriting */
+    .elementor-15 .elementor-element.elementor-element-4c147b6 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #svg-beatbox {
+        width: 40rem;
+    }
+}
+
+@media all and (max-width: 480px) {
+    #svg-beatbox {
+        width: 30rem;
+    }
+}
+
+@media all and (max-width: 320px) {
+    #svg-beatbox {
+        width: 28rem;
+    }
+}
+
+/* End of landing */
+
+/* Start of Post */
+/* the image/thumb container at the top section of a single post */
+.post-thumb-img-content.post-thumb {
+    text-align: center;
+}
+
+.post-thumb-img-content.post-thumb img {
+    width: 60%;
+}
+
+.post.type-post {
+    margin: 20vh 0 0 0;
+}
+
+/*
+1. The container
+2. Search Results for: ...
+3. Any of the type in a page as .post
+*/
+article.page,
+section.ast-archive-description,
+article[class*="type-"] {
+    background: transparent !important;
+}
+
+/* The result rows & articile post */
+.ast-row article,
+article.post {
+    background: transparent !important;
+    border: 1px solid white !important;
+}
+
+/* section.elementor-section.elementor-top-section {
+    min-height: 30vh !important;
+}
+
+.elementor-container.elementor-column-gap-no {
+    margin: auto !important;
+} */
+/* Comment from others */
+#comments.comments-area .comments-title,
+#comments.comments-area ol.ast-comment-list li {
+    background-color: #121212d4 !important;
+}
+
+/* Comment box */
+#comments .comment-respond {
+    background: transparent !important;
+}
+
+/* Submit button */
+#comments .form-submit input.submit {
+    font-size: 1.6rem !important;
+    padding: 0 !important;
+}
+
+/* Reply */
+#comments a.comment-reply-link {
+    padding: 1rem;
+}
+
+/* End of Post */
+
+/* Search style is after because of some similar classes that need to be overwritten */
+/* Start of Search related things */
+.search-form {
+    background: transparent !important;
+}
+
+/* Search Results for: ... */
+.ast-row article {
+    margin: 1.6rem 0 !important;
+}
+
+/* The font */
+section.ast-archive-description h1.page-title.ast-archive-title {
+    font-size: 2.4rem;
+}
+
+.ast-archive-description h1.page-title.ast-archive-title span {
+    font-size: 2.4rem;
+    opacity: 0.5;
+}
+
+/* End of Search */
+
+/* Start of search not found & 404 */
+section.no-results.not-found {
+    background: transparent !important;
+    border: 1px solid white !important;
+}
+
+/* The empty search container (404) */
+section.no-results.not-found .page-content {
+    text-align: center;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+/* Search again submit button */
+section.no-results.not-found .page-content input.search-submit {
+    font-size: 1.2rem;
+    color: var(--theme-color) !important;
+}
+
+section.error-404.not-found {
+    background: transparent !important;
+}
+
+section.error-404.not-found .page-header .page-title {
+    font-size: 6rem;
+}
+
+.ast-404-search input.search-submit {
+    display: none !important;
+}
+
+/* End of 404 */
+
+/* Start of Home page & global styling on the home page */
+.home-page-section {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.home-page-section .home-page-title {
+    /* font-size: 2.4rem; */
+    text-align: center;
+    color: var(--theme-color);
+}
+
+/* End of Home page & global styling on the home page */
+
+/* Start of About */
+#about-us-action-btn>span {
+    display: flex;
+    gap: 1.4rem;
+    padding: 0.2rem;
+}
+
+#about-us-action-btn span {
+    height: fit-content;
+    margin: auto;
+    font-family: "hansonBold";
+    color: var(--theme-color);
+}
+
+#about-us-action-btn span span i {
+    font-size: 3rem !important;
+}
+
+/* End of About */
+
+/* Start of 5CV */
+#cv-container .elementor-element-populated {
+    max-width: 82%;
+}
+
+@media all and (max-width: 768px) {
+    #cv-container .elementor-element-populated {
+        max-width: unset;
+    }
+}
+
+/* End of 5CV */
+
+/* Start of Lesson */
+.home-page-lesson-section {
+    padding: 20rem 0 10rem !important;
+}
+
+.lesson-swiper {
+    width: 100%;
+}
+
+.lesson-swiper .swiper-slide {
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.lesson-swiper .swiper-slide picture img {
+    max-height: 70vh;
+    height: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 2px solid #ef3340;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+/* End of Lesson */
+
+/* Start of Event */
+.event-swiper .event-content .event-title {
+    margin: 2rem 0 1.4rem 0;
+}
+
+.event-swiper .swiper-wrapper .event-item {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.event-swiper .swiper-wrapper .event-item img {
+    height: 75vh;
+    object-fit: cover;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    padding: 1rem;
+    opacity: 0.5;
+}
+
+.event-swiper .swiper-wrapper .event-item.swiper-slide-active img {
+    border: 1px solid #ef3340;
+    opacity: 1;
+}
+
+/* Single event page, NOW IT IS NOT CUSTOMISED */
+.type-events .entry-header .entry-title {
+    font-size: 8rem !important;
+}
+
+.event_emergence img {
+    margin: 1rem auto 1rem;
+    width: 30rem;
+}
+
+/* End of Event */
+
+@media all and (max-width: 1024px) {}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 480px) {}
+
+@media all and (max-width: 320px) {}
+
+/* Start of Testimonial */
+.testimonial-section {
+    padding: 6rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+@media all and (max-width: 480px) {
+    .testimonial-section {
+        padding: 1rem 0;
+    }
+}
+
+.testimonial-section .testimonial-item {
+    border-bottom: 1px solid #ffffff38;
+    margin: 1rem 0 3rem 0;
+}
+
+.testimonial-section .testimonial-item .testimonial-content {
+    background: #f7f7f726;
+    padding: 1rem 2rem 6rem;
+    border-radius: 2rem;
+}
+
+@media all and (max-width: 1024px) {
+    .testimonial-section .testimonial-item .testimonial-content {
+        padding: 1rem 2rem 9rem;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .testimonial-section .testimonial-item .testimonial-content {
+        padding: 1rem 2rem 12rem;
+    }
+}
+
+.testimonial-section .testimonial-item .testimonial-text {
+    margin: 0;
+    min-height: 15rem;
+}
+
+.testimonial-section .testimonial-item .testimonial-text::before {
+    content: "‟";
+    margin: 0 0.4rem;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: bold;
+}
+
+.testimonial-section .testimonial-item .testimonial-author {
+    text-align: center;
+    transform: translateY(-40%);
+}
+
+.testimonial-section .testimonial-item .testimonial-author .testimonial-picture img {
+    width: 12rem;
+    height: 12rem;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.testimonial-section .testimonial-item .testimonial-author .student-name {
+    margin: 1rem 0;
+}
+
+/* End of Testimonial */
+
+/* Start of Contact */
+#contact {
+    scroll-margin-top: 12.5rem;
+}
+
+form.wpforms-form button {
+    font-size: 1.2rem;
+}
+
+/* These classes is added in Elementor */
+.main-page-contact-form-section {
+    padding: 1rem 2rem !important;
+}
+
+.main-page-contact-form-container {}
+
+/* End of Contact */
+
+/* Start of Footer */
+/* #menu-footer-menu li[class*="menu-item-"] a {
+    font-size: 1.8rem !important;
+} */
+
+aside.footer-widget-area.widget-area.site-footer-focus-item.footer-widget-area-inner * {
+    font-size: 1.6rem !important;
+}
+
+.ast-footer-copyright p {
+    font-size: 1.2rem;
+    letter-spacing: unset;
+}
+
+/* End of Footer */
+
+/* Start of Preload */
+
+.preload {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    height: 100vh;
+    width: 100%;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    background-color: #000000;
+    opacity: 1;
+}
+
+.preload .preload-top {
+    top: 0;
+    height: 50vh;
+    background-color: #121212;
+    width: 100vw;
+}
+
+.preload .preload-bot {
+    bottom: 0;
+    height: 50vh;
+    background-color: #121212;
+    width: 100vw;
+}
+
+.preload .preload-box {
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.preload .preload-box img {
+    width: 30rem;
+}
+
+@media all and (max-width: 992px) {
+    .preload .preload-box img {
+        width: 20rem;
+    }
+}
+
+.preload #svg-loading {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+@media all and (max-width: 992px) {
+    .preload #svg-loading {
+        width: 16%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .preload #svg-loading {
+        width: 26%;
+        -webkit-transform: translate(-50%, -25%);
+        transform: translate(-50%, -25%);
+    }
+}
+
+/* End of Preload */

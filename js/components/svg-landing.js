@@ -7,7 +7,7 @@ class SvgLanding extends HTMLElement {
 
         // 2 px.
         let svg_thin = `
-        
+
         <svg width="1846" height="146" viewBox="0 0 1846 146" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0" y="0" width="1846" height="146" fill="black">
         <rect fill="white" width="1846" height="146"/>
@@ -38,7 +38,7 @@ class SvgLanding extends HTMLElement {
 
         // 4 px.
         let svg_thic = `
-        
+
         <svg width="1849" height="148" viewBox="0 0 1849 148" fill="none" xmlns="http://www.w3.org/2000/svg">
         <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0" y="0" width="1849" height="148" fill="black">
         <rect fill="white" width="1849" height="148"/>
@@ -72,9 +72,9 @@ class SvgLanding extends HTMLElement {
         // data-aos="zoom-out" data-aos-delay="500"
         this.innerHTML = `
         <div id="svg-beatbox" data-aos="fade-up">
-        
+
         ${svg_logo}
-        
+
         </div>
         `;
     }
@@ -83,11 +83,19 @@ class SvgLanding extends HTMLElement {
 customElements.define('svg-landing-component', SvgLanding);
 
 // This generates the animation of the main landing text
-const svgBeatbox = document.querySelectorAll("#svg-beatbox path");
+let svgBeatbox = document.querySelectorAll("#svg-beatbox path");
 
-for (let i = 0; i < svgBeatbox.length; i++) {
-    svgBeatbox[i].style.strokeDasharray = svgBeatbox[i].getTotalLength();
-    svgBeatbox[i].style.strokeDashoffset = svgBeatbox[i].getTotalLength();
-    // console.log(`Letter ${i} is ${svgBeatbox[i].getTotalLength()}`);
-}
+// for (let i = 0; i < svgBeatbox.length; i++) {
+//     svgBeatbox[i].style.strokeDasharray = svgBeatbox[i].getTotalLength();
+//     svgBeatbox[i].style.strokeDashoffset = svgBeatbox[i].getTotalLength();
+//     // console.log(`Letter ${i} is ${svgBeatbox[i].getTotalLength()}`);
+// }
 
+// Deley 4.5s before executing
+setTimeout(() => {
+    for (let i = 0; i < svgBeatbox.length; i++) {
+        svgBeatbox[i].classList.add("animated");
+        svgBeatbox[i].style.strokeDasharray = svgBeatbox[i].getTotalLength();
+        svgBeatbox[i].style.strokeDashoffset = svgBeatbox[i].getTotalLength();
+    }
+}, 4400);

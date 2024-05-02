@@ -101,16 +101,6 @@
     }
 }
 
-// FINISH CLASSES
-.preload-finish {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.loading-finish {
-    opacity: 0;
-}
-
 .moveup {
     transform: translateY(-100%);
     transition: all 1s ease-in-out;

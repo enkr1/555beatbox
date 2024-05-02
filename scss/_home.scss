@@ -31,7 +31,7 @@
                 width: 40em;
             }
 
-            // mobile 
+            // mobile
             @media all and (max-width: $screen_xs) {
                 width: 30em;
             }
@@ -40,7 +40,7 @@
                 width: 26em;
             }
 
-            path {
+            path.animated {
                 animation: line-anime 5s ease forwards 0s;
                 // fill: $theme-color;
                 // // fill: black;
@@ -103,11 +103,11 @@
             margin: .4% 1.4%;
             box-shadow: $neumorphism-box-shadow;
             /* Neumorphism */
-            /* -webkit-box-shadow: 
+            /* -webkit-box-shadow:
         0px 0px 10px 0px var(--pri-color);
-    -moz-box-shadow: 
+    -moz-box-shadow:
         0px 0px 10px 0px var(--pri-color);
-    box-shadow: 
+    box-shadow:
         0px 0px 10px 0px var(--pri-color); */
 
 
