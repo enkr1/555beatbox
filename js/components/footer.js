@@ -87,7 +87,7 @@ class Footer extends HTMLElement {
     </div>
 
     <p>&copy; 2021 ENKR. All rights reserved.</p>
-    <p>Developed and designed by <a target="_blank" href="https://enkr1.github.io/">ENKR</a></p>
+    <p>Developed and designed by <a target="_blank" href="https://platforms.enkr1.com/">ENKR</a></p>
 
 </footer>
         `;
